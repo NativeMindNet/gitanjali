@@ -1,0 +1,3719 @@
+<?xml version="1.0"?>
+
+<book version="1.0">
+	
+	<head>
+		
+		<id>1</id>
+		<book-title>Sri Gaudiya Gitanjali</book-title>		
+        <lang>eng</lang>
+        <src-lang>eng</src-lang>
+		<orientation>portrait</orientation>
+		
+		<controls>
+			
+			<control type="prev-page">
+				<center>
+					<x>18</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/previous.png</image>
+				<highlighted-image>($APP_BUNDLE)/previous_h.png</highlighted-image>
+			</control>
+            
+			<control type="add-bookmark">
+				<center>
+					<x>108</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/bookmark-add.png</image>
+				<highlighted-image>($APP_BUNDLE)/bookmark-add_h.png</highlighted-image>
+			</control>
+			
+			<control type="bookmarks">
+				<center>
+					<x>198</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/bookmark.png</image>
+				<highlighted-image>($APP_BUNDLE)/bookmark_h.png</highlighted-image>
+			</control>
+
+			<control type="page-link">
+				<center>
+					<x>296</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/prog.png</image>
+				<highlighted-image>($APP_BUNDLE)/prog_h.png</highlighted-image>
+				<arg>378</arg>
+			</control>
+			
+			<control type="page-link">
+				<center>
+					<x>384</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/home.png</image>
+				<highlighted-image>($APP_BUNDLE)/home_h.png</highlighted-image>
+				<arg>2</arg>
+			</control>
+            
+			<control type="search">
+				<center>
+					<x>486</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/search.png</image>
+				<highlighted-image>($APP_BUNDLE)/search_h.png</highlighted-image>
+			</control>
+
+            <control type="play-sound">
+				<center>
+					<x>580</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/play.png</image>
+				<highlighted-image>($APP_BUNDLE)/play_h.png</highlighted-image>
+			</control>
+			
+			<control type="stop-sound">
+				<center>
+					<x>580</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/stop.png</image>
+				<highlighted-image>($APP_BUNDLE)/stop_h.png</highlighted-image>
+			</control>
+            
+			<control type="toggle-player">
+				<center>
+					<x>670</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/toggle-player.png</image>
+				<highlighted-image>($APP_BUNDLE)/toggle-player_h.png</highlighted-image>
+			</control>
+
+			<control type="next-page">
+				<center>
+					<x>754</x>
+					<y>986</y>
+				</center>
+				<image>($APP_BUNDLE)/next.png</image>
+				<highlighted-image>($APP_BUNDLE)/next_h.png</highlighted-image>
+				<disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+			</control>
+		</controls>
+		
+	</head>
+	
+	<body>
+        
+		<styles>
+            <style name="title" font-size="28" text-alignment="right" text-color="#000000"/>
+        </styles>
+			<section>
+				<title>
+                   <p hidden="true">Logo</p>
+               </title>
+				<page>
+				<background>
+					<animation center="{384, 512}">
+						<target type="keyframe" repeat-count="1" images-per-second="12">($APP_BUNDLE)/saraswati</target>
+					</animation>
+				</background>
+				<show-number>0</show-number>
+				</page>
+				
+				<page>
+				<background>
+						<animation center="{384, 512}">
+							<target type="image">($APP_BUNDLE)/cower_en.png</target>
+						</animation>
+						
+						<animation center="{384, 512}">
+							<target type="image">($APP_BUNDLE)/blik.png</target>
+								<actions>
+									<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="-360"/>
+								</actions>
+						</animation>
+						
+						<animation center="{384, 512}">
+							<target type="image">($APP_BUNDLE)/cower_mask.png</target>
+						</animation>
+						<!--stars-->
+						<animation center="{255, 102}">
+							<target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star</target>
+						</animation>
+						<animation center="{687, 538}" start-delay="0.2">
+							<target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star</target>
+						</animation>
+						<animation center="{82, 473}" start-delay="0.4">
+							<target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star</target>
+						</animation>
+						
+						<animation center="{729, 317}" start-delay="0.6">
+							<target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star</target>
+						</animation>
+						<animation center="{335, 594}" start-delay="0.8">
+							<target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star</target>
+						</animation>
+						<animation center="{447, 102}" start-delay="1">
+							<target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star</target>
+						</animation>
+						<animation center="{578, 631}" start-delay="1.2">
+							<target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star</target>
+						</animation>
+						<!--pero-->
+						<animation center="{486, 316}" start-delay="2">
+							<target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/stars</target>
+						</animation>
+						</background>
+				<show-number>0</show-number>
+			</page>
+			
+			<section>
+                <title>
+                    <p hidden="true">Home</p>
+                </title>
+				 <content-title>
+                    <p>Home</p>
+                </content-title>
+				<page>
+				
+				<controls>
+				
+				<control type="page-link">
+				<center>
+					<x>397</x>
+					<y>86</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b1_h.png</highlighted-image>
+				<arg>25</arg>
+				</control>
+				
+				<control type="page-link">
+				<center>
+					<x>435</x>
+					<y>152</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b2_h.png</highlighted-image>
+				<arg>64</arg>
+				</control>
+				
+				<control type="page-link">
+				<center>
+					<x>364</x>
+					<y>221</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b3_h.png</highlighted-image>
+				<arg>70</arg>
+				</control>
+				
+				<control type="page-link">
+				<center>
+					<x>448</x>
+					<y>285</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b4_h.png</highlighted-image>
+				<arg>126</arg>
+				</control>
+				
+				<control type="page-link">
+				<center>
+					<x>376</x>
+					<y>352</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b5_h.png</highlighted-image>
+				<arg>136</arg>
+				</control> 
+				
+				<control type="page-link">
+				<center>
+					<x>412</x>
+					<y>418</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b6_h.png</highlighted-image>
+				<arg>158</arg>
+				</control>
+				
+				<control type="page-link">
+				<center>
+					<x>415</x>
+					<y>487</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b7_h.png</highlighted-image>
+				<arg>166</arg>
+				</control>
+				
+				<control type="page-link">
+				<center>
+					<x>477</x>
+					<y>549</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b8_h.png</highlighted-image>
+				<arg>231</arg>
+				</control>
+				
+				<control type="page-link">
+				<center>
+					<x>338</x>
+					<y>619</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b9_h.png</highlighted-image>
+				<arg>252</arg>
+				</control>
+				
+				
+				<control type="page-link">
+				<center>
+					<x>328</x>
+					<y>684</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b10_h.png</highlighted-image>
+				<arg>261</arg>
+				</control>
+				
+				
+				<control type="page-link">
+				<center>
+					<x>347</x>
+					<y>751</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b11_h.png</highlighted-image>
+				<arg>279</arg>
+				</control>
+				
+				
+				<control type="page-link">
+				<center>
+					<x>388</x>
+					<y>820</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b12_h.png</highlighted-image>
+				<arg>330</arg>
+				</control>
+				
+				<control type="page-link">
+				<center>
+					<x>350</x>
+					<y>884</y>
+				</center>
+				<image>($APP_BUNDLE)/b0.png</image>
+				<highlighted-image>($APP_BUNDLE)/b13_h.png</highlighted-image>
+				<arg>356</arg>
+				</control>
+				
+				</controls>
+				<background image="($APP_BUNDLE)/bg_home.png"/>
+				</page>
+			</section>	
+
+			
+            <section>
+                <title>
+                    <p hidden="true">Vandanā</p>
+                </title>
+				<content-title>
+                    <p background-color="#fff3bc">Vandanā</p>
+                </content-title>
+				<page>
+					<background image="($APP_BUNDLE)/004.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/005.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/006.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/007.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/008.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/009.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/010.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/011.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/012.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/013.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/014.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/015.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/016.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/017.png"/>
+				</page>
+			</section>	
+				
+			<section>
+				<title>
+                    <p hidden="true">Jaya Dhvani</p>
+				</title>
+				<content-title>
+                    <p background-color="#fff3bc">Jaya Dhvani</p>
+                </content-title>
+				<page>
+					<background image="($APP_BUNDLE)/018.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/019.png"/>
+				</page>
+				<page>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Mahamantra Kirttan.m4a</audio>
+					<background image="($APP_BUNDLE)/020.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                    <p hidden="true">Daśa-vidha Nāmāparādha</p>
+				</title>
+				<content-title>
+                    <p background-color="#fff3bc">Daśa-vidha Nāmāparādha</p>
+                </content-title>
+				<page>
+					<comments><p>hari-nāma mahāmantra sarva-mantra-sāra</p></comments>
+					<background image="($APP_BUNDLE)/021.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/022.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/023.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/024.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/025.png"/>
+				</page>
+			</section>
+			
+			
+		<section>
+               <title>
+                   <p hidden="true">Morning Songs</p>
+               </title>
+			   <content-title>
+                    <p background-color="#a4ffc8">Morning Songs</p>
+                </content-title>
+			<page>
+				<background image="($APP_BUNDLE)/026_01_morning.png">
+				<animation center="{384, 512}">
+					<target type="image">($APP_BUNDLE)/spiral.png</target>
+					<actions>
+						<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                       </actions>
+				</animation>
+				<animation center="{384, 512}">
+					<target type="image">($APP_BUNDLE)/026_02_morning.png</target>
+				</animation>
+				<animation center="{384, 512}">
+					<target type="image">($APP_BUNDLE)/026_03_morning.png</target>
+					<actions>
+						<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="1" end-scale="1.03"/>
+						<action type="rotation" duration="2" autoreverse = "true" repeats-count="0" start-angle="4" end-angle="7"/>
+					</actions>
+				</animation>
+				</background>
+			</page>
+			<section>
+				<title>
+                   <p hidden="true">Gupta Govardhan Ārati</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Gupta Govardhan Ārati</p>
+                </content-title>
+				<page>
+					<comments><p>jaya jaya girirājer ārati viśāla</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Jaya Girirajer Arati Visala.m4a</audio>
+					<background image="($APP_BUNDLE)/027.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/028.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Girirāj-Govardhan Ārati</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Śrī Śrī Girirāj-Govardhan Ārati</p>
+                </content-title>
+				<page>
+					<comments><p>jaya jaya girirājer ārotiko śobhā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Jaya Girirajer Arotiko Sobha.m4a</audio>
+					<background image="($APP_BUNDLE)/029.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/030.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Nitāi-Chaitanya-Ārati</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Śrī Śrī Nitāi-Chaitanya-Ārati</p>
+                </content-title>
+				<page>
+					<comments><p>jaya guru mahārāja koruṇā-sāgara</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Guru Maharaja Koruna Sagara.m4a</audio>
+					<background image="($APP_BUNDLE)/031.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/032.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/033.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Guru Ārati</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Śrī Guru Ārati</p>
+                </content-title>
+				<page>
+					<comments><p>jaya jaya gurudever ārati ujjvala</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya-Jaya Gurudever Arati Ujjvala.m4a</audio>
+					<background image="($APP_BUNDLE)/034.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/035.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/036.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Guru Ārati-stuti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Śrī Guru Ārati-stuti</p>
+                </content-title>
+				<page>
+					<comments><p>jaya guru-mahārāja jati-rājeśvara</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Guru-Maharaja Jati-Rajesvara.m4a</audio>
+					<background image="($APP_BUNDLE)/037.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/038.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/039.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/040.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Prabhāti Gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Prabhāti Gīti</p>
+                </content-title>
+				<page>
+					<comments><p>kali-kukkura-kadana jadi chāo he</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Kali Kukkura Kadana.m4a</audio>
+					<background image="($APP_BUNDLE)/041.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/042.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Nāma-Kīrttan</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Śrī Nāma-Kīrttan</p>
+                </content-title>
+				<page>
+					<comments><p>jaśomatī-nandana braja-baro nāgara</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jasomati Nandana.m4a</audio>
+					<background image="($APP_BUNDLE)/043.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/044.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śachīnandana-vandanā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Śrī Śachīnandana-vandanā</p>
+                </content-title>
+				<page>
+					<comments><p>jaya śachīnandana sura-muni-vandana</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Sachinandana.m4a</audio>
+					<background image="($APP_BUNDLE)/045.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/046.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Gurudeva</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Gurudeva</p>
+                </content-title>
+				<page>
+					<comments><p>gurudeva! kṛpā-bindu diyā, koro’ ei dāse</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gurudeva Krpa-bindu diya.m4a</audio>
+					<background image="($APP_BUNDLE)/047.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Aruṇodoya-kīrttan</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Aruṇodoya-kīrttan</p>
+                </content-title>
+				<page>
+					<comments><p>udilo aruṇa pūraba-bhāge</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Udilo Aruna.m4a</audio>
+					<background image="($APP_BUNDLE)/048.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/049.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Aruṇodoya-kīrttan (part 2)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Aruṇodoya-kīrttan (part 2)</p>
+                </content-title>
+				<page>
+					<comments><p>jīv jāgo, jīv jāgo, gaurāchā̐da bole</p></comments>
+					<background image="($APP_BUNDLE)/050.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Gurvvāṣṭaka</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Śrī Śrī Gurvvāṣṭaka</p>
+                </content-title>
+				<page>
+					<comments><p>saṁsāra-dāvānala-līḍha-loka-trāṇāya</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Samsara Davanala.m4a</audio>
+					<background image="($APP_BUNDLE)/051.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/052.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/053.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Auspicious Invocation to Śaraṇāgati</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Auspicious Invocation to Śaraṇāgati</p>
+                </content-title>
+				<page>
+					<comments><p>śrī-kṛṣṇa-chaitanya prabhu jīve doyā kori’</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sri Krishna Chaitanya Prabhu jive doya kori.m4a</audio>
+					<background image="($APP_BUNDLE)/054.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/055.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Bhajan-gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Bhajan-gīti</p>
+                </content-title>
+				<page>
+					<comments><p>bhaja re bhaja re āmār mana ati manda</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Bhaja re Bhaja re Amar.m4a</audio>
+					<background image="($APP_BUNDLE)/056.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/057.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Vibhāvarī Śeṣa</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Vibhāvarī Śeṣa</p>
+                </content-title>
+				<page>
+					<comments><p>vibhāvarī śeṣa, āloka-praveśa</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Vibhavari Sesa Aloka Pravesa.m4a</audio>
+					<background image="($APP_BUNDLE)/058.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/059.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/060.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Ṭhākura-vaiṣṇava-gaṇa</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Ṭhākura-vaiṣṇava-gaṇa</p>
+                </content-title>
+				<page>
+					<comments><p>ṭhākura vaiṣṇava-gaṇa kori ei nivedana</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Thakura Vaisnava-Gana.m4a</audio>
+					<background image="($APP_BUNDLE)/061.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/062.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Nāma-Saṅkīrttan</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d3ffe4">Nāma-Saṅkīrttan</p>
+				</content-title>
+				<page>
+					<comments><p>hari haraye namaḥ kṛṣṇa jādavāya namaḥ</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Hari Haraye Namah Krishna.m4a</audio>
+					<background image="($APP_BUNDLE)/063.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/064.png"/>
+				</page>
+			</section>
+		</section>	
+			
+			
+			<section>
+               <title>
+                   <p hidden="true">Midday Songs</p>
+               </title>
+			   <content-title>
+                    <p background-color="#8dedff">Midday Songs</p>
+                </content-title>
+			<page>
+				<background image="($APP_BUNDLE)/065_01_midday.png">
+				<animation center="{384, 512}">
+					<target type="image">($APP_BUNDLE)/spiral.png</target>
+					<actions>
+						<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                       </actions>
+				</animation>
+				<animation center="{384, 512}">
+					<target type="image">($APP_BUNDLE)/065_02_midday.png</target>
+				</animation>
+				<animation center="{384, 512}">
+					<target type="image">($APP_BUNDLE)/065_03_midday.png</target>
+					<actions>
+						<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="0.9" end-scale="0.96"/>
+					</actions>
+				</animation>
+				</background>
+			</page>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Bhoga-ārati Gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d1f8ff">Śrī Bhoga-ārati Gīti</p>
+                </content-title>
+				<page>
+					<comments><p>bhaja bhakata-vatsala śrī-gaurahari</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Bhaja Bhakata-Vatsala.m4a</audio>
+					<background image="($APP_BUNDLE)/066.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/067.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/068.png"/>
+				</page>
+				<page>
+					<comments><p>mahāprasāde govinde nāma brahmaṇi vaiṣṇave</p></comments>
+					<background image="($APP_BUNDLE)/069.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Prasāda-sevāya Gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d1f8ff">Śrī Prasāda-sevāya Gīti</p>
+                </content-title>
+				<page>
+					<comments><p>bhāi-re! śorīra avidyā-jāl, joḍendriya tāhe kāl</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Bhai Re Sorira Avidya-Jal.m4a</audio>
+					<background image="($APP_BUNDLE)/070.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Evening Songs</p>
+				</title>
+				<content-title>
+                    <p background-color="#e7c6fd">Evening Songs</p>
+                </content-title>
+				<page>
+					<background image="($APP_BUNDLE)/071_01_evening.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/071_02_evening.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/071_03_evening.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="1" end-scale="1.03"/>
+							<action type="rotation" duration="2" autoreverse = "true" repeats-count="0" start-angle="-2" end-angle="1"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Gaura-ārati</p>
+               </title>
+			   <content-title>
+                    <p background-color="#f9efff">Śrī Gaura-ārati</p>
+                </content-title>
+				<page>
+					<comments><p>jaya jaya gaurāchā̐der ārotiko śobhā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sri Gaura Arati.m4a</audio>
+					<background image="($APP_BUNDLE)/072.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/073.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Sāraswat-ārati</p>
+               </title>
+			   <content-title>
+                    <p background-color="#f9efff">Śrī Sāraswat-ārati</p>
+                </content-title>
+				<page>
+					<comments><p>jayare jayare jaya gaura-sarasvatī</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Saraswat Arati.m4a</audio>
+					<background image="($APP_BUNDLE)/074.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/075.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/076.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Dainya Prārthanā Gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#f9efff">Dainya Prārthanā Gīti</p>
+                </content-title>
+				<page>
+					<comments><p>kobe śrī chaitanya more-koribena doyā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Kobe Sri Chaitanya.m4a</audio>
+					<background image="($APP_BUNDLE)/077.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/078.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Tulasī-parikramā-gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#f9efff">Śrī Tulasī-parikramā-gīti</p>
+				</content-title>
+				<page>
+					<comments><p>namo namaḥ tulasī mahārāṇī</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Namo Namah Tulasi Maharani.m4a</audio>
+					<background image="($APP_BUNDLE)/079.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/080.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Guru-vaiṣṇava Māhātmya-gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#f9efff">Śrī Guru-vaiṣṇava Māhātmya-gīti</p>
+				</content-title>
+				<page>
+					<comments><p>śrī guru charaṇa-padma, kevala-bhakati-sadma</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sri Guru Charana Padma.m4a</audio>
+					<background image="($APP_BUNDLE)/081.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/082.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Sāvaraṇa-Śrī-Gaura-pāda-padme</p>
+               </title>
+			   <content-title>
+                    <p background-color="#f9efff">Sāvaraṇa-Śrī-Gaura-pāda-padme</p>
+				</content-title>
+				<page>
+					<comments><p>śrī kṛṣṇa chaitanya prabhu doyā koro more</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sri Krishna Chaitanya Prabhu Doya Koro More.m4a</audio>
+					<background image="($APP_BUNDLE)/083.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/084.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Vaiṣṇava-mahimā-gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#f9efff">Śrī Vaiṣṇava-mahimā-gīti</p>
+				</content-title>
+				<page>
+					<comments><p>ohe vaiṣṇava ṭhākura, doyāra sāgara, e dāse koruṇā kori</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Ohe Vaisnava Thakura.m4a</audio>
+					<background image="($APP_BUNDLE)/085.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/086.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Prabhupāda-padma Stavakaḥ</p>
+               </title>
+			   <content-title>
+                    <p background-color="#f9efff">Śrī Śrī Prabhupāda-padma Stavakaḥ</p>
+				</content-title>
+				<page>
+					<comments><p>sujanārvvuda-rādhita-pāda-yugaṁ</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Pranamami Sadha Prabhupada Padam.m4a</audio>
+					<background image="($APP_BUNDLE)/087.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/088.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/089.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/090.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Premadhāma-deva-stotram</p>
+				</title>
+				<content-title>
+                    <p background-color="#f9efff">Śrī Śrī Premadhāma-deva-stotram</p>
+				</content-title>
+				<page>
+					<comments><p>deva-siddha-mukta-yukta-bhakta-vṛnda-vanditaṁ</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Prema Dhama.m4a</audio>
+					<background image="($APP_BUNDLE)/091.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/092.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/093.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/094.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/095.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/096.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/097.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/098.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/099.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/100.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/101.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/102.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/103.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/104.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/105.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/106.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/107.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/108.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/109.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/110.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/111.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/112.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/113.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/114.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/115.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/116.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/117.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/118.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/119.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/120.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/121.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/122.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/123.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/124.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/125.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/126.png"/>
+				</page>
+			</section>
+			</section>
+			
+			
+			<section>
+                <title>
+                    <p hidden="true">Songs to Lord Nityānanda</p>
+                </title>
+				<content-title>
+                    <p background-color="#ffd182">Songs to Lord Nityānanda</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/127_01_stln.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/127_02_stln.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/127_03_stln.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="1" end-scale="1.03"/>
+							<action type="rotation" duration="2" autoreverse = "true" repeats-count="0" start-angle="-2" end-angle="1"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Ājñā-Ṭahal</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffecca">Ājñā-Ṭahal</p>
+				</content-title>
+				<page>
+					<comments><p>nadīyā-godrume nityānanda mahājana</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Nadiya-Godrume.m4a</audio>
+					<background image="($APP_BUNDLE)/128.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Manaḥ-Śikṣā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffecca">Manaḥ-Śikṣā</p>
+				</content-title>
+				<page>
+					<comments><p>nitāi-pada-kamala, koṭī-chandra-suśītala</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Nitai-Pada-Kamala.m4a</audio>
+					<background image="($APP_BUNDLE)/129.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/130.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Sva-Niṣṭha</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffecca">Sva-Niṣṭha</p>
+				</content-title>
+				<page>
+					<comments><p>dhana mora nityānanda pati mora gaurachandra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Dhana Mora Nityananda.m4a</audio>
+					<background image="($APP_BUNDLE)/131.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Nitāi guṇamaṇi āmāra</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffecca">Nitāi guṇamaṇi āmāra</p>
+				</content-title>
+				<page>
+					<comments><p>nitāi guṇamaṇi āmāra nitāi guṇamaṇi</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Nitai Gunamani.m4a</audio>
+					<background image="($APP_BUNDLE)/132.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Akrodha paramānanda</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffecca">Akrodha paramānanda</p>
+				</content-title>
+				<page>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Akrodha Paramananda.m4a</audio>
+					<comments><p>akrodha paramānanda nityānanda rāy</p></comments>
+					<background image="($APP_BUNDLE)/133.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Gaura-Nityānander Doyā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffecca">Śrī Śrī Gaura-Nityānander Doyā</p>
+				</content-title>
+				<page>
+					<comments><p>parama koruṇa, pahu̐ dūi jana</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Parama Koruna Pahu Dui Jana.m4a</audio>
+					<background image="($APP_BUNDLE)/134.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/135.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Dayāl Nitāi Chaitanya</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffecca">Dayāl Nitāi Chaitanya</p>
+				</content-title>
+				<page>
+					<comments><p>dayāl nitāi chaitanya bo’le nāch re āmār man</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Dayal Nitai Chaitanya Bole.m4a</audio>
+					<background image="($APP_BUNDLE)/136.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Songs to Lord Chaitanya</p>
+                </title>
+				<content-title>
+                    <p background-color="#ffe982">Songs to Lord Chaitanya</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/137_01_stlc.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/137_02_stlc.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/137_03_stlc.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="1" end-scale="1.03"/>
+							<action type="rotation" duration="2" autoreverse = "true" repeats-count="0" start-angle="2" end-angle="5"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Sāvaraṇa-Śrī-Gaura-mahimā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Sāvaraṇa-Śrī-Gaura-mahimā</p>
+				</content-title>
+				<page>
+					<comments><p>gaurāṅgera duṭi pada, jār dhana sampada</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gaurangera Duti Pada.m4a</audio>
+					<background image="($APP_BUNDLE)/138.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/139.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Ākṣepa</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Ākṣepa</p>
+				</content-title>
+				<page>
+					<comments><p>gaurā pahu̐ nā bhajiyā mainu</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gaura Pahu Na Bhajiya Mainu.m4a</audio>
+					<background image="($APP_BUNDLE)/140.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Avatāra Sāra</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Avatāra Sāra</p>
+				</content-title>
+				<page>
+					<comments><p>avatāra sāra gorā avatāra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Avatara Sara.m4a</audio>
+					<background image="($APP_BUNDLE)/141.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/142.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Nāma</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Śrī Nāma</p>
+				</content-title>
+				<page>
+					<comments><p>gāy gorā madhur svare</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gay Gaura Madhura Sware.m4a</audio>
+					<background image="($APP_BUNDLE)/143.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Siddhi-lālasā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Siddhi-lālasā</p>
+				</content-title>
+				<page>
+					<comments><p>kobe gaura-vane, suradhunī-taṭe</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Kobe Gaura-Vane.m4a</audio>
+					<background image="($APP_BUNDLE)/144.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/145.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Kali-ghora timire</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Kali-ghora timire</p>
+				</content-title>
+				<page>
+					<comments><p>kali-ghora timire garasala jagajana</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Kali-ghora timire.m4a</audio>
+					<background image="($APP_BUNDLE)/146.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/147.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Jadi Gaura nā ho’to</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Jadi Gaura nā ho’to</p>
+				</content-title>
+				<page>
+					<comments><p>jadi gaura nā ho’to, tobe ki hoito</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jadi Gaura Na Hoto.m4a</audio>
+					<background image="($APP_BUNDLE)/148.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/149.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Emona Gaurāṅga bine nāhi āra</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Emona Gaurāṅga bine nāhi āra</p>
+				</content-title>
+				<page>
+					<comments><p>emona gaurāṅga bine nāhi āra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Emona Gauranga bine nahi ara.m4a</audio>
+					<background image="($APP_BUNDLE)/150.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/151.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Ke jabi ke jabi</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Ke jabi ke jabi</p>
+				</content-title>
+				<page>
+					<comments><p>ke jabi ke jabi bhāi bhava-sindhu pāra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Ke Jabi.m4a</audio>
+					<background image="($APP_BUNDLE)/152.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Bimala hemajini</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Bimala hemajini</p>
+				</content-title>
+				<page>
+					<comments><p>bimala hemajini tanu anupama re!</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Bimala Hemajini.m4a</audio>
+					<background image="($APP_BUNDLE)/153.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/154.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Gaurāṅga bolite hobe</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Gaurāṅga bolite hobe</p>
+				</content-title>
+				<page>
+					<comments><p>gaurāṅga bolite hobe pulaka-śorīra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gauranga bolite hobe.m4a</audio>
+					<background image="($APP_BUNDLE)/155.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Gaurasundarer Avirbhāva Vasare</p>
+               </title>
+			   <content-title>
+                    <p background-color="#fff5c4">Śrī Śrī Gaurasundarer Avirbhāva Vasare</p>
+				</content-title>
+				<page>
+					<comments><p>aruṇa basane sonara sūraja</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Aruna Basane.m4a</audio>
+					<background image="($APP_BUNDLE)/156.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/157.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/158.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Songs to the Vaiṣṇavas</p>
+                </title>
+				<content-title>
+                    <p background-color="#8acfff">Songs to the Vaiṣṇavas</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/159_01_sttv.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/159_02_sttv.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/159_03_sttv.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="1" end-scale="1.03"/>
+							<action type="rotation" duration="2" autoreverse = "true" repeats-count="0" start-angle="-5" end-angle="-3"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Ṭhākura-vaiṣṇava-pada</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e2f3ff">Ṭhākura-vaiṣṇava-pada</p>
+				</content-title>
+				<page>
+					<comments><p>ṭhākura-vaiṣṇava-pada, avanīra susampada</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Thakura-Vaisnava-Pada.m4a</audio>
+					<background image="($APP_BUNDLE)/160.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/161.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Viraha-gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e2f3ff">Viraha-gīti</p>
+				</content-title>
+				<page>
+					<comments><p>je ānilo prema-dhana koruṇā prachura</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Je Anilo Prema Dhana.m4a</audio>
+					<background image="($APP_BUNDLE)/162.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Vaiṣṇava Vijñāpti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e2f3ff">Vaiṣṇava Vijñāpti</p>
+				</content-title>
+				<page>
+					<comments><p>ei-bāro koruṇā koro vaiṣṇava-gosāi</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Ei-Baro Koruna Koro.m4a</audio>
+					<background image="($APP_BUNDLE)/163.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/164.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Prārthanā Lalasāmayi</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e2f3ff">Prārthanā Lalasāmayi</p>
+				</content-title>
+				<page>
+					<comments><p>kṛpa koro’ vaiṣṇava ṭhākura</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Kripa Koro Vaisnava.m4a</audio>
+					<background image="($APP_BUNDLE)/165.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/166.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Various Songs to the Vaiṣṇava Acharyas</p>
+                </title>
+				<content-title>
+                    <p background-color="#ffb185">Various Songs to the Vaiṣṇava Acharyas</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/167_01_vsotva.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/167_02_vsotva.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/167_03_vsotva.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="0.94" end-scale="0.98"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Nāmāṣṭakam 8</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Śrī Nāmāṣṭakam 8</p>
+				</content-title>
+				<page>
+					<comments><p>nārada muni, bājāya vīṇā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Narada Muni.m4a</audio>
+					<background image="($APP_BUNDLE)/168.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/169.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Ṣaḍ-Gosvāmy-aṣṭakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Śrī Śrī Ṣaḍ-Gosvāmy-aṣṭakam</p>
+				</content-title>
+				<page>
+					<comments><p>kṛṣṇotkīrttana-gāna-narttana-parau</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sat Goswami Astaka.m4a</audio>
+					<background image="($APP_BUNDLE)/170.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/171.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/172.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/173.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Nāmāṣṭakam 7</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Śrī Nāmāṣṭakam 7</p>
+				</content-title>
+				<page>
+					<comments><p>ohe harinām, tava mahimā apāra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Ohe Harinam Tava.m4a</audio>
+					<background image="($APP_BUNDLE)/174.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/175.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Ki-rūpe pāibo sevā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Ki-rūpe pāibo sevā </p>
+				</content-title>
+				<page>
+					<comments><p>ki-rūpe pāibo sevā mui durāchāra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Ki-rupe paibo seva.m4a</audio>
+					<background image="($APP_BUNDLE)/176.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Bhajahu̐ Re Mana</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Bhajahu̐ Re Mana</p>
+				</content-title>
+				<page>
+					<comments><p>bhajahu̐ re mana śrī-nanda-nandana</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Bhajahu Re Mana.m4a</audio>
+					<background image="($APP_BUNDLE)/177.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/178.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Mānasa Deho Geho</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Mānasa Deho Geho</p>
+				</content-title>
+				<page>
+					<comments><p>mānasa, deho, geho, jo kichū mora</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Manasa Deho Geho.m4a</audio>
+					<background image="($APP_BUNDLE)/179.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/180.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">E ghora saṁsāre</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">E ghora saṁsāre</p>
+				</content-title>
+				<page>
+					<comments><p>e ghora saṁsāre, poḍiyā mānava</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/E Ghora Samsare.m4a</audio>
+					<background image="($APP_BUNDLE)/181.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Vaiṣṇava Ke?— “Who is a Real Vaiṣṇava?”</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Vaiṣṇava Ke?— “Who is a Real Vaiṣṇava?”</p>
+				</content-title>
+				<page>
+					<comments><p>duṣṭa mana! tumi kisera vaiṣṇava?</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Dusta Mana Tumi Kisera Vaisnava.m4a</audio>
+					<background image="($APP_BUNDLE)/182.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/183.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/184.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/185.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/186.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/187.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Dainyātmikā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Dainyātmikā</p>
+				</content-title>
+				<page>
+					<comments><p>emona durmati, saṁsāra bhitore</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Emona Durmati.m4a</audio>
+					<background image="($APP_BUNDLE)/188.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/189.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Goptṛtve Varaṇa</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Goptṛtve Varaṇa</p>
+				</content-title>
+				<page>
+					<comments><p>ki jāni ki bole, tomāra dhāmete</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Ki Jani Ki Bole.m4a</audio>
+					<background image="($APP_BUNDLE)/190.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/191.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Dainya</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Dainya</p>
+				</content-title>
+				<page>
+					<comments><p>bhuliyā tomāre, saṁsāre āsiyā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Bhuliya Tomare.m4a</audio>
+					<background image="($APP_BUNDLE)/192.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/193.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Bhajan-Lālasā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Bhajan-Lālasā</p>
+				</content-title>
+				<page>
+					<comments><p>prapañche poḍiyā, agati hoiyā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Prapanche Podiya.m4a</audio>
+					<background image="($APP_BUNDLE)/194.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/195.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Iṣṭa-deve Vijñāpti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Iṣṭa-deve Vijñāpti</p>
+				</content-title>
+				<page>
+					<comments><p>hari hari! biphole janama goyāinu</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Hari Hari Biphole.m4a</audio>
+					<background image="($APP_BUNDLE)/196.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/197.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Ātma-nivedana</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Ātma-nivedana</p>
+				</content-title>
+				<page>
+					<comments><p>ātma-nivedana, tuyā pade kori</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Atma Nivedana.m4a</audio>
+					<background image="($APP_BUNDLE)/198.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/199.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Āmāra jīvana</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Āmāra jīvana</p>
+				</content-title>
+				<page>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Amara Jivana.m4a</audio>
+					<comments><p>āmāra jīvana, sadā pāpe rata</p></comments>
+					<background image="($APP_BUNDLE)/200.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/201.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Tumi sarveśvareśvara</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Tumi sarveśvareśvara</p>
+				</content-title>
+				<page>
+					<comments><p>tumi sarvveśvareśvara, brajendra-kumāra!</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Tumi Sarvvesvaresvara.m4a</audio>
+					<background image="($APP_BUNDLE)/202.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/203.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Sarvasva tomāra</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Sarvasva tomāra</p>
+				</content-title>
+				<page>
+					<comments><p>sarvasva tomāra, charaṇe sa̐piyā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sarvasva Tomara.m4a</audio>
+					<background image="($APP_BUNDLE)/204.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/205.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Tātala Saikate</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Tātala Saikate</p>
+				</content-title>
+				<page>
+					<comments><p>tātala saikate bāri bindu-sama</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Tatala Saikate.m4a</audio>
+					<background image="($APP_BUNDLE)/206.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/207.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Dainya O Prapatti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Dainya O Prapatti</p>
+				</content-title>
+				<page>
+					<comments><p>hari he dayāla mora jaya rādhā-nātha</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Hari He Doyala Mora.m4a</audio>
+					<background image="($APP_BUNDLE)/208.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Ātma-samarpaṇe</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Ātma-samarpaṇe</p>
+				</content-title>
+				<page>
+					<comments><p>ātma-samarpaṇe gelā abhimāna</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Atma Samarpane.m4a</audio>
+					<background image="($APP_BUNDLE)/209.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/210.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Kobe ho’be bolo</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Kobe ho’be bolo</p>
+				</content-title>
+				<page>
+					<comments><p>kobe ho’be bolo se-dina āmār</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Kobe Hobe Bolo.m4a</audio>
+					<background image="($APP_BUNDLE)/211.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/212.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/213.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Nivedana</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Nivedana</p>
+				</content-title>
+				<page>
+					<comments><p>gopīnāth, mama nivedana śuno</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gopinath Mama Nivedana Suno.m4a</audio>
+					<background image="($APP_BUNDLE)/214.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/215.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Nivedana (part 2)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Nivedana (part 2)</p>
+				</content-title>
+				<page>
+					<comments><p>gopīnāth, ghuchāo saṁsāra-jvālā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gopinath Ghuchao Samsara-Jvala.m4a</audio>
+					<background image="($APP_BUNDLE)/216.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/217.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Nivedana (part 3)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Nivedana (part 3)</p>
+				</content-title>
+				<page>
+					<comments><p>gopīnāth, āmāra upāya nāi</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gopinath Amara Upaya Nai.m4a</audio>
+					<background image="($APP_BUNDLE)/218.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/219.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī-Rūpa-Mañjarī-pada</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Śrī-Rūpa-Mañjarī-pada</p>
+				</content-title>
+				<page>
+					<comments><p>śrī-rūpa-mañjarī-pada, sei mora sampada</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sri Rupa Manjari Pada.m4a</audio>
+					<background image="($APP_BUNDLE)/220.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/221.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/222.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Durlabha mānava-janma</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Durlabha mānava-janma</p>
+				</content-title>
+				<page>
+					<comments><p>durlabha mānava-janma labhiyā saṁsāre</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Durlabha manava-janma.m4a</audio>
+					<background image="($APP_BUNDLE)/223.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/224.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/225.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Anya-abhilāṣa chāḍi</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffebe0">Anya-abhilāṣa chāḍi</p>
+				</content-title>
+				<page>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Anya-Abhilasa.m4a</audio>
+					<comments><p>anya-abhilāsa chāḍi jñāna karma parihari</p></comments>
+					<background image="($APP_BUNDLE)/226.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/227.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/228.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/229.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/230.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/231.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Śrī Śikṣāṣṭakam by Śrīla Bhaktivinoda Ṭhākur</p>
+                </title>
+				<content-title>
+                    <p background-color="#c7bcff">Śrī Śikṣāṣṭakam by Śrīla Bhaktivinoda Ṭhākur</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/232_01_ssbsbt.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/232_02_ssbsbt.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/232_03_ssbsbt.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="0.94" end-scale="0.98"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 1)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 1)</p>
+				</content-title>
+				<page>
+					<comments><p>cheto-darpaṇa-mārjanaṁ bhava-mahā-dāvāgni-nirvāpaṇaṁ</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Pita-Barana Kali-Pavana Gora.m4a</audio>
+					<background image="($APP_BUNDLE)/233.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/234.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 2)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 2)</p>
+				</content-title>
+				<page>
+					<comments><p>nāmnām akāri bahudhā nija-sarvva-śaktis</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Tuhu Doya Sagara.m4a</audio>
+					<background image="($APP_BUNDLE)/235.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/236.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 3)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 3)</p>
+				</content-title>
+				<page>
+					<comments><p>tṛṇād api sunīchena</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sri Krishna Kirttane Jodi Manasa Tohara.m4a</audio>
+					<background image="($APP_BUNDLE)/237.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/238.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 4)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 4)</p>
+				</content-title>
+				<page>
+					<comments><p>na dhanaṁ na janaṁ na sundarīṁ</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Prabhu Tava Pada-Juge.m4a</audio>
+					<background image="($APP_BUNDLE)/239.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/240.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 5)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 5)</p>
+				</content-title>
+				<page>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Anadi Karama Phole.m4a</audio>
+					<comments><p>ayi nanda-tanuja kiṅkaraṁ</p></comments>
+					<background image="($APP_BUNDLE)/241.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/242.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 6)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 6)</p>
+				</content-title>
+				<page>
+					<comments><p>nayanaṁ galad-aśru-dhārayā</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Aparadha Phole Mama.m4a</audio>
+					<background image="($APP_BUNDLE)/243.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/244.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 7a)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 7a)</p>
+				</content-title>
+				<page>
+					<comments><p>yugāyitaṁ nimeṣeṇa</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gaite Gaite Nama.m4a</audio>
+					<background image="($APP_BUNDLE)/245.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/246.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 7b)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 7b)</p>
+				</content-title>
+				<page>
+					<comments><p>gāite govinda-nām, upajilo bhāva-grām</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Gaite Govinda-Nam.m4a</audio>
+					<background image="($APP_BUNDLE)/247.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 7c)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 7c)</p>
+				</content-title>
+				<page>
+					<comments><p>sakhi go kemote dhoribo parāṇ</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sakhi Go Kemote.m4a</audio>
+					<background image="($APP_BUNDLE)/248.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 8a)</p>
+               </title>
+                <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 8a)</p>
+				</content-title>
+				<page>
+					<comments><p>āśliṣya vā pāda-ratāṁ pinaṣṭu mām</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Bondhu Gon.m4a</audio>
+					<background image="($APP_BUNDLE)/249.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/250.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śikṣāṣṭakam (Song 8b)</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ece8ff">Śrī Śikṣāṣṭakam (Song 8b)</p>
+				</content-title>
+				<page>
+					<comments><p>yoga-pīṭhopari-sthita, aṣṭa-sakhī-subeṣṭita</p></comments>
+					<background image="($APP_BUNDLE)/251.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/252.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Songs to Śrīmatī Rādhārānī</p>
+                </title>
+				<content-title>
+                    <p background-color="#ffcefb">Songs to Śrīmatī Rādhārānī</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/253_01_stsr.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/253_02_stsr.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/253_03_stsr.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="0.94" end-scale="0.98"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Rādhāṣṭaka</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffedfe">Śrī Rādhāṣṭaka</p>
+				</content-title>
+				<page>
+					<comments><p>rādhikā-charaṇa-padma, sakala śreyera sadma</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Radhika Charana Padma.m4a</audio>
+					<background image="($APP_BUNDLE)/254.png"/>
+				</page>
+				<page>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Viraja Pare Suddha.m4a</audio>
+					<background image="($APP_BUNDLE)/255.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/256.png"/>
+				</page>
+				<page>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Radha Bhajane Jodi.m4a</audio>
+					<background image="($APP_BUNDLE)/257.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/258.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Rādhā-kuṇḍataṭa-kuñja-kuṭīra</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffedfe">Rādhā-kuṇḍataṭa-kuñja-kuṭīra</p>
+				</content-title>
+				<page>
+					<comments><p>rādhākuṇḍataṭa-kuñjakuṭīra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Radha-kundatata.m4a</audio>
+					<background image="($APP_BUNDLE)/259.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/260.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Rādhikā-stava</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffedfe">Śrī Rādhikā-stava</p>
+				</content-title>
+				<page>
+					<comments><p>rādhe jaya jaya mādhava-dayite</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Radhe Jaya Jaya.m4a</audio>
+					<background image="($APP_BUNDLE)/261.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Songs to Śrī Krishna</p>
+                </title>
+				<content-title>
+                    <p background-color="#9dbee6">Songs to Śrī Krishna</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/262_01_stsk.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/262_02_stsk.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/262_03_stsk.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="0.94" end-scale="0.98"/>
+							<action type="rotation" duration="2" autoreverse = "true" repeats-count="0" start-angle="-5" end-angle="-3"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">He Deva bhavantaṁ vande</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">He Deva bhavantaṁ vande</p>
+				</content-title>
+				<page>
+					<comments><p>he deva bhavantaṁ vande</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/He Deva Bhavantam.m4a</audio>
+					<background image="($APP_BUNDLE)/263.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Jaya Rādhā-Mādhava</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Jaya Rādhā-Mādhava</p>
+				</content-title>
+				<page>
+					<comments><p>jaya rādhā-mādhava jaya kuñja-bihārī</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Radha Madhava.m4a</audio>
+					<background image="($APP_BUNDLE)/264.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Mayura mukuṭa</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Mayura mukuṭa</p>
+				</content-title>
+				<page>
+					<comments><p>mayura-mukuṭa pītāmbara-dhārī</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Mayura-Mukuta.m4a</audio>
+					<background image="($APP_BUNDLE)/265.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Jugala-ārati</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Śrī Jugala-ārati</p>
+				</content-title>
+				<page>
+					<comments><p>jaya jaya rādhā-kṛṣṇa jugala-milan</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Jaya Radha-Krishna.m4a</audio>
+					<background image="($APP_BUNDLE)/266.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/267.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Sakhi-vṛnde Vijñaptiḥ</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Sakhi-vṛnde Vijñaptiḥ</p>
+				</content-title>
+				<page>
+					<comments><p>rādhā-kṛṣṇa prāṇa mora jugala-kiśora</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Radha-Krishna prana mora.m4a</audio>
+					<background image="($APP_BUNDLE)/268.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/269.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Braja-dhāma-mahimāmṛta</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Śrī Braja-dhāma-mahimāmṛta</p>
+				</content-title>
+				<page>
+					<comments><p>jaya rādhe, jaya kṛṣṇa, jaya vṛndāvan</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Radhe Jaya Krsna.m4a</audio>
+					<background image="($APP_BUNDLE)/270.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/271.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/272.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Rūpa Kīrttan</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Rūpa Kīrttan</p>
+				</content-title>
+				<page>
+					<comments><p>janama saphala tā’ra, kṛṣṇa-daraśana jā’ra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Janama Saphala Tara.m4a</audio>
+					<background image="($APP_BUNDLE)/273.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/274.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Guṇa-Kīrttan</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Guṇa-Kīrttan</p>
+				</content-title>
+				<page>
+					<comments><p>śuno, he rasika jon kṛṣṇa guṇa agaṇon</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Guna-Kirttan.m4a</audio>
+					<background image="($APP_BUNDLE)/275.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/276.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Jaya Jaśodā-Nandana Kṛṣṇa</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Jaya Jaśodā-Nandana Kṛṣṇa</p>
+				</content-title>
+				<page>
+					<comments><p>jaya jaśodā-nandana kṛṣṇa gopāla govinda</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Jasoda-Nandana Krishna.m4a</audio>
+					<background image="($APP_BUNDLE)/277.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrita Kamalā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d9dfe5">Śrita Kamalā</p>
+				</content-title>
+				<page>
+					<comments><p>śrita-kamalā-kucha-maṇḍala dhṛta-kuṇḍala he</p></comments>
+					<background image="($APP_BUNDLE)/278.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/279.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Special Songs for Festival Days</p>
+                </title>
+				<content-title>
+                    <p background-color="#89ffcc">Special Songs for Festival Days</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/280_01_ssffd.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/280_02_ssffd.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/280_03_ssffd.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="0.94" end-scale="0.98"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Āchāryya-charaṇa-vandana</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Āchāryya-charaṇa-vandana</p>
+				</content-title>
+				<page>
+					<comments><p>jaya śrīla mahārāja charaṇāravinda</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jaya Srila Maharaja Charanaravindam.m4a</audio>
+					<background image="($APP_BUNDLE)/281.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/282.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/283.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Guru-paramparā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrī Guru-paramparā</p>
+				</content-title>
+				<page>
+					<comments><p>kṛṣṇa hoite chatur-mukha, hon kṛṣṇa sevonmukha</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Krishna hoite Chaturmukha.m4a</audio>
+					<background image="($APP_BUNDLE)/284.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/285.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/286.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/287.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Dayita Dās Praṇati Pañchakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrī Dayita Dās Praṇati Pañchakam</p>
+				</content-title>
+				<page>
+					<comments><p>bhayabhañjana jayaśaṁsana-karuṇāyata-nayanam</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Bhayabhanjana.m4a</audio>
+					<background image="($APP_BUNDLE)/288.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/289.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/290.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Āchāryya vandana</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Āchāryya vandana</p>
+				</content-title>
+				<page>
+					<comments><p>jayare jayare jaya paramahaṁsa mahāśay</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Jayare Jayare Jaya Paramahamsa.m4a</audio>
+					<background image="($APP_BUNDLE)/291.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/292.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/293.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/294.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/295.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/296.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Daśāvatār-stotram</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrī Daśāvatār-stotram</p>
+				</content-title>
+				<page>
+					<comments><p>pralaya-payodhi-jale dhṛtavān asi vedaṁ</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Pralaya Payodhi Jale.m4a</audio>
+					<background image="($APP_BUNDLE)/297.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/298.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/299.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/300.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Nṛsiṁha Praṇām</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrī Nṛsiṁha Praṇām</p>
+				</content-title>
+				<page>
+					<comments><p>namas te narasiṁhāya prahlādāhlāda-dāyine</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Namas Te Narasimhaya.m4a</audio>
+					<background image="($APP_BUNDLE)/301.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Dāmodarāṣṭakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrī Śrī Dāmodarāṣṭakam</p>
+				</content-title>
+				<page>
+					<comments><p>namāmīśvaraṁ sachchidānanda rūpaṁ</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sri Damodarastakam.m4a</audio>
+					<background image="($APP_BUNDLE)/302.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/303.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/304.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrīman Mahāprabhur śata-nāma</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrīman Mahāprabhur śata-nāma</p>
+				</content-title>
+				<page>
+					<comments><p>nadīyā-nagare nitāi neche neche gāy re</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Nadiya-Nagare Nitai.m4a</audio>
+					<background image="($APP_BUNDLE)/305.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/306.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/307.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/308.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/309.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Kṛṣṇera Viṁsottara-śata-nāma</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrī Kṛṣṇera Viṁsottara-śata-nāma</p>
+				</content-title>
+				<page>
+					<comments><p>nagare nagare gorā gāy</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Nagare Nagare Gora Gay.m4a</audio>
+					<background image="($APP_BUNDLE)/310.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/311.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/312.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/313.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/314.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Hari-vāsara-gīti</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrī Hari-vāsara-gīti</p>
+				</content-title>
+				<page>
+					<comments><p>śrī hari-vāsare hari-kīrttana-vidhāna</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Sri Hari Vasara.m4a</audio>
+					<background image="($APP_BUNDLE)/315.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/316.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/317.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śuddha-bhakata</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śuddha-bhakata</p>
+				</content-title>
+				<page>
+					<comments><p>śuddha-bhakata-charaṇa-reṇu, bhajana-anukūla</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Suddha Bhakata Charana Renu.m4a</audio>
+					<background image="($APP_BUNDLE)/318.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/319.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Gaura Purṇīmā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Śrī Gaura Purṇīmā</p>
+				</content-title>
+				<page>
+					<comments><p>chaudda-śata sāta-śake māsa je phālgun</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Chaudda-Sata Sata-Sake.m4a</audio>
+					<background image="($APP_BUNDLE)/320.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/321.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/322.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/323.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/324.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/325.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/326.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/327.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/328.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Prabhu kohe</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">Prabhu kohe</p>
+				</content-title>
+				<page>
+					<comments><p>prabhu kohe—kohilaṅ ei mahāmantra</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Prabhu Kohe-Kohilan.m4a</audio>
+					<background image="($APP_BUNDLE)/329.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">After parikramā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#d0ffeb">After parikramā</p>
+				</content-title>
+				<page>
+					<comments><p>nagara bhramiyā āmāra gaura elo ghore</p></comments>
+                    <audio autoplay="false" loop="false">($APP_BUNDLE)/Nagara Bhramiya Amara.m4a</audio>
+					<background image="($APP_BUNDLE)/330.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Compositions by Śrīla Srīdhar Mahārāj</p>
+                </title>
+				<content-title>
+                    <p background-color="#bfbbff">Compositions by Śrīla Srīdhar Mahārāj</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/331_01_cbssm.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/331_02_cbssm.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/331_03_cbssm.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="0.94" end-scale="0.98"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Śrīmad Bhaktivinoda-viraha Daśakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e0deff">Śrīmad Bhaktivinoda-viraha Daśakam</p>
+				</content-title>
+				<page>
+					<comments><p>hā hā bhaktivinoda-ṭhakkura! guroḥ!</p></comments>
+					<background image="($APP_BUNDLE)/332.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/333.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/334.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/335.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/336.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrīmad Gaura-Kiśora-namaskāra Daśakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e0deff">Śrī Śrīmad Gaura-Kiśora-namaskāra Daśakam</p>
+				</content-title>
+				<page>
+					<comments><p>guror guro me paramo gurus tvaṁ</p></comments>
+					<background image="($APP_BUNDLE)/337.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/338.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/339.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Śrī Dayita Dās Daśakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e0deff">Śrī Śrī Dayita Dās Daśakam</p>
+				</content-title>
+				<page>
+					<comments><p>nīte yasmin niśānte nayana-jala-bharaiḥ</p></comments>
+					<background image="($APP_BUNDLE)/340.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/341.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/342.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/343.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/344.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrīmad Rūpa-pada-rajaḥ Prārthanā Daśakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e0deff">Śrīmad Rūpa-pada-rajaḥ Prārthanā Daśakam</p>
+				</content-title>
+				<page>
+					<comments><p>śrīmach-chaitanyapādau chara-kamalayugau</p></comments>
+					<background image="($APP_BUNDLE)/345.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/346.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/347.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/348.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/349.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrīman Nityānanda Dvādaśakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#e0deff">Śrīman Nityānanda Dvādaśakam</p>
+				</content-title>
+				<page>
+					<comments><p>yo ’nanto ’nanta-vaktrair niravadhi</p></comments>
+					<background image="($APP_BUNDLE)/350.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/351.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/352.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/353.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/354.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/355.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/356.png"/>
+				</page>
+			</section>
+			</section>
+			
+			<section>
+                <title>
+                    <p hidden="true">Compositions by Śrīla Govinda Mahārāj</p>
+                </title>
+				<content-title>
+                    <p background-color="#ffd4a6">Compositions by Śrīla Govinda Mahārāj</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/357_01_cbsgm.png">
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/spiral.png</target>
+						<actions>
+							<action type="rotation" duration="8" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                        </actions>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/357_02_cbsgm.png</target>
+					</animation>
+					<animation center="{384, 512}">
+						<target type="image">($APP_BUNDLE)/357_03_cbsgm.png</target>
+						<actions>
+							<action type="scale" duration="2" autoreverse = "true" repeats-count="0" start-scale="0.94" end-scale="0.98"/>
+						</actions>
+					</animation>
+					</background>
+				</page>
+			<section>
+				<title>
+                   <p hidden="true">Praṇām Mantra</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Praṇām Mantra</p>
+				</content-title>
+				<page>
+					<comments><p>śrī-svarūpa-rāya-rūpa jīva-bhāva-sambharaṁ</p></comments>
+					<background image="($APP_BUNDLE)/358.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/359.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Praṇati Daśakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Praṇati Daśakam</p>
+				</content-title>
+				<page>
+					<comments><p>naumi śrī-guru-pādābjaṁ, yatirājeśvareśvaram</p></comments>
+					<background image="($APP_BUNDLE)/360.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/361.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/362.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Praṇām Mantra</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Praṇām Mantra</p>
+				</content-title>
+				<page>
+					<comments><p>prerakaṁ prāchya pāśchātya</p></comments>
+					<background image="($APP_BUNDLE)/363.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Govinda Kuṇḍa Māhātmya</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Śrī Govinda Kuṇḍa Māhātmya</p>
+				</content-title>
+				<page>
+					<comments><p>atha govardhane ramye surabhi gauḥ samudrajā</p></comments>
+					<background image="($APP_BUNDLE)/364.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/365.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Gaṅgadhara Sadāśiva Praṇām-Mantram</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Gaṅgadhara Sadāśiva Praṇām-Mantram</p>
+				</content-title>
+				<page>
+					<comments><p>devādidevam-ahibhūṣaṇam-indukāśaṁ</p></comments>
+					<background image="($APP_BUNDLE)/366.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Guru-Praśastiḥ</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Śrī Guru-Praśastiḥ</p>
+				</content-title>
+				<page>
+					<comments><p>bhāgyādhīśa! tvadīyo bimala-sukhamayaḥ</p></comments>
+					<background image="($APP_BUNDLE)/367.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/368.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/369.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/370.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Praṇati-Pañchakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Praṇati-Pañchakam</p>
+				</content-title>
+				<page>
+					<comments><p>nava-nalina-gañjitaṁ kusuma-dala-maṇḍitaṁ</p></comments>
+					<background image="($APP_BUNDLE)/371.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/372.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Śrī Gaurahari-Kusuma-Stavāṣṭakam</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Śrī Gaurahari-Kusuma-Stavāṣṭakam</p>
+				</content-title>
+				<page>
+					<comments><p>guru-rūpa-virājita-nanda-sutaṁ</p></comments>
+					<background image="($APP_BUNDLE)/373.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/374.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/375.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Māyā Duratyayā</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Māyā Duratyayā</p>
+				</content-title>
+				<page>
+					<comments><p>mahā-bhaya śaṅkula e bhava taraṅginī</p></comments>
+					<background image="($APP_BUNDLE)/376.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/377.png"/>
+				</page>
+			</section>
+			<section>
+				<title>
+                   <p hidden="true">Praṇām Mantra</p>
+               </title>
+			   <content-title>
+                    <p background-color="#ffe9d1">Praṇām Mantra</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/378.png"/>
+				</page>
+			</section>
+			</section>
+			
+			
+			<section>
+				<title>
+                   <p hidden="true">Programme</p>
+               </title>
+			   <content-title>
+                    <p background-color="#beffbc">Programme</p>
+				</content-title>
+				
+				<page>
+				<controls>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>333</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>84</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>369</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>19</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>453</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>26</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>537</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>33</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>621</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>36</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>705</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>40</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>741</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>42</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>777</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>44</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>861</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>46</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>897</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>47</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>933</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>49</arg>
+				</control>
+				</controls>
+					<background image="($APP_BUNDLE)/379.png"/>
+				</page>
+				
+				<page>
+				<controls>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>93</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>14</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>177</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>11</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>213</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>15</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>633</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>50</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>669</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>53</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>705</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>55</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>741</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>57</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>777</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>60</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>885</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>62</arg>
+				</control>
+				</controls>
+					<background image="($APP_BUNDLE)/380.png"/>
+				</page>
+				
+				<page>
+				<controls>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>165</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>65</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>249</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>33</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>333</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>36</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>417</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>42</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>453</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>44</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>561</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>68</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>597</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>69</arg>
+				</control>
+				</controls>
+					<background image="($APP_BUNDLE)/381.png"/>
+				</page>
+				
+				<page>
+				<controls>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>165</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>84</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>249</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>26</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>333</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>33</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>417</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>36</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>501</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>71</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>537</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>73</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>621</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>76</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>705</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>14</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>789</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>78</arg>
+				</control>
+				</controls>
+					<background image="($APP_BUNDLE)/382.png"/>
+				</page>
+				
+				<page>
+				<controls>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>117</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>11</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>153</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>15</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>453</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>80</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>489</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>82</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>525</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>84</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>609</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>86</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>789</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>62</arg>
+				</control>
+				</controls>
+					<background image="($APP_BUNDLE)/383.png"/>
+				</page>
+				
+				<page>
+				<controls>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>213</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>314</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>297</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>317</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>405</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>283</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>513</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>162</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>597</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>161</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>705</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>155</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>741</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>319</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>346</x>
+					<y>849</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>296</arg>
+				</control>
+				</controls>
+					<background image="($APP_BUNDLE)/384.png"/>
+				</page>
+				
+				<page>
+				<controls>
+				<control type="page-link">
+				<center>
+					<x>380</x>
+					<y>141</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>304</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>380</x>
+					<y>177</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>309</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>380</x>
+					<y>213</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>301</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>380</x>
+					<y>249</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>260</arg>
+				</control>
+				<control type="page-link">
+				<center>
+					<x>380</x>
+					<y>417</y>
+				</center>
+				<image>($APP_BUNDLE)/p.png</image>
+				<highlighted-image>($APP_BUNDLE)/p_h.png</highlighted-image>
+				<arg>232</arg>
+				</control>
+				</controls>
+					<background image="($APP_BUNDLE)/385.png"/>
+				</page>
+			</section>
+			
+			
+			<section>
+				<title>
+                   <p hidden="true">International Centres</p>
+               </title>
+			   <content-title>
+                    <p background-color="#beffbc">International Centres</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/386.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/387.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/388.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/389.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/390.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/391.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/392.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/393.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/394.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/395.png"/>
+				</page>
+				<page>
+					<background image="($APP_BUNDLE)/396.png"/>
+				</page>
+			</section>
+			
+			<section>
+				<title>
+                   <p hidden="true">Description</p>
+               </title>
+			   <content-title>
+                    <p background-color="#beffbc">Description</p>
+				</content-title>
+				<page>
+					<background image="($APP_BUNDLE)/397.png"/>
+				</page>
+			</section>
+        </section>
+	</body>
+</book>
