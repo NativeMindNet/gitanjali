@@ -6,14 +6,22 @@ import 'legacy_asset_resolver.dart';
 import 'xml_helpers.dart';
 
 class BookRepository {
-  static const String bookAsset = 'assets/legacy/example.xml';
-
-  Future<Book> loadBook() async {
+  Future<Book> loadBook({required BookLanguage language}) async {
+    final bookAsset = _bookAssetFor(language);
     final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
     final resolver = LegacyAssetResolver(manifest.listAssets());
     final source = await rootBundle.loadString(bookAsset);
 
     return parseBookDocument(XmlDocument.parse(source), resolver);
+  }
+
+  static String _bookAssetFor(BookLanguage language) {
+    switch (language) {
+      case BookLanguage.eng:
+        return 'assets/legacy/example.xml';
+      case BookLanguage.ru:
+        return 'assets/legacy/example_ru.xml';
+    }
   }
 
   Book parseBookDocument(XmlDocument document, LegacyAssetResolver resolver) {

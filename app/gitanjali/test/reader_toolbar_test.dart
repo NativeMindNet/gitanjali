@@ -18,7 +18,7 @@ void main() {
       audioService: _FakeAudioService(),
     );
     addTearDown(controller.dispose);
-    await controller.initialize();
+    await controller.initialize(bookLanguage: BookLanguage.eng);
 
     await tester.pumpWidget(
       MaterialApp(
@@ -46,7 +46,7 @@ void main() {
 
 class _FakeBookRepository extends BookRepository {
   @override
-  Future<Book> loadBook() async => _sampleBook;
+  Future<Book> loadBook({required BookLanguage language}) async => _sampleBook;
 }
 
 class _FakeReaderStore extends ReaderStore {

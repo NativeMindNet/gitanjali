@@ -62,7 +62,7 @@ class ReaderController extends ChangeNotifier {
         .toList();
   }
 
-  Future<void> initialize({bool forceReload = false}) async {
+  Future<void> initialize({required BookLanguage bookLanguage, bool forceReload = false}) async {
     if (book != null && !forceReload) {
       return;
     }
@@ -71,7 +71,7 @@ class ReaderController extends ChangeNotifier {
     notifyListeners();
 
     try {
-      final loadedBook = await repository.loadBook();
+      final loadedBook = await repository.loadBook(language: bookLanguage);
       book = loadedBook;
       bookmarks = await store.loadBookmarks(loadedBook.id);
       currentPageIndex = await store.loadPageIndex(loadedBook.id, loadedBook.pages.length);

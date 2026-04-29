@@ -37,7 +37,7 @@ void main() {
       store.loadedBookmarks = {1};
       store.loadedPageIndex = 1;
 
-      await controller.initialize();
+      await controller.initialize(bookLanguage: BookLanguage.eng);
 
       expect(controller.book, isNotNull);
       expect(controller.totalPages, 2);
@@ -46,7 +46,7 @@ void main() {
     });
 
     test('navigation changes page and persists index', () async {
-      await controller.initialize();
+      await controller.initialize(bookLanguage: BookLanguage.eng);
       expect(controller.currentPageIndex, 0);
 
       await controller.nextPage();
@@ -62,7 +62,7 @@ void main() {
     });
 
     test('toggleBookmark adds/removes current page and persists', () async {
-      await controller.initialize();
+      await controller.initialize(bookLanguage: BookLanguage.eng);
       expect(controller.bookmarks, isEmpty);
 
       await controller.toggleBookmark();
@@ -75,7 +75,7 @@ void main() {
     });
 
     test('search returns matches by selected scope', () async {
-      await controller.initialize();
+      await controller.initialize(bookLanguage: BookLanguage.eng);
 
       final contentResults = controller.search('Hari', SearchScope.content);
       expect(contentResults.map((e) => e.pageIndex), [0]);
@@ -90,7 +90,7 @@ void main() {
     test('initialize triggers autoplay on restored page with autoplay audio', () async {
       store.loadedPageIndex = 1;
 
-      await controller.initialize();
+      await controller.initialize(bookLanguage: BookLanguage.eng);
 
       expect(audioService.playCalls, 1);
       expect(audioService.currentAsset, 'assets/legacy/Sounds/chapter-two.m4a');
@@ -98,7 +98,7 @@ void main() {
     });
 
     test('goToPage triggers autoplay when target page has autoplay audio', () async {
-      await controller.initialize();
+      await controller.initialize(bookLanguage: BookLanguage.eng);
       expect(audioService.playCalls, 0);
 
       await controller.goToPage(1);
@@ -109,7 +109,7 @@ void main() {
 
     test('toggleCurrentPageAudio stops and replays current page audio', () async {
       store.loadedPageIndex = 1;
-      await controller.initialize();
+      await controller.initialize(bookLanguage: BookLanguage.eng);
       expect(audioService.playCalls, 1);
       expect(audioService.isPlaying, isTrue);
 
@@ -126,7 +126,7 @@ void main() {
 
 class _FakeBookRepository extends BookRepository {
   @override
-  Future<Book> loadBook() async => _sampleBook;
+  Future<Book> loadBook({required BookLanguage language}) async => _sampleBook;
 }
 
 class _FakeReaderStore extends ReaderStore {

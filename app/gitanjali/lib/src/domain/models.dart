@@ -179,6 +179,11 @@ enum ControlType {
   unknown,
 }
 
+enum BookLanguage {
+  eng,
+  ru,
+}
+
 extension ControlTypeX on ControlType {
   static ControlType fromXml(String? value) {
     switch (value) {

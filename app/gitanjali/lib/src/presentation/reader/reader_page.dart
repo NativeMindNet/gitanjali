@@ -5,10 +5,13 @@ import 'package:flutter/material.dart';
 import '../../data/audio_service.dart';
 import '../../data/book_repository.dart';
 import '../../data/reader_store.dart';
+import '../../domain/models.dart';
 import 'reader_controller.dart';
 import 'widgets/background_layer.dart';
 import 'widgets/reader_toolbar.dart';
-import 'widgets/page_link_button.dart';
+import 'widgets/current_page_audio_card.dart';
+import 'widgets/navigate_links_panel.dart';
+import 'widgets/page_comments_card.dart';
 
 class ReaderPage extends StatefulWidget {
   const ReaderPage({super.key});
@@ -19,6 +22,8 @@ class ReaderPage extends StatefulWidget {
 
 class _ReaderPageState extends State<ReaderPage> {
   late final ReaderController _controller;
+  BookLanguage _bookLanguage = BookLanguage.eng;
+  bool _initialized = false;
 
   @override
   void initState() {
@@ -28,7 +33,26 @@ class _ReaderPageState extends State<ReaderPage> {
       store: ReaderStore(),
       audioService: AudioService(),
     );
-    unawaited(_controller.initialize());
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    final languageCode = Localizations.localeOf(context).languageCode.toLowerCase();
+    final nextLanguage = languageCode.startsWith('ru') ? BookLanguage.ru : BookLanguage.eng;
+
+    if (!_initialized) {
+      _initialized = true;
+      _bookLanguage = nextLanguage;
+      unawaited(_controller.initialize(bookLanguage: _bookLanguage));
+      return;
+    }
+
+    if (nextLanguage != _bookLanguage) {
+      _bookLanguage = nextLanguage;
+      unawaited(_controller.initialize(bookLanguage: _bookLanguage, forceReload: true));
+    }
   }
 
   @override
@@ -81,7 +105,7 @@ class _ReaderPageState extends State<ReaderPage> {
               ),
               const SizedBox(height: 12),
               FilledButton(
-                onPressed: () => _controller.initialize(forceReload: true),
+                onPressed: () => _controller.initialize(bookLanguage: _bookLanguage, forceReload: true),
                 child: const Text('Retry'),
               ),
             ],
@@ -172,53 +196,17 @@ class _ReaderPageState extends State<ReaderPage> {
                           ),
                         ),
                       ),
-                  if (page.comments != null && page.comments!.trim().isNotEmpty) ...[
-                    const SizedBox(height: 16),
-                    Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Text(
-                          page.comments!,
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                      ),
-                    ),
-                  ],
-                  if (page.linkControls.isNotEmpty) ...[
-                    const SizedBox(height: 20),
-                    Text(
-                      'Navigate',
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.w600,
-                          ),
-                    ),
-                    const SizedBox(height: 8),
-                    Wrap(
-                      spacing: 12,
-                      runSpacing: 12,
-                      children: page.linkControls
-                          .map(
-                            (control) => PageLinkButton(
-                              control: control,
-                              onPressed: () => _controller.handleControl(control),
-                            ),
-                          )
-                          .toList(),
-                    ),
-                  ],
+                  PageCommentsCard(comments: page.comments),
+                  NavigateLinksPanel(
+                    controls: page.linkControls,
+                    onControlTap: _controller.handleControl,
+                  ),
                   if (page.audio != null) ...[
                     const SizedBox(height: 24),
-                    Card(
-                      child: ListTile(
-                        leading: Icon(
-                          _controller.isPlayingCurrentPageAudio
-                              ? Icons.stop_circle_outlined
-                              : Icons.play_circle_outline,
-                        ),
-                        title: Text(page.audio!.displayName),
-                        subtitle: Text(page.audio!.autoplay ? 'Autoplay enabled' : 'Tap to play'),
-                        onTap: _controller.toggleCurrentPageAudio,
-                      ),
+                    CurrentPageAudioCard(
+                      audio: page.audio!,
+                      isPlaying: _controller.isPlayingCurrentPageAudio,
+                      onToggle: () => unawaited(_controller.toggleCurrentPageAudio()),
                     ),
                   ],
                 ],
