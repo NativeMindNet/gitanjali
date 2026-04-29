@@ -8,13 +8,18 @@ class LegacyAssetResolver {
   String? resolveAudio(String? rawPath) => _resolve(rawPath, preferredFolder: 'Sounds');
 
   String? resolveKeyframePreview(String? rawPath) {
+    final frames = resolveKeyframeFrames(rawPath);
+    return frames.isEmpty ? null : frames.first;
+  }
+
+  List<String> resolveKeyframeFrames(String? rawPath) {
     final normalized = _normalize(rawPath);
     if (normalized == null) {
-      return null;
+      return const [];
     }
     final prefix = 'assets/legacy/Images/$normalized/';
     final matches = assets.where((asset) => asset.startsWith(prefix)).toList()..sort();
-    return matches.isEmpty ? null : matches.first;
+    return matches;
   }
 
   String? _resolve(String? rawPath, {required String preferredFolder}) {

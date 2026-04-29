@@ -26,6 +26,14 @@ void main() {
       expect(resolver.resolveKeyframePreview('Anim'), 'assets/legacy/Images/Anim/bg0001.png');
     });
 
+    test('resolves keyframe frames sorted for animation', () {
+      final resolver = LegacyAssetResolver(assets);
+      expect(resolver.resolveKeyframeFrames('Anim'), [
+        'assets/legacy/Images/Anim/bg0001.png',
+        'assets/legacy/Images/Anim/bg0002.png',
+      ]);
+    });
+
     test('normalizes legacy bundle placeholders in path', () {
       final resolver = LegacyAssetResolver(assets);
       expect(

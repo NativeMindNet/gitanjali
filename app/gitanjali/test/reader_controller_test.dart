@@ -210,6 +210,7 @@ final _sampleBook = Book(
       ],
       comments: '',
       backgroundAsset: null,
+      backgroundFrames: const [],
       controls: const [],
       showNumber: true,
       audio: null,
@@ -232,6 +233,7 @@ final _sampleBook = Book(
       ],
       comments: 'Important note',
       backgroundAsset: null,
+      backgroundFrames: const [],
       controls: const [],
       showNumber: true,
       audio: const PageAudio(

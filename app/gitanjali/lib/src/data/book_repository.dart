@@ -148,36 +148,50 @@ class BookRepository {
             );
           }
         case 'background':
-          draft.backgroundAsset = _parseBackground(child, resolver);
+          final background = _parseBackground(child, resolver);
+          draft.backgroundAsset = background.asset;
+          draft.backgroundFrames
+            ..clear()
+            ..addAll(background.frames);
         default:
           break;
       }
     }
   }
 
-  String? _parseBackground(XmlElement background, LegacyAssetResolver resolver) {
+  _ParsedBackground _parseBackground(XmlElement background, LegacyAssetResolver resolver) {
     final imageAttribute = background.getAttribute('image');
     if (imageAttribute != null) {
-      return resolver.resolveImage(imageAttribute);
+      return _ParsedBackground(
+        asset: resolver.resolveImage(imageAttribute),
+        frames: const [],
+      );
     }
 
+    final keyframeFrames = <String>[];
     for (final target in background.findAllElements('target')) {
       final type = target.getAttribute('type');
       final value = target.innerText.trim();
       if (type == 'image') {
         final resolved = resolver.resolveImage(value);
         if (resolved != null) {
-          return resolved;
+          return _ParsedBackground(asset: resolved, frames: const []);
         }
       }
       if (type == 'keyframe') {
-        final resolved = resolver.resolveKeyframePreview(value);
-        if (resolved != null) {
-          return resolved;
+        final resolvedFrames = resolver.resolveKeyframeFrames(value);
+        if (resolvedFrames.isNotEmpty) {
+          keyframeFrames.addAll(resolvedFrames);
         }
       }
     }
-    return null;
+    if (keyframeFrames.isNotEmpty) {
+      return _ParsedBackground(
+        asset: keyframeFrames.first,
+        frames: keyframeFrames,
+      );
+    }
+    return const _ParsedBackground(asset: null, frames: []);
   }
 
   List<ParagraphSpec> _parseParagraphContainer(
@@ -263,5 +277,15 @@ class BookRepository {
     final name = assetPath.split('/').last;
     return name.replaceAll('.m4a', '').replaceAll('-', ' ');
   }
+}
+
+class _ParsedBackground {
+  const _ParsedBackground({
+    required this.asset,
+    required this.frames,
+  });
+
+  final String? asset;
+  final List<String> frames;
 }
 

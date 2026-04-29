@@ -22,6 +22,7 @@ class BookPage {
     required this.paragraphs,
     required this.comments,
     required this.backgroundAsset,
+    required this.backgroundFrames,
     required this.controls,
     required this.showNumber,
     required this.audio,
@@ -33,6 +34,7 @@ class BookPage {
   final List<ParagraphSpec> paragraphs;
   final String? comments;
   final String? backgroundAsset;
+  final List<String> backgroundFrames;
   final List<ControlInfo> controls;
   final bool showNumber;
   final PageAudio? audio;
@@ -50,6 +52,7 @@ class BookPage {
       paragraphs: paragraphs,
       comments: comments,
       backgroundAsset: backgroundAsset,
+      backgroundFrames: backgroundFrames,
       controls: controls,
       showNumber: showNumber,
       audio: audio,
@@ -69,6 +72,7 @@ class PageDraft {
   final List<ControlInfo> controls = <ControlInfo>[];
   String? comments;
   String? backgroundAsset;
+  final List<String> backgroundFrames = <String>[];
   bool showNumber = true;
   PageAudio? audio;
 
@@ -87,6 +91,7 @@ class PageDraft {
       paragraphs: List<ParagraphSpec>.unmodifiable(paragraphs),
       comments: comments,
       backgroundAsset: backgroundAsset,
+      backgroundFrames: List<String>.unmodifiable(backgroundFrames),
       controls: List<ControlInfo>.unmodifiable(controls),
       showNumber: showNumber,
       audio: audio,
