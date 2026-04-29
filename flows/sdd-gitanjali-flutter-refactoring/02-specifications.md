@@ -7,7 +7,7 @@
 
 ## Overview
 
-Новая реализация в `app/gitangali` должна заменить legacy Objective-C reader из `legacy/legacy_gitanjajali_swift` полноценным Flutter-приложением, которое использует локально упакованный контент и не зависит от legacy runtime-кода. Первая миграционная версия ориентируется на функциональную паритетность ядра продукта: reader, page navigation, page links, bookmarks, audio, search, и сохранение reader state.
+Новая реализация в `app/gitanjali` должна заменить legacy Objective-C reader из `legacy/legacy_gitanjajali_swift` полноценным Flutter-приложением, которое использует локально упакованный контент и не зависит от legacy runtime-кода. Первая миграционная версия ориентируется на функциональную паритетность ядра продукта: reader, page navigation, page links, bookmarks, audio, search, и сохранение reader state.
 
 Спецификация намеренно разделяет перенос на два уровня:
 - **Must-build now**: базовая архитектура Flutter, XML ingestion, reader shell, bookmarks, search, audio, local persistence.
@@ -17,10 +17,10 @@
 
 | System | Impact | Notes |
 |--------|--------|-------|
-| `app/gitangali/lib` | Create | New Flutter app architecture, models, services, screens, widgets |
-| `app/gitangali/pubspec.yaml` | Modify | Add runtime packages, assets, fonts, and audio declarations |
-| `app/gitangali/test` | Modify | Replace template test with targeted tests for parser/state/bootstrap |
-| `app/gitangali/assets` | Create | New packaged content for XML, images, audio, and fonts |
+| `app/gitanjali/lib` | Create | New Flutter app architecture, models, services, screens, widgets |
+| `app/gitanjali/pubspec.yaml` | Modify | Add runtime packages, assets, fonts, and audio declarations |
+| `app/gitanjali/test` | Modify | Replace template test with targeted tests for parser/state/bootstrap |
+| `app/gitanjali/assets` | Create | New packaged content for XML, images, audio, and fonts |
 | `legacy/legacy_gitanjajali_swift` | Read-only input | Source of truth for migration behavior and bundled content |
 | `flows/sdd-gitanjali-flutter-refactoring` | Modify | SDD artifacts and implementation log updates |
 
@@ -212,7 +212,7 @@ Deferred support allowed:
 
 ### Blocks
 
-- Implementation of the new reader shell in `app/gitangali`
+- Implementation of the new reader shell in `app/gitanjali`
 - Any further modernization work that assumes a stable Flutter domain model
 
 ## Integration Points
@@ -225,8 +225,8 @@ Deferred support allowed:
 
 ### Internal Systems
 
-- `app/gitangali/lib/main.dart` becomes bootstrap into the real app shell
-- New app modules under `app/gitangali/lib/src/...`
+- `app/gitanjali/lib/main.dart` becomes bootstrap into the real app shell
+- New app modules under `app/gitanjali/lib/src/...`
 - `pubspec.yaml` will declare migrated assets and fonts
 
 ## Testing Strategy
@@ -246,7 +246,7 @@ Deferred support allowed:
 
 ### Manual Verification
 
-- [ ] Launch `app/gitangali` and confirm the default counter demo is gone
+- [ ] Launch `app/gitanjali` and confirm the default counter demo is gone
 - [ ] Navigate between several migrated pages using gestures and controls
 - [ ] Open search and jump to at least one result in each supported scope
 - [ ] Add, open, and delete bookmarks

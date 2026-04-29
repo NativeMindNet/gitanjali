@@ -13,7 +13,10 @@ class BookRepository {
     final resolver = LegacyAssetResolver(manifest.listAssets());
     final source = await rootBundle.loadString(bookAsset);
 
-    final document = XmlDocument.parse(source);
+    return parseBookDocument(XmlDocument.parse(source), resolver);
+  }
+
+  Book parseBookDocument(XmlDocument document, LegacyAssetResolver resolver) {
     final root = document.rootElement;
     if (root.name.local != 'book' || root.getAttribute('version') != '1.0') {
       throw StateError('Unsupported book format');

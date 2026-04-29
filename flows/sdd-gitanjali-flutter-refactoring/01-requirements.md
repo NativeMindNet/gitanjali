@@ -6,9 +6,9 @@
 
 ## Problem Statement
 
-В репозитории уже есть legacy-приложение `legacy/legacy_gitanjajali_swift`, которое фактически является полноценным офлайн-ридером/песенником `Sri Gaudiya Gitanjali` с XML-контентом, изображениями, аудио, поиском и закладками. Целевое приложение `app/gitangali` существует только как стандартный Flutter-шаблон и не содержит ни доменной модели, ни импорта контента, ни пользовательских сценариев.
+В репозитории уже есть legacy-приложение `legacy/legacy_gitanjajali_swift`, которое фактически является полноценным офлайн-ридером/песенником `Sri Gaudiya Gitanjali` с XML-контентом, изображениями, аудио, поиском и закладками. Целевое приложение `app/gitanjali` существует только как стандартный Flutter-шаблон и не содержит ни доменной модели, ни импорта контента, ни пользовательских сценариев.
 
-Нужно выполнить управляемый рефакторинг и миграцию: сохранить ключевое поведение legacy-приложения, но перенести его в современное Flutter-приложение с понятной архитектурой, чтобы дальнейшая разработка велась уже в `app/gitangali`.
+Нужно выполнить управляемый рефакторинг и миграцию: сохранить ключевое поведение legacy-приложения, но перенести его в современное Flutter-приложение с понятной архитектурой, чтобы дальнейшая разработка велась уже в `app/gitanjali`.
 
 ## User Stories
 
@@ -70,9 +70,9 @@
 
 ## Constraints
 
-- **Technical**: Source functionality must be derived from `legacy/legacy_gitanjajali_swift`; target implementation must live in `app/gitangali`.
+- **Technical**: Source functionality must be derived from `legacy/legacy_gitanjajali_swift`; target implementation must live in `app/gitanjali`.
 - **Performance**: Core reading flow should remain responsive with bundled offline assets.
-- **Platform**: Primary target is Flutter app structure under `app/gitangali`; exact platform release work can be phased.
+- **Platform**: Primary target is Flutter app structure under `app/gitanjali`; exact platform release work can be phased.
 - **Dependencies**: Migration depends on understanding the legacy XML/content model and selecting Flutter packages for audio, persistence, and structured rendering.
 
 ## Open Questions
@@ -87,8 +87,8 @@
 - `legacy/legacy_gitanjajali_swift/Gitanjali/Resources/example.xml`
 - `legacy/legacy_gitanjajali_swift/Gitanjali/Classes/Interface/BUIMainViewController.m`
 - `legacy/legacy_gitanjajali_swift/Gitanjali/Classes/Interface/BUISharedAudioPlayerView.m`
-- `app/gitangali/lib/main.dart`
-- `app/gitangali/pubspec.yaml`
+- `app/gitanjali/lib/main.dart`
+- `app/gitanjali/pubspec.yaml`
 
 ---
 
