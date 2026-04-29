@@ -7,7 +7,8 @@ import '../../data/book_repository.dart';
 import '../../data/reader_store.dart';
 import '../../domain/models.dart';
 import 'reader_controller.dart';
-import 'widgets/animated_background.dart';
+import 'widgets/background_layer.dart';
+import 'widgets/reader_toolbar.dart';
 
 class ReaderPage extends StatefulWidget {
   const ReaderPage({super.key});
@@ -58,8 +59,7 @@ class _ReaderPageState extends State<ReaderPage> {
             ],
           ),
           body: _buildBody(context),
-          bottomNavigationBar:
-              _controller.book == null ? null : _ReaderToolbar(controller: _controller),
+          bottomNavigationBar: _controller.book == null ? null : ReaderToolbar(controller: _controller),
         );
       },
     );
@@ -111,7 +111,7 @@ class _ReaderPageState extends State<ReaderPage> {
       child: Stack(
         children: [
           Positioned.fill(
-            child: _BackgroundImage(
+            child: BackgroundLayer(
               assetPath: page.backgroundAsset,
               frames: page.backgroundFrames,
               framesPerSecond: page.backgroundFramesPerSecond,
@@ -231,224 +231,6 @@ class _ReaderPageState extends State<ReaderPage> {
   }
 }
 
-class _ReaderToolbar extends StatelessWidget {
-  const _ReaderToolbar({required this.controller});
-
-  final ReaderController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    final bookmarked = controller.isCurrentPageBookmarked;
-    return SafeArea(
-      child: BottomAppBar(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              IconButton(
-                onPressed: controller.canGoPrevious ? controller.previousPage : null,
-                icon: const Icon(Icons.chevron_left),
-                tooltip: 'Previous',
-              ),
-              IconButton(
-                onPressed: controller.toggleBookmark,
-                icon: Icon(bookmarked ? Icons.bookmark : Icons.bookmark_add_outlined),
-                tooltip: bookmarked ? 'Remove bookmark' : 'Add bookmark',
-              ),
-              IconButton(
-                onPressed: () => _showBookmarks(context, controller),
-                icon: const Icon(Icons.bookmarks_outlined),
-                tooltip: 'Bookmarks',
-              ),
-              IconButton(
-                onPressed: controller.goHome,
-                icon: const Icon(Icons.home_outlined),
-                tooltip: 'Home',
-              ),
-              IconButton(
-                onPressed: () => _showSearch(context, controller),
-                icon: const Icon(Icons.search),
-                tooltip: 'Search',
-              ),
-              IconButton(
-                onPressed: controller.currentPage?.audio == null
-                    ? null
-                    : controller.toggleCurrentPageAudio,
-                icon: Icon(
-                  controller.isPlayingCurrentPageAudio
-                      ? Icons.stop_circle_outlined
-                      : Icons.play_circle_outline,
-                ),
-                tooltip: 'Play / stop audio',
-              ),
-              IconButton(
-                onPressed: controller.canGoNext ? controller.nextPage : null,
-                icon: const Icon(Icons.chevron_right),
-                tooltip: 'Next',
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Future<void> _showBookmarks(BuildContext context, ReaderController controller) async {
-    await showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (context) {
-        final bookmarks = controller.bookmarkedPages;
-        if (bookmarks.isEmpty) {
-          return const SizedBox(
-            height: 160,
-            child: Center(child: Text('No bookmarks yet')),
-          );
-        }
-        return ListView.builder(
-          itemCount: bookmarks.length,
-          itemBuilder: (context, index) {
-            final page = bookmarks[index];
-            return ListTile(
-              leading: const Icon(Icons.bookmark),
-              title: Text(page.contentTitle ?? page.title),
-              subtitle: Text('Page ${page.index + 1}'),
-              trailing: IconButton(
-                icon: const Icon(Icons.delete_outline),
-                onPressed: () {
-                  controller.removeBookmark(page.index);
-                  Navigator.of(context).pop();
-                },
-              ),
-              onTap: () {
-                controller.goToPage(page.index);
-                Navigator.of(context).pop();
-              },
-            );
-          },
-        );
-      },
-    );
-  }
-
-  Future<void> _showSearch(BuildContext context, ReaderController controller) async {
-    await showModalBottomSheet<void>(
-      context: context,
-      isScrollControlled: true,
-      showDragHandle: true,
-      builder: (context) => _SearchSheet(controller: controller),
-    );
-  }
-}
-
-class _SearchSheet extends StatefulWidget {
-  const _SearchSheet({required this.controller});
-
-  final ReaderController controller;
-
-  @override
-  State<_SearchSheet> createState() => _SearchSheetState();
-}
-
-class _SearchSheetState extends State<_SearchSheet> {
-  late final TextEditingController _textController;
-  SearchScope _scope = SearchScope.content;
-  List<SearchResult> _results = const [];
-
-  @override
-  void initState() {
-    super.initState();
-    _textController = TextEditingController();
-    _textController.addListener(_updateResults);
-  }
-
-  @override
-  void dispose() {
-    _textController.dispose();
-    super.dispose();
-  }
-
-  void _updateResults() {
-    setState(() {
-      _results = widget.controller.search(_textController.text, _scope);
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-    return Padding(
-      padding: EdgeInsets.only(bottom: mediaQuery.viewInsets.bottom),
-      child: SizedBox(
-        height: mediaQuery.size.height * 0.75,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: TextField(
-                controller: _textController,
-                decoration: const InputDecoration(
-                  labelText: 'Search Gitanjali',
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.search),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: DropdownButtonFormField<SearchScope>(
-                initialValue: _scope,
-                decoration: const InputDecoration(
-                  labelText: 'Scope',
-                  border: OutlineInputBorder(),
-                ),
-                items: SearchScope.values
-                    .map(
-                      (scope) => DropdownMenuItem(
-                        value: scope,
-                        child: Text(scope.label),
-                      ),
-                    )
-                    .toList(),
-                onChanged: (value) {
-                  if (value == null) {
-                    return;
-                  }
-                  setState(() {
-                    _scope = value;
-                    _results = widget.controller.search(_textController.text, _scope);
-                  });
-                },
-              ),
-            ),
-            const SizedBox(height: 12),
-            Expanded(
-              child: _textController.text.trim().isEmpty
-                  ? const Center(child: Text('Type to search content, comments, or titles'))
-                  : ListView.separated(
-                      itemCount: _results.length,
-                      separatorBuilder: (_, _) => const Divider(height: 1),
-                      itemBuilder: (context, index) {
-                        final result = _results[index];
-                        return ListTile(
-                          title: Text(result.title),
-                          subtitle: Text(result.excerpt),
-                          trailing: Text('P${result.pageIndex + 1}'),
-                          onTap: () {
-                            widget.controller.goToPage(result.pageIndex);
-                            Navigator.of(context).pop();
-                          },
-                        );
-                      },
-                    ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
 class _PageLinkButton extends StatelessWidget {
   const _PageLinkButton({
     required this.control,
@@ -492,46 +274,6 @@ class _PageLinkButton extends StatelessWidget {
                   ),
                 ),
               ),
-      ),
-    );
-  }
-}
-
-class _BackgroundImage extends StatelessWidget {
-  const _BackgroundImage({
-    required this.assetPath,
-    required this.frames,
-    required this.framesPerSecond,
-  });
-
-  final String? assetPath;
-  final List<String> frames;
-  final double? framesPerSecond;
-
-  @override
-  Widget build(BuildContext context) {
-    if (frames.length > 1) {
-      return AnimatedBackground(
-        frames: frames,
-        framesPerSecond: framesPerSecond,
-      );
-    }
-
-    if (assetPath == null) {
-      return const DecoratedBox(
-        decoration: BoxDecoration(
-          color: Color(0xFFF1E7D3),
-        ),
-      );
-    }
-
-    return Image.asset(
-      assetPath!,
-      fit: BoxFit.cover,
-      errorBuilder: (_, _, _) => const DecoratedBox(
-        decoration: BoxDecoration(
-          color: Color(0xFFF1E7D3),
-        ),
       ),
     );
   }
