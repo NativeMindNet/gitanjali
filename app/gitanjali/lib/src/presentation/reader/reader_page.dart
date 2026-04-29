@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import '../../data/audio_service.dart';
 import '../../data/book_repository.dart';
 import '../../data/reader_store.dart';
-import '../../domain/models.dart';
 import 'reader_controller.dart';
 import 'widgets/background_layer.dart';
 import 'widgets/reader_toolbar.dart';
+import 'widgets/page_link_button.dart';
 
 class ReaderPage extends StatefulWidget {
   const ReaderPage({super.key});
@@ -198,7 +198,7 @@ class _ReaderPageState extends State<ReaderPage> {
                       runSpacing: 12,
                       children: page.linkControls
                           .map(
-                            (control) => _PageLinkButton(
+                            (control) => PageLinkButton(
                               control: control,
                               onPressed: () => _controller.handleControl(control),
                             ),
@@ -230,52 +230,3 @@ class _ReaderPageState extends State<ReaderPage> {
     );
   }
 }
-
-class _PageLinkButton extends StatelessWidget {
-  const _PageLinkButton({
-    required this.control,
-    required this.onPressed,
-  });
-
-  final ControlInfo control;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    final asset = control.highlightedImageAsset ?? control.imageAsset;
-    return InkWell(
-      onTap: onPressed,
-      borderRadius: BorderRadius.circular(12),
-      child: Ink(
-        width: 88,
-        height: 88,
-        decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.75),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.brown.shade200),
-        ),
-        child: asset == null
-            ? Center(
-                child: Text(
-                  'Page ${control.targetPageIndex! + 1}',
-                  textAlign: TextAlign.center,
-                ),
-              )
-            : Padding(
-                padding: const EdgeInsets.all(8),
-                child: Image.asset(
-                  asset,
-                  fit: BoxFit.contain,
-                  errorBuilder: (_, _, _) => Center(
-                    child: Text(
-                      'Page ${control.targetPageIndex! + 1}',
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
-      ),
-    );
-  }
-}
-
