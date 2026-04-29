@@ -30,6 +30,7 @@ void main() {
       expect(book.pages.first.paragraphs.first.text, 'Hello world');
       expect(book.pages.first.backgroundAsset, 'assets/legacy/Images/bg.png');
       expect(book.pages.first.backgroundFrames, isEmpty);
+      expect(book.pages.first.backgroundFramesPerSecond, isNull);
       expect(book.pages.first.audio?.assetPath, 'assets/legacy/Sounds/song.m4a');
       expect(book.pages.first.controls.first.targetPageIndex, 1);
     });
@@ -43,6 +44,7 @@ void main() {
         'assets/legacy/Images/Anim/bg0001.png',
         'assets/legacy/Images/Anim/bg0002.png',
       ]);
+      expect(book.pages.first.backgroundFramesPerSecond, 12);
     });
 
     test('throws for unsupported root version', () {
@@ -123,7 +125,7 @@ const _xmlWithKeyframeBackground = '''
       <page>
         <p>Hello world</p>
         <background>
-          <target type="keyframe">Anim</target>
+          <target type="keyframe" images-per-second="12">Anim</target>
         </background>
       </page>
     </section>

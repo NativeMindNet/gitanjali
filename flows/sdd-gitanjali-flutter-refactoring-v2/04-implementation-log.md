@@ -38,6 +38,23 @@
 **Ended at**: Implementation complete  
 **Handoff notes**: Next optional slice can tune animation cadence by XML metadata and add further pixel-level visual parity.
 
+### Session 2026-04-29 - Codex 5.3 (continuation)
+
+**Started at**: Post-v2 refactoring continuation  
+**Context**: User requested to continue refactoring without narrowing scope.
+
+#### Completed
+- Extended background model with `backgroundFramesPerSecond` to carry legacy keyframe speed metadata.
+- Updated XML parser to read `images-per-second` from keyframe targets and propagate it into page models.
+- Updated reader animation runtime to use parsed FPS when available, with safe fallback interval.
+- Extended parser tests to validate FPS parsing alongside frame sequence parsing.
+
+#### Deviations from Plan
+- Widget-level animated background test remains pending; this continuation focused on parser/model/runtime consistency first.
+
+**Ended at**: Implementation complete (continuation slice)  
+**Handoff notes**: Next step is adding targeted widget tests for background frame switching cadence.
+
 ## Completion Checklist
 
 - [x] All tasks completed or explicitly deferred

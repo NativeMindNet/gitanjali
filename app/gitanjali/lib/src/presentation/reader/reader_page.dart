@@ -7,6 +7,7 @@ import '../../data/book_repository.dart';
 import '../../data/reader_store.dart';
 import '../../domain/models.dart';
 import 'reader_controller.dart';
+import 'widgets/animated_background.dart';
 
 class ReaderPage extends StatefulWidget {
   const ReaderPage({super.key});
@@ -113,6 +114,7 @@ class _ReaderPageState extends State<ReaderPage> {
             child: _BackgroundImage(
               assetPath: page.backgroundAsset,
               frames: page.backgroundFrames,
+              framesPerSecond: page.backgroundFramesPerSecond,
             ),
           ),
           Positioned.fill(
@@ -499,15 +501,20 @@ class _BackgroundImage extends StatelessWidget {
   const _BackgroundImage({
     required this.assetPath,
     required this.frames,
+    required this.framesPerSecond,
   });
 
   final String? assetPath;
   final List<String> frames;
+  final double? framesPerSecond;
 
   @override
   Widget build(BuildContext context) {
     if (frames.length > 1) {
-      return _AnimatedBackground(frames: frames);
+      return AnimatedBackground(
+        frames: frames,
+        framesPerSecond: framesPerSecond,
+      );
     }
 
     if (assetPath == null) {
@@ -521,62 +528,6 @@ class _BackgroundImage extends StatelessWidget {
     return Image.asset(
       assetPath!,
       fit: BoxFit.cover,
-      errorBuilder: (_, _, _) => const DecoratedBox(
-        decoration: BoxDecoration(
-          color: Color(0xFFF1E7D3),
-        ),
-      ),
-    );
-  }
-}
-
-class _AnimatedBackground extends StatefulWidget {
-  const _AnimatedBackground({required this.frames});
-
-  final List<String> frames;
-
-  @override
-  State<_AnimatedBackground> createState() => _AnimatedBackgroundState();
-}
-
-class _AnimatedBackgroundState extends State<_AnimatedBackground> {
-  static const Duration _frameDuration = Duration(milliseconds: 120);
-  Timer? _timer;
-  int _frameIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _timer = Timer.periodic(_frameDuration, (_) {
-      if (!mounted || widget.frames.length < 2) {
-        return;
-      }
-      setState(() {
-        _frameIndex = (_frameIndex + 1) % widget.frames.length;
-      });
-    });
-  }
-
-  @override
-  void didUpdateWidget(covariant _AnimatedBackground oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (oldWidget.frames != widget.frames) {
-      _frameIndex = 0;
-    }
-  }
-
-  @override
-  void dispose() {
-    _timer?.cancel();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Image.asset(
-      widget.frames[_frameIndex],
-      fit: BoxFit.cover,
-      gaplessPlayback: true,
       errorBuilder: (_, _, _) => const DecoratedBox(
         decoration: BoxDecoration(
           color: Color(0xFFF1E7D3),

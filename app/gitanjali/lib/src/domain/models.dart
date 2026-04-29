@@ -23,6 +23,7 @@ class BookPage {
     required this.comments,
     required this.backgroundAsset,
     required this.backgroundFrames,
+    required this.backgroundFramesPerSecond,
     required this.controls,
     required this.showNumber,
     required this.audio,
@@ -35,6 +36,7 @@ class BookPage {
   final String? comments;
   final String? backgroundAsset;
   final List<String> backgroundFrames;
+  final double? backgroundFramesPerSecond;
   final List<ControlInfo> controls;
   final bool showNumber;
   final PageAudio? audio;
@@ -53,6 +55,7 @@ class BookPage {
       comments: comments,
       backgroundAsset: backgroundAsset,
       backgroundFrames: backgroundFrames,
+      backgroundFramesPerSecond: backgroundFramesPerSecond,
       controls: controls,
       showNumber: showNumber,
       audio: audio,
@@ -73,6 +76,7 @@ class PageDraft {
   String? comments;
   String? backgroundAsset;
   final List<String> backgroundFrames = <String>[];
+  double? backgroundFramesPerSecond;
   bool showNumber = true;
   PageAudio? audio;
 
@@ -92,6 +96,7 @@ class PageDraft {
       comments: comments,
       backgroundAsset: backgroundAsset,
       backgroundFrames: List<String>.unmodifiable(backgroundFrames),
+      backgroundFramesPerSecond: backgroundFramesPerSecond,
       controls: List<ControlInfo>.unmodifiable(controls),
       showNumber: showNumber,
       audio: audio,

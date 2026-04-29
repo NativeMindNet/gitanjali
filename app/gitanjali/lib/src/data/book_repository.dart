@@ -153,6 +153,7 @@ class BookRepository {
           draft.backgroundFrames
             ..clear()
             ..addAll(background.frames);
+          draft.backgroundFramesPerSecond = background.framesPerSecond;
         default:
           break;
       }
@@ -165,23 +166,31 @@ class BookRepository {
       return _ParsedBackground(
         asset: resolver.resolveImage(imageAttribute),
         frames: const [],
+        framesPerSecond: null,
       );
     }
 
     final keyframeFrames = <String>[];
+    double? keyframeFramesPerSecond;
     for (final target in background.findAllElements('target')) {
       final type = target.getAttribute('type');
       final value = target.innerText.trim();
       if (type == 'image') {
         final resolved = resolver.resolveImage(value);
         if (resolved != null) {
-          return _ParsedBackground(asset: resolved, frames: const []);
+          return _ParsedBackground(
+            asset: resolved,
+            frames: const [],
+            framesPerSecond: null,
+          );
         }
       }
       if (type == 'keyframe') {
         final resolvedFrames = resolver.resolveKeyframeFrames(value);
         if (resolvedFrames.isNotEmpty) {
           keyframeFrames.addAll(resolvedFrames);
+          keyframeFramesPerSecond ??=
+              double.tryParse(target.getAttribute('images-per-second') ?? '');
         }
       }
     }
@@ -189,9 +198,14 @@ class BookRepository {
       return _ParsedBackground(
         asset: keyframeFrames.first,
         frames: keyframeFrames,
+        framesPerSecond: keyframeFramesPerSecond,
       );
     }
-    return const _ParsedBackground(asset: null, frames: []);
+    return const _ParsedBackground(
+      asset: null,
+      frames: [],
+      framesPerSecond: null,
+    );
   }
 
   List<ParagraphSpec> _parseParagraphContainer(
@@ -283,9 +297,11 @@ class _ParsedBackground {
   const _ParsedBackground({
     required this.asset,
     required this.frames,
+    required this.framesPerSecond,
   });
 
   final String? asset;
   final List<String> frames;
+  final double? framesPerSecond;
 }
 

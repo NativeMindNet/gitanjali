@@ -12,8 +12,9 @@ The v2 refactoring slice is complete. Flutter reader now supports animated keyfr
 ## Delivered Changes
 
 - Added `BookPage.backgroundFrames` and parser support for keyframe frame sequences.
+- Added `BookPage.backgroundFramesPerSecond` and XML parsing of keyframe `images-per-second`.
 - Added resolver API for deterministic frame sequence lookup.
-- Updated reader background widget to animate when multiple frames are present.
+- Updated reader background widget to animate when multiple frames are present and use parsed FPS when provided.
 - Preserved static fallback behavior for non-keyframe or missing assets.
 - Added legacy folder documentation in `legacy/README.md`.
 
