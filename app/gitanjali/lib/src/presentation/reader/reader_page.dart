@@ -12,6 +12,7 @@ import 'widgets/reader_toolbar.dart';
 import 'widgets/current_page_audio_card.dart';
 import 'widgets/navigate_links_panel.dart';
 import 'widgets/page_comments_card.dart';
+import 'widgets/reader_page_header.dart';
 
 class ReaderPage extends StatefulWidget {
   const ReaderPage({super.key});
@@ -161,25 +162,11 @@ class _ReaderPageState extends State<ReaderPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  if ((page.contentTitle ?? page.title).isNotEmpty)
-                    Text(
-                      page.contentTitle ?? page.title,
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                            fontWeight: FontWeight.w700,
-                            color: const Color(0xFF5A3D2B),
-                          ),
-                    ),
-                  if (page.showNumber) ...[
-                    const SizedBox(height: 8),
-                    Text(
-                      'Page ${page.index + 1}',
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                            color: Colors.brown.shade700,
-                          ),
-                    ),
-                  ],
+                  ReaderPageHeader(
+                    title: page.contentTitle ?? page.title,
+                    showNumber: page.showNumber,
+                    pageIndex: page.index,
+                  ),
                   const SizedBox(height: 16),
                   ...page.paragraphs.where((paragraph) => !paragraph.hidden).map(
                         (paragraph) => Padding(
