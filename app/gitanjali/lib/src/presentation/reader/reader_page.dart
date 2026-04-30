@@ -13,6 +13,8 @@ import 'widgets/current_page_audio_card.dart';
 import 'widgets/navigate_links_panel.dart';
 import 'widgets/page_comments_card.dart';
 import 'widgets/reader_page_header.dart';
+import 'widgets/page_paragraphs.dart';
+import 'widgets/reader_swipe_navigator.dart';
 
 class ReaderPage extends StatefulWidget {
   const ReaderPage({super.key});
@@ -122,17 +124,9 @@ class _ReaderPageState extends State<ReaderPage> {
     }
 
     final page = _controller.currentPage!;
-    return GestureDetector(
-      onHorizontalDragEnd: (details) {
-        if (details.primaryVelocity == null) {
-          return;
-        }
-        if (details.primaryVelocity! < -150) {
-          _controller.nextPage();
-        } else if (details.primaryVelocity! > 150) {
-          _controller.previousPage();
-        }
-      },
+    return ReaderSwipeNavigator(
+      onNext: _controller.nextPage,
+      onPrevious: _controller.previousPage,
       child: Stack(
         children: [
           Positioned.fill(
@@ -168,21 +162,7 @@ class _ReaderPageState extends State<ReaderPage> {
                     pageIndex: page.index,
                   ),
                   const SizedBox(height: 16),
-                  ...page.paragraphs.where((paragraph) => !paragraph.hidden).map(
-                        (paragraph) => Padding(
-                          padding: const EdgeInsets.only(bottom: 12),
-                          child: Text(
-                            paragraph.text,
-                            textAlign: paragraph.style.textAlign,
-                            style: TextStyle(
-                              fontFamily: paragraph.style.fontFamily,
-                              fontSize: paragraph.style.fontSize,
-                              color: paragraph.style.textColor,
-                              height: 1.4,
-                            ),
-                          ),
-                        ),
-                      ),
+                  PageParagraphs(paragraphs: page.paragraphs),
                   PageCommentsCard(comments: page.comments),
                   NavigateLinksPanel(
                     controls: page.linkControls,
