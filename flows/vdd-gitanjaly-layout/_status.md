@@ -6,7 +6,7 @@ VISUAL
 
 ## Phase Status
 
-DRAFTING
+REVIEW (v1.2 - all questions resolved)
 
 ## Last Updated
 
@@ -18,10 +18,14 @@ DRAFTING
 
 ## Progress
 
-- [x] Requirements drafted
-- [x] Requirements approved
-- [x] Visual mockups drafted  <- current
-- [ ] Visual approved
+- [x] Requirements v1.0 drafted
+- [x] Requirements v1.0 approved
+- [x] Visual v1.0 drafted
+- [x] Requirements v1.1 expanded (user)  <- iPad, new screens, mini player
+- [x] Visual v1.1 expanded (user)  <- Design system, navigation models, new screens
+- [ ] Requirements v1.1 approved
+- [ ] Visual v1.1 approved  <- current
+- [ ] Specifications drafted
 - [ ] Specifications drafted
 - [ ] Specifications approved
 - [ ] Plan drafted
@@ -40,9 +44,29 @@ Key decisions and context for resuming:
   - `legacy-gitanjali-en-swift` (English version, 686 images, 118 audio files)
 - Target: Flutter app in `app/gitanjali/`
 - Flutter app already has basic reader functionality implemented
-- Need to add adaptive layout for multiple screen sizes
-- Combine Russian and English versions into unified multilingual app
-- Also available for reference: `legacy-cookbook-swift` and `legacy-avadhuta-swift`
+
+### v1.1 Expansion (by user)
+
+**New Screens Added:**
+- Cover / Splash (full-screen with peacock feather background)
+- TOC / Library Categories (full-screen list over background)
+- Section Cover (illustration + title)
+- Dedication / Biography pages (portrait + quote)
+
+**iPad-specific Requirements:**
+- Model B navigation: Tab bar (Back, +, Book, List, Home, Read, Audio) instead of bottom toolbar
+- Mini player bar above tab bar with: Play/Pause, seek bar, elapsed/remaining timings, expand chevron
+- Verse numbering column on left, translation in gray
+
+**Design System:**
+- Typography roles: H0 Cover (script), H1 Title, Byline, Original, Translation, Verse number, Quote
+- Colors: off-white reader bg, full-screen bg for cover/TOC, accent (teal/blue)
+- Layout tokens: max-width 720-800px, padding XS 12px to LG 32px
+
+**Resolved Questions (v1.2):**
+- [x] Tab bar: **4 tabs** (Home, Library, Audio, Settings)
+- [x] Mini player: **elapsed + remaining** default, tap to toggle to elapsed + total
+- [x] Read tab: **merged into Settings** (text size + theme)
 
 ## Source Analysis Summary
 

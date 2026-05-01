@@ -1,0 +1,3119 @@
+<?xml version="1.0"?>
+
+<book version="1.0">
+	
+	<head>
+		
+		<id>1</id>
+		<book-title>Avadhuta</book-title>		
+        <lang>ru</lang>
+        <src-lang>eng</src-lang>
+		<orientation>portrait</orientation>
+		
+	</head>
+	
+	<body>
+		<styles>
+            <style name="title" font-size="28" text-alignment="right" text-color="#000000"/>
+        </styles>
+			<section>
+				<title>
+                   <p hidden="true">Logo</p>
+               </title>
+				<page>
+                    <controls>
+                        <control type="next-page">
+                            <center>
+                                <x>718</x>
+                                <y>980</y>
+                            </center>
+                            <image>($APP_BUNDLE)/arrow.png</image>
+                            <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                        </control>
+                    </controls>
+                <background color="#f3e1c6">
+					<animation center="{384, 502}">
+						<target type="keyframe" repeat-count="1" images-per-second="12">($APP_BUNDLE)/saraswati</target>
+					</animation>
+				</background>
+				<show-number>0</show-number>
+				</page>
+             </section>
+             <section>
+                <title>
+                    <p hidden="true">S0</p>
+                </title>
+                <content-title>
+                    <p>S0</p>
+                </content-title>
+                <page>
+                    <audio autoplay="true" loop="true">($APP_BUNDLE)/00_0 Oblozhka.m4a</audio>
+                    <controls>
+                        <control type="toggle-animations"> 
+                            <center>
+                                <x>90</x>
+                                <y>287</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>A</animation> </arg>
+                        </control>
+                        <control type="toggle-animations"> 
+                            <center>
+                                <x>130</x>
+                                <y>187</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>B</animation> </arg>
+                        </control>
+                        <control type="toggle-animations"> 
+                            <center>
+                                <x>241</x>
+                                <y>109</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>A_mid</animation> </arg>
+                        </control>
+                        <control type="toggle-animations"> 
+                            <center>
+                                <x>332</x>
+                                <y>78</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>D</animation> </arg>
+                        </control>
+                        <control type="toggle-animations"> 
+                            <center>
+                                <x>453</x>
+                                <y>82</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>X</animation> </arg>
+                        </control>
+                        <control type="toggle-animations"> 
+                            <center>
+                                <x>575</x>
+                                <y>134</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>Y</animation> </arg>
+                        </control>
+                        <control type="toggle-animations"> 
+                            <center>
+                                <x>638</x>
+                                <y>183</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>T</animation> </arg>
+                        </control>
+                        <control type="toggle-animations">
+                            <center>
+                                <x>678</x>
+                                <y>290</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>A_end</animation> </arg>
+                        </control>
+                        <control type="toggle-animations"> 
+                            <center>
+                                <x>384</x>
+                                <y>592</y>
+                            </center>
+                            <image>($APP_BUNDLE)/empty.png</image>
+                            <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                            <arg> <animation>sun</animation> </arg>
+                        </control>
+                        <control type="prev-page">
+                            <center>
+                                <x>50</x>
+                                <y>980</y>
+                            </center>
+                            <image>($APP_BUNDLE)/previous_h_n.png</image>
+                            <highlighted-image>($APP_BUNDLE)/previous_n.png</highlighted-image>
+                        </control>
+                        <control type="next-page">
+                            <center>
+                                <x>718</x>
+                                <y>980</y>
+                            </center>
+                            <image>($APP_BUNDLE)/next_n.png</image>
+                            <highlighted-image>($APP_BUNDLE)/next_h_n.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                        </control>
+                    </controls>
+                    <background image="($APP_BUNDLE)/Nitay_cover.png">
+                        <animation center="{384, 592}">
+                        <target type="image">($APP_BUNDLE)/Nitay_circle_animals.png</target>
+                            <actions>
+                                <action type="rotation" duration="16" autoreverse = "false" repeats-count="0" start-angle="0" end-angle="360"/>
+                            </actions>
+                        </animation>
+                        <animation name="A" autostart="false" center="{90, 287}">
+                            <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/A</target>
+                        </animation>
+                        <animation name="B" autostart="false" center="{130, 187}">
+                            <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/B</target>
+                        </animation>
+                        <animation name="A_mid" autostart="false" center="{241, 109}">
+                            <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/A_mid</target>
+                        </animation>
+                        <animation name="D" autostart="false" center="{332, 78}">
+                            <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/D</target>
+                        </animation>
+                        <animation name="X" autostart="false" center="{453, 82}">
+                            <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/X</target>
+                        </animation>             
+                        <animation name="Y" autostart="false" center="{570, 135}">
+                            <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/Y</target>
+                        </animation>
+                        <animation name="T" autostart="false" center="{638, 183}">
+                            <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/T</target>
+                        </animation>
+                        <animation name="A_end" autostart="false" center="{678, 290}">
+                            <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/A_end</target>
+                        </animation>
+                        <animation name="sun" autostart="false" center="{384, 592}">
+                            <target type="image">($APP_BUNDLE)/Nitay_circle.png</target>
+                            <actions>
+                                <action type="rotation" duration="18" autoreverse = "false" repeats-count="0" start-angle="360" end-angle="0"/>
+                            </actions>
+                        </animation>
+                    </background>
+                    <show-number>0</show-number>
+                </page>
+                    
+                    
+                                       
+                    <title>
+                        <p hidden="true">S1</p>
+                    </title>
+                    <content-title>
+                        <p>S1</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0001.png">
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+                    <title>
+                        <p hidden="true">S2</p>
+                    </title>
+                    <content-title>
+                        <p>S2</p>
+                    </content-title>
+                    <page>
+                    <controls>
+                        <control type="prev-page">
+                            <center>
+                                <x>50</x>
+                                <y>980</y>
+                            </center>
+                            <image>($APP_BUNDLE)/arrow_pr.png</image>
+                            <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                            <center>
+                                <x>718</x>
+                                <y>980</y>
+                            </center>
+                            <image>($APP_BUNDLE)/arrow.png</image>
+                            <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                            <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                        </control>
+                        <control type="page-link" dragable="true"> 
+                            <center>
+                                <x>206</x>
+                                <y>80</y>
+                            </center>
+                            <image>($APP_BUNDLE)/moons_0004.png</image>
+                            <highlighted-image>($APP_BUNDLE)/moons_color_0004.png</highlighted-image>
+                            <arg>-1</arg>
+                         </control>
+                         <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>120</x>
+                                <y>155</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0002.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0002.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>78</x>
+                                <y>235</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0022.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0022.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>111</x>
+                                <y>350</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0018.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0018.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>141</x>
+                                <y>418</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0016.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0016.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>82</x>
+                                <y>510</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0020.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0020.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>157</x>
+                                <y>583</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_color_0014.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_0014.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>107</x>
+                                <y>721</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_color_0023.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_0023.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                         <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>62</x>
+                                <y>847</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0011.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0011.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>159</x>
+                                <y>885</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0009.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0009.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>243</x>
+                                <y>930</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0006.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0006.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>375</x>
+                                <y>928</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0007.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0007.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>569</x>
+                                <y>968</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0005.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0005.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>633</x>
+                                <y>877</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0010.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0010.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>668</x>
+                                <y>743</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0012.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0012.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>681</x>
+                                <y>658</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0013.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0013.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>594</x>
+                                <y>509</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0015.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0015.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>711</x>
+                                <y>435</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0017.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0017.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>653</x>
+                                <y>338</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0019.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0019.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>681</x>
+                                <y>198</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0001.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0001.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>631</x>
+                                <y>89</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0003.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0003.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                        <control type="page-link" checkmark="true"> 
+                            <center>
+                                <x>493</x>
+                                <y>64</y>
+                            </center>
+                            <image>($APP_BUNDLE)/Moons/moons_0021.png</image>
+                            <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0021.png</highlighted-image>
+                            <arg>-1</arg>
+                        </control>
+                    </controls> 
+                       <background color="#000000">
+                           <animation center="{400, 290}" size="{550, 415}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/02.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0002.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S3</p>
+                    </title>
+                    <content-title>
+                        <p>S3</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>                           
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>217</x>
+                                    <y>90</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0020.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0020.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>348</x>
+                                    <y>56</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0004.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0004.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>417</x>
+                                    <y>116</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0021.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0021.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                           <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>489</x>
+                                    <y>51</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0003.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0003.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>645</x>
+                                    <y>245</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0001.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0001.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>559</x>
+                                    <y>317</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0019.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0019.png</highlighted-image>
+                                 <arg> <animation>stars_03</animation> </arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>678</x>
+                                    <y>377</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0015.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0015.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>652</x>
+                                    <y>516</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0013.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0013.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>528</x>
+                                    <y>554</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0017.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0017.png</highlighted-image>
+                                 <arg> <animation>stars_02</animation> </arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>617</x>
+                                    <y>813</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0010.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0010.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>628</x>
+                                    <y>923</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0007.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0007.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>517</x>
+                                    <y>988</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0008.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0008.png</highlighted-image>
+                                <arg> <animation>stars_01</animation> </arg>
+
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>437</x>
+                                    <y>950</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0009.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0009.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>294</x>
+                                    <y>996</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0005.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0005.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>122</x>
+                                    <y>626</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0014.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0014.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>34</x>
+                                    <y>561</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0016.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0016.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>113</x>
+                                    <y>472</y>
+                                </center>
+                                <image>($APP_BUNDLE)/Moons/moons_0018.png</image>
+                                <highlighted-image>($APP_BUNDLE)/Moons/moons_color_0018.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/moons_0018.png</disabled-image>
+                                <arg> <animation>stars_04</animation> </arg>
+                            </control>
+                    </controls>
+                       <background image="($APP_BUNDLE)/Nitay_0003.png">
+                            <animation center="{57, 137}">
+                                <target type="image">($APP_BUNDLE)/moon_page_3.png</target>
+                                <actions>
+                                    <action type="rotation" duration="5" autoreverse = "true" repeats-count="0" start-angle="0" end-angle="30"/>
+                                </actions>
+                            </animation>
+                            <animation name="stars_04" autostart="false" center="{97, 333}">
+                               <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/stars_04</target>
+                            </animation>
+                            <animation name="stars_01" autostart="false" center="{673, 114}">
+                               <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/stars_01</target>
+                            </animation>
+                            <animation name="stars_02" autostart="false" center="{648, 676}">
+                               <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/stars_02</target>
+                            </animation>
+                            <animation name="stars_03" autostart="false" center="{115, 895}">
+                               <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/stars_03</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S4</p>
+                    </title>
+                    <content-title>
+                        <p>S4</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>650</x>
+                                    <y>900</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>cow_muu</animation> </arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0004.png">
+                            <animation center="{384, 355}" size="{573, 212}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0004.mp4</target>
+                            </animation>
+                            <animation name="cow_muu" autostart="false" center="{650, 900}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/cow_muu</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S5</p>
+                    </title>
+                    <content-title>
+                        <p>S5</p>
+                    </content-title>
+                    <page>
+                        <audio autoplay="true" loop="true">($APP_BUNDLE)/03_1 Javlenie Nytaya.m4a</audio>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background color="#000000">
+                            <animation center="{384, 502}" size="{680, 820}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0005.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0005.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S6</p>
+                    </title>
+                    <content-title>
+                        <p>S6</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>161</x>
+                                    <y>814</y>
+                                </center>
+                                <image>($APP_BUNDLE)/balls/ball_1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/balls/ball_1_color.png</highlighted-image>
+                                <arg> <animation>cow_1</animation> </arg>
+                            </control>
+                                <control type="toggle-animations" checkmark="true"> 
+                                    <center>
+                                        <x>260</x>
+                                        <y>927</y>
+                                    </center>
+                                    <image>($APP_BUNDLE)/balls/ball_1.png</image>
+                                    <highlighted-image>($APP_BUNDLE)/balls/ball_1_color.png</highlighted-image>
+                                    <arg> <animation>fish</animation> </arg>
+                                </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>332</x>
+                                    <y>940</y>
+                                </center>
+                                <image>($APP_BUNDLE)/balls/ball_1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/balls/ball_1_color.png</highlighted-image>
+                                <arg> <animation>r_lotos</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>448</x>
+                                    <y>944</y>
+                                </center>
+                                <image>($APP_BUNDLE)/balls/ball_1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/balls/ball_1_color.png</highlighted-image>
+                                <arg> <animation>turtle</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>522</x>
+                                    <y>924</y>
+                                </center>
+                                <image>($APP_BUNDLE)/balls/ball_1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/balls/ball_1_color.png</highlighted-image>
+                                <arg> <animation>l_lotos</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>607</x>
+                                    <y>851</y>
+                                </center>
+                                <image>($APP_BUNDLE)/balls/ball_1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/balls/ball_1_color.png</highlighted-image>
+                               <arg> <animation>ball_stars</animation> </arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0006.png">
+                            <animation name="cow_1" autostart="false" center="{198, 170}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/cow_1</target>
+                            </animation>
+                            <animation name="turtle" autostart="false" center="{400, 156}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/turtle</target>
+                            </animation>
+                            <animation name="fish" autostart="false" center="{569, 153}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/fish</target>
+                            </animation>
+                            <animation name="r_lotos" autostart="false" center="{667, 559}" start-delay="true" repeat="true" delay-between-cycles="3">
+                                <target type="keyframe" repeat-count="0" images-per-second="10">($APP_BUNDLE)/r_lotos</target>
+                                <actions>
+                                <action type="rotation" duration="4" autoreverse = "true"
+                                repeats-count="1" start-angle="0" end-angle="0"/>
+                                </actions>
+                            </animation>
+                            <animation name="l_lotos" autostart="false" center="{100, 542}" start-delay="true" repeat="true" delay-between-cycles="3">
+                                <target type="keyframe" repeat-count="0" images-per-second="10">($APP_BUNDLE)/l_lotos</target>
+                                <actions>
+                                    <action type="rotation" duration="4" autoreverse = "true"
+                                    repeats-count="1" start-angle="0" end-angle="0"/>
+                                </actions>
+                            </animation>
+                            <animation name="ball_stars" autostart="false" center="{357, 63}">
+                                <target type="image">($APP_BUNDLE)/balls_2.png</target>
+                                <actions>
+                                    <action type="fade" duration="3" autoreverse = "true" repeats-count="0" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+                            </background>
+                        <show-number>0</show-number>
+                    </page>
+
+                    
+                    
+                    <title>
+                        <p hidden="true">S7</p>
+                    </title>
+                    <content-title>
+                        <p>S7</p>
+                    </content-title>
+                    <page>
+                        <audio autoplay="true" loop="true">($APP_BUNDLE)/04_8 lotus feet.m4a</audio>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                         <background color="#000000">
+                            <animation center="{382, 502}" size="{666, 840}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0007.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0007.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S8</p>
+                    </title>
+                    <content-title>
+                        <p>S8</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>157</x>
+                                    <y>475</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0007.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0007.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>578</x>
+                                    <y>500</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0008.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0008.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>611</x>
+                                    <y>256</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0009.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0009.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>129</x>
+                                    <y>352</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0010.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0010.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>151</x>
+                                    <y>248</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0011.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0011.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>618</x>
+                                    <y>409</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0012.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0012.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>284</x>
+                                    <y>170</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0013.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0013.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>373</x>
+                                    <y>83</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0014.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0014.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>423</x>
+                                    <y>162</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0015.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0015.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>473</x>
+                                    <y>119</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0016.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0016.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>567</x>
+                                    <y>160</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0017.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0017.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>479</x>
+                                    <y>231</y>
+                                </center>
+                                <image>($APP_BUNDLE)/08_stars_balls/star_0018.png</image>
+                                <highlighted-image>($APP_BUNDLE)/08_stars_balls/color_0018.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>151</x>
+                                    <y>965</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>star_1</animation></arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>101</x>
+                                    <y>852</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>star_2</animation></arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>74</x>
+                                    <y>662</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>star_3</animation></arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>575</x>
+                                    <y>960</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>star_4</animation></arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>626</x>
+                                    <y>858</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>star_5</animation></arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>676</x>
+                                    <y>661</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>star_6</animation></arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0008.png">
+                            <animation name="star_1" autostart="false" center="{164, 766}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/star_1</target>
+                            </animation>
+                            <animation name="star_2" autostart="false" center="{108, 728}">
+                                <target type="keyframe" repeat-count="0" images-per-second="16">($APP_BUNDLE)/star_2</target>
+                            </animation>
+                            <animation name="star_3" autostart="false" center="{91, 682}">
+                                <target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star_3</target>
+                            </animation>
+                            <animation name="star_4" autostart="false" center="{588, 772}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/star_4</target>
+                            </animation>
+                            <animation name="star_5" autostart="false" center="{640, 725}">
+                                <target type="keyframe" repeat-count="0" images-per-second="16">($APP_BUNDLE)/star_5</target>
+                            </animation>
+                            <animation name="star_6" autostart="false" center="{670, 676}">
+                                <target type="keyframe" repeat-count="0" images-per-second="20">($APP_BUNDLE)/star_6</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S9</p>
+                    </title>
+                    <content-title>
+                        <p>S9</p>
+                    </content-title>
+                    <page>
+                        <audio autoplay="true" loop="true">($APP_BUNDLE)/05_2 razluka.m4a</audio> 
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                       <background color="#000000">
+                            <animation center="{382, 502}" size="{666, 830}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0009.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0009.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S10</p>
+                    </title>
+                    <content-title>
+                        <p>S10</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>672</x>
+                                    <y>508</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bird_01</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>107</x>
+                                    <y>441</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bird_02</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>100</x>
+                                    <y>233</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bird_03</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>655</x>
+                                    <y>318</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bird_04</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>613</x>
+                                    <y>97</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bird_05</animation> </arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0010.png">
+                            <animation name="bird_01" autostart="false" center="{672, 508}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/bird_01</target>
+                            </animation>
+                            <animation name="bird_02" autostart="false" center="{107, 441}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/bird_02</target>
+                            </animation>
+                            <animation name="bird_03" autostart="false" center="{100, 233}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/bird_03</target>
+                            </animation>
+                            <animation name="bird_04" autostart="false" center="{655, 318}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/bird_04</target>
+                            </animation>
+                            <animation name="bird_05" autostart="false" center="{613, 97}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/bird_05</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+
+                    
+                    
+                    <title>
+                        <p hidden="true">S11</p>
+                    </title>
+                    <content-title>
+                        <p>S11</p>
+                    </content-title>
+                    <page>
+                         <audio autoplay="true" loop="true">($APP_BUNDLE)/06_3 igry.m4a</audio>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                             <background color="#000000">
+                            <animation center="{382, 502}" size="{684, 830}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0011.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0011.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+                    <title>
+                        <p hidden="true">S12</p>
+                    </title>
+                    <content-title>
+                        <p>S12</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="toggle-animations"> 
+                                <center>
+                                    <x>643</x>
+                                    <y>137</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <arg> <animation>Nitay_012_night</animation> </arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background>
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0012.png</target>
+                            </animation>
+                            <animation name="Nitay_012_night" autostart="false" center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_012_night.png</target>
+                                <actions>
+                                    <action type="fade" duration="4" autoreverse = "false" repeats-count="1" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+              
+                    <title>
+                        <p hidden="true">S13</p>
+                    </title>
+                    <content-title>
+                        <p>S13</p>
+                    </content-title>
+                    <page>
+                        <audio autoplay="true" loop="true">($APP_BUNDLE)/07_5 gluk s Krishnoi.m4a</audio>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                             <background color="#000000">
+                            <animation center="{382, 502}" size="{684, 840}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0013.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0013.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+
+                    
+                    
+                    <title>
+                        <p hidden="true">S14</p>
+                    </title>
+                    <content-title>
+                        <p>S14</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>502</x>
+                                    <y>948</y>
+                                </center>
+                                <image>($APP_BUNDLE)/fs/stone_0001.png</image>
+                                <highlighted-image>($APP_BUNDLE)/fs/flower_0001.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/fs/stone_0001.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>684</x>
+                                    <y>855</y>
+                                </center>
+                                <image>($APP_BUNDLE)/fs/stone_0002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/fs/flower_0002.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/fs/stone_0002.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>608</x>
+                                    <y>842</y>
+                                </center>
+                                <image>($APP_BUNDLE)/fs/stone_0003.png</image>
+                                <highlighted-image>($APP_BUNDLE)/fs/flower_0003.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/fs/stone_0003.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>327</x>
+                                    <y>972</y>
+                                </center>
+                                <image>($APP_BUNDLE)/fs/stone_0004.png</image>
+                                <highlighted-image>($APP_BUNDLE)/fs/flower_0004.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/fs/stone_0004.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>187</x>
+                                    <y>962</y>
+                                </center>
+                                <image>($APP_BUNDLE)/fs/stone_0005.png</image>
+                                <highlighted-image>($APP_BUNDLE)/fs/flower_0005.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/fs/stone_0005.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>89</x>
+                                    <y>932</y>
+                                </center>
+                                <image>($APP_BUNDLE)/fs/stone_0006.png</image>
+                                <highlighted-image>($APP_BUNDLE)/fs/flower_0006.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/fs/stone_0006.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>140</x>
+                                    <y>158</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0006</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>315</x>
+                                    <y>107</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0005</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>432</x>
+                                    <y>178</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0003</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>475</x>
+                                    <y>84</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0001</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>600</x>
+                                    <y>135</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0004</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>675</x>
+                                    <y>254</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0002</animation> </arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0014.png">
+                            <animation name="spiral_0006" autostart="false" center="{140, 158}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0006.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="-360"/>
+                                </actions>
+                            </animation>
+                            <animation name="spiral_0005" autostart="false" center="{315, 107}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0005.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation>
+                            <animation name="spiral_0003" autostart="false" center="{432, 178}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0003.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation>
+                            <animation name="spiral_0001" autostart="false" center="{475, 84}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0001.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation>
+                            <animation name="spiral_0004" autostart="false" center="{600, 135}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0004.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation>
+                            <animation name="spiral_0002" autostart="false" center="{675, 254}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0002.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S15</p>
+                    </title>
+                    <content-title>
+                        <p>S15</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>172</x>
+                                    <y>115</y>
+                                </center>
+                                <image>($APP_BUNDLE)/snail_stone/stone_0001.png</image>
+                                <highlighted-image>($APP_BUNDLE)/snail_stone/snail_0001.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/snail_stone/stone_0001.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>303</x>
+                                    <y>64</y>
+                                </center>
+                                <image>($APP_BUNDLE)/snail_stone/stone_0002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/snail_stone/snail_0002.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/snail_stone/stone_0002.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>497</x>
+                                    <y>93</y>
+                                </center>
+                                <image>($APP_BUNDLE)/snail_stone/stone_0003.png</image>
+                                <highlighted-image>($APP_BUNDLE)/snail_stone/snail_0003.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/snail_stone/stone_0003.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>581</x>
+                                    <y>130</y>
+                                </center>
+                                <image>($APP_BUNDLE)/snail_stone/stone_0004.png</image>
+                                <highlighted-image>($APP_BUNDLE)/snail_stone/snail_0004.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/snail_stone/stone_0004.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>597</x>
+                                    <y>190</y>
+                                </center>
+                                <image>($APP_BUNDLE)/snail_stone/stone_0005.png</image>
+                                <highlighted-image>($APP_BUNDLE)/snail_stone/snail_0005.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/snail_stone/stone_0005.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>685</x>
+                                    <y>138</y>
+                                </center>
+                                <image>($APP_BUNDLE)/snail_stone/stone_0006.png</image>
+                                <highlighted-image>($APP_BUNDLE)/snail_stone/snail_0006.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/snail_stone/stone_0006.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>193</x>
+                                    <y>955</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0003</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>522</x>
+                                    <y>945</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0004</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>644</x>
+                                    <y>945</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0001</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>651</x>
+                                    <y>830</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0005</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>640</x>
+                                    <y>601</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0006</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>354</x>
+                                    <y>93</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>spiral_0002</animation> </arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0015.png">
+                            <animation name="spiral_0003" autostart="false" center="{193, 955}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0003.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation>
+                            <animation name="spiral_0004" autostart="false" center="{522, 945}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0004.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="360" end-angle="0"/>
+                                </actions>
+                            </animation>
+                            <animation name="spiral_0001" autostart="false" center="{644, 945}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0001.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation><animation name="spiral_0005" autostart="false" center="{651, 830}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0005.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation><animation name="spiral_0006" autostart="false" center="{640, 601}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0006.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="0" end-angle="360"/>
+                                </actions>
+                            </animation><animation name="spiral_0002" autostart="false" center="{354, 93}">
+                                <target type="image">($APP_BUNDLE)/spiral/spiral_0002.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "false"
+                                    repeats-count="0" start-angle="360" end-angle="0"/>
+                                </actions>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+
+                    
+                    <title>
+                        <p hidden="true">S16</p>
+                    </title>
+                    <content-title>
+                        <p>S16</p>
+                    </content-title>
+                    <page>
+                        <audio autoplay="true" loop="true">($APP_BUNDLE)/08_7 Nitay i Mahaprabhu 2.m4a</audio>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                         <background color="#000000">
+                            <animation center="{380, 496}" size="{662, 828}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0016_v.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0016.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    <title>
+                        <p hidden="true">S17</p>
+                    </title>
+                    <content-title>
+                        <p>S17</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>51</x>
+                                    <y>263</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb1</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>50</x>
+                                    <y>194</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb2</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>67</x>
+                                    <y>138</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb3</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>110</x>
+                                    <y>82</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb4</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>170</x>
+                                    <y>60</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb5</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>230</x>
+                                    <y>48</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb6</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>291</x>
+                                    <y>34</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb7</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>348</x>
+                                    <y>30</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb8</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>442</x>
+                                    <y>26</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb9</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>520</x>
+                                    <y>35</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb10</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>597</x>
+                                    <y>69</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb11</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>662</x>
+                                    <y>120</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb12</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>704</x>
+                                    <y>192</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb13</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>91</x>
+                                    <y>888</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb14</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>107</x>
+                                    <y>938</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb15</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>152</x>
+                                    <y>968</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb16</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>195</x>
+                                    <y>988</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb17</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>159</x>
+                                    <y>1005</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb18</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>493</x>
+                                    <y>992</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb19</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>549</x>
+                                    <y>981</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb20</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>612</x>
+                                    <y>970</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb21</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>662</x>
+                                    <y>940</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb22</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>711</x>
+                                    <y>915</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb23</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>732</x>
+                                    <y>851</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb24</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>732</x>
+                                    <y>781</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>bb25</animation> </arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>                        
+                        <background image="($APP_BUNDLE)/Nitay_0017.png">
+                            <animation name="bb1" autostart="false" center="{51, 263}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst</target>
+                            </animation>
+                            <animation name="bb2" autostart="false" center="{53, 194}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst2</target>
+                            </animation>
+                            <animation name="bb3" autostart="false" center="{67, 138}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                            <animation name="bb4" autostart="false" center="{110, 82}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                            <animation name="bb5" autostart="false" center="{170, 60}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst2</target>
+                            </animation>
+                            <animation name="bb6" autostart="false" center="{230, 48}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst</target>
+                            </animation>
+                            <animation name="bb7" autostart="false" center="{291, 34}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst</target>
+                            </animation>
+                            <animation name="bb8" autostart="false" center="{348, 30}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst2</target>
+                            </animation>
+                            <animation name="bb9" autostart="false" center="{442, 26}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                            <animation name="bb10" autostart="false" center="{520, 35}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                            <animation name="bb11" autostart="false" center="{597, 69}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst2</target>
+                            </animation>
+                            <animation name="bb12" autostart="false" center="{662, 120}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst</target>
+                            </animation>
+                            <animation name="bb13" autostart="false" center="{704, 192}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst</target>
+                            </animation>
+                            <animation name="bb14" autostart="false" center="{97, 883}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst2</target>
+                            </animation>
+                            <animation name="bb15" autostart="false" center="{110, 934}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                            <animation name="bb16" autostart="false" center="{152, 968}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                            <animation name="bb17" autostart="false" center="{195, 988}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst2</target>
+                            </animation>
+                            <animation name="bb18" autostart="false" center="{250, 990}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst</target>
+                            </animation>
+                            <animation name="bb19" autostart="false" center="{493, 972}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst</target>
+                            </animation>
+                            <animation name="bb20" autostart="false" center="{549, 961}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst2</target>
+                            </animation>
+                            <animation name="bb21" autostart="false" center="{616, 960}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                            <animation name="bb22" autostart="false" center="{662, 930}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                            <animation name="bb23" autostart="false" center="{711, 900}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst2</target>
+                            </animation>
+                            <animation name="bb24" autostart="false" center="{732, 841}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst</target>
+                            </animation>
+                            <animation name="bb25" autostart="false" center="{730, 781}">
+                                <target type="keyframe" repeat-count="0" images-per-second="12">($APP_BUNDLE)/ball_burst3</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+    
+
+
+                    <title>
+                        <p hidden="true">S18</p>
+                    </title>
+                    <content-title>
+                        <p>S18</p>
+                    </content-title>
+                    <page>
+                        <audio autoplay="true" loop="true">($APP_BUNDLE)/09_4 Palomnichestvo.m4a</audio>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background color="#000000">
+                            <animation center="{383, 494}" size="{662, 834}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0018.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0018.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    
+                    
+                    
+                    
+                    <title>
+                        <p hidden="true">S19</p>
+                    </title>
+                    <content-title>
+                        <p>S19</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>684</x>
+                                    <y>710</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>hand_0002</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>637</x>
+                                    <y>563</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>hand_0003</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>595</x>
+                                    <y>855</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>hand_0001</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>337</x>
+                                    <y>907</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>hand_0004</animation> </arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>110</x>
+                                    <y>165</y>
+                                </center>
+                                <image>($APP_BUNDLE)/feet_flower/feet_0008.png</image>
+                                <highlighted-image>($APP_BUNDLE)/feet_flower/flower_0008.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/feet_flower/feet_0008.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>180</x>
+                                    <y>175</y>
+                                </center>
+                                <image>($APP_BUNDLE)/feet_flower/feet_0007.png</image>
+                                <highlighted-image>($APP_BUNDLE)/feet_flower/flower_0007.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/feet_flower/feet_0007.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>255</x>
+                                    <y>137</y>
+                                </center>
+                                <image>($APP_BUNDLE)/feet_flower/feet_0006.png</image>
+                                <highlighted-image>($APP_BUNDLE)/feet_flower/flower_0006.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/feet_flower/feet_0006.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>323</x>
+                                    <y>177</y>
+                                </center>
+                                <image>($APP_BUNDLE)/feet_flower/feet_0005.png</image>
+                                <highlighted-image>($APP_BUNDLE)/feet_flower/flower_0005.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/feet_flower/feet_0005.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>414</x>
+                                    <y>174</y>
+                                </center>
+                                <image>($APP_BUNDLE)/feet_flower/feet_0004.png</image>
+                                <highlighted-image>($APP_BUNDLE)/feet_flower/flower_0004.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/feet_flower/feet_0004.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>502</x>
+                                    <y>140</y>
+                                </center>
+                                <image>($APP_BUNDLE)/feet_flower/feet_0003.png</image>
+                                <highlighted-image>($APP_BUNDLE)/feet_flower/flower_0003.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/feet_flower/feet_0003.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>590</x>
+                                    <y>184</y>
+                                </center>
+                                <image>($APP_BUNDLE)/feet_flower/feet_0002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/feet_flower/flower_0002.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/feet_flower/feet_0002.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true"> 
+                                <center>
+                                    <x>654</x>
+                                    <y>150</y>
+                                </center>
+                                <image>($APP_BUNDLE)/feet_flower/feet_0001.png</image>
+                                <highlighted-image>($APP_BUNDLE)/feet_flower/flower_0001.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/feet_flower/feet_0001.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0019.png">
+                        <animation name="hand_0002" autostart="false" center="{684, 710}">
+                            <target type="image">($APP_BUNDLE)/19_20/hand_0002.png</target>
+                            <actions>
+                                <action type="rotation" duration="1.5" autoreverse = "true"
+                                repeats-count="0" start-angle="-15" end-angle="80"/>
+                            </actions>
+                        </animation>
+                            <animation name="hand_0003" autostart="false" center="{637, 563}">
+                                <target type="image">($APP_BUNDLE)/19_20/hand_0003.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1.5" autoreverse = "true"
+                                    repeats-count="0" start-angle="-15" end-angle="80"/>
+                                </actions>
+                            </animation>
+                            <animation name="hand_0001" autostart="false" center="{595, 855}">
+                                <target type="image">($APP_BUNDLE)/19_20/hand_0001.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "true"
+                                    repeats-count="0" start-angle="-45" end-angle="35"/>
+                                </actions>
+                            </animation>
+                            <animation name="hand_0004" autostart="false" center="{337, 907}">
+                                <target type="image">($APP_BUNDLE)/19_20/hand_0004.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1.5" autoreverse = "true"
+                                    repeats-count="0" start-angle="-15" end-angle="80"/>
+                                </actions>
+                            </animation>
+                            <animation center="{62, 898}"  start-delay="0.5">
+                                <target type="image">($APP_BUNDLE)/20_feet_flower/feet 1.png</target>
+                                <actions>
+                                 <action type="fade" duration="1.3" autoreverse = "true" repeats-count="1" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+                            <animation center="{81, 818}"  start-delay="1.5">
+                                <target type="image">($APP_BUNDLE)/20_feet_flower/feet 8.png</target>
+                                <actions>
+                                    <action type="fade" duration="1.3" autoreverse = "true" repeats-count="1" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+                            <animation center="{60, 700}"  start-delay="3">
+                                <target type="image">($APP_BUNDLE)/20_feet_flower/feet 4.png</target>
+                                <actions>
+                                    <action type="fade" duration="1.3" autoreverse = "true" repeats-count="1" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+                            <animation center="{83, 615}"  start-delay="4.5">
+                                <target type="image">($APP_BUNDLE)/20_feet_flower/feet 8.png</target>
+                                <actions>
+                                    <action type="fade" duration="1.3" autoreverse = "true" repeats-count="1" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+
+                            <animation center="{77, 519}"  start-delay="6">
+                                <target type="image">($APP_BUNDLE)/20_feet_flower/feet 4.png</target>
+                                <actions>
+                                    <action type="fade" duration="1.3" autoreverse = "true" repeats-count="1" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+                            <animation center="{73, 326}"  start-delay="7.5">
+                                <target type="image">($APP_BUNDLE)/20_feet_flower/feet 8.png</target>
+                                <actions>
+                                    <action type="fade" duration="1.3" autoreverse = "true" repeats-count="1" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+                            <animation center="{123, 229}"  start-delay="9">
+                                <target type="image">($APP_BUNDLE)/20_feet_flower/feet 8.png</target>
+                                <actions>
+                                    <action type="fade" duration="1.3" autoreverse = "true" repeats-count="1" start-alpha="0" end-alpha="1"/>
+                                </actions>
+                            </animation>
+
+
+
+                    </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    <title>
+                        <p hidden="true">S20</p>
+                    </title>
+                    <content-title>
+                        <p>S20</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="page-link" checkmark="true">        
+                                <center>           
+                                    <x>99</x>            
+                                    <y>143</y>                  
+                                </center>             
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/feet 1.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/20_feet_flower/flower 1.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true">        
+                                <center>           
+                                    <x>179</x>            
+                                    <y>179</y>                  
+                                </center>             
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 2.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/feet 2.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/20_feet_flower/flower 2.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true">        
+                                <center>           
+                                    <x>264</x>            
+                                    <y>137</y>                  
+                                </center>             
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 3.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/feet 3.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/20_feet_flower/flower 3.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true">        
+                                <center>           
+                                    <x>353</x>            
+                                    <y>174</y>                  
+                                </center>             
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 4.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/feet 4.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/20_feet_flower/flower 4.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true">        
+                                <center>           
+                                    <x>448</x>            
+                                    <y>183</y>                  
+                                </center>             
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 5.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/feet 5.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/20_feet_flower/flower 5.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true">        
+                                <center>           
+                                    <x>512</x>            
+                                    <y>125</y>                  
+                                </center>             
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 6.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/feet 6.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/20_feet_flower/flower 6.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true">        
+                                <center>           
+                                    <x>580</x>            
+                                     <y>177</y>                  
+                                </center>             
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 7.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/feet 7.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/20_feet_flower/flower 7.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" checkmark="true">        
+                                <center>           
+                                    <x>671</x>            
+                                    <y>158</y>                  
+                                </center>             
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 8.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/feet 8.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/20_feet_flower/flower 8.png</disabled-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>624</x>
+                                    <y>644</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>hand_0004</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>655</x>
+                                    <y>840</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>hand_0001</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>106</x>
+                                    <y>872</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>hand_0002</animation> </arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>112</x>
+                                    <y>705</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>hand_0003</animation> </arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0020.png">
+                            <animation name="hand_0004" autostart="false" center="{624, 644}">
+                                <target type="image">($APP_BUNDLE)/19_20/hand_0004.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1.5" autoreverse = "true"
+                                    repeats-count="0" start-angle="-15" end-angle="80"/>
+                                </actions>
+                            </animation>
+                            <animation name="hand_0001" autostart="false" center="{655, 840}">
+                                <target type="image">($APP_BUNDLE)/19_20/hand_0001.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "true"
+                                    repeats-count="0" start-angle="-15" end-angle="80"/>
+                                </actions>
+                            </animation>
+                            <animation name="hand_0002" autostart="false" center="{106, 872}">
+                                <target type="image">($APP_BUNDLE)/19_20/hand_0002.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1" autoreverse = "true"
+                                    repeats-count="0" start-angle="-15" end-angle="80"/>
+                                </actions>
+                            </animation>
+                            <animation name="hand_0003" autostart="false" center="{112, 705}">
+                                <target type="image">($APP_BUNDLE)/19_20/hand_0003.png</target>
+                                <actions>
+                                    <action type="rotation" duration="1.5" autoreverse = "true"
+                                    repeats-count="0" start-angle="-15" end-angle="80"/>
+                                </actions>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    <title>
+                        <p hidden="true">S21</p>
+                    </title>
+                    <content-title>
+                        <p>S21</p>
+                    </content-title>
+                    <page>
+                        <audio autoplay="true" loop="true">($APP_BUNDLE)/10_6 Sankirtana.m4a</audio>
+                        <controls>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                         <background color="#000000">
+                            <animation center="{383, 498}" size="{668, 834}" start-delay="0">
+                                <target type="video" repeat="1">($APP_BUNDLE)/Nitay_0021.mp4</target>
+                            </animation> 
+                            <animation center="{384, 502}">
+                                <target type="image">($APP_BUNDLE)/Nitay_0021.png</target>
+                            </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                    
+                    <title>
+                        <p hidden="true">S22</p>
+                    </title>
+                    <content-title>
+                        <p>S22</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>246</x>
+                                    <y>214</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_001.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_001.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>568</x>
+                                    <y>576</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_001.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_001.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>311</x>
+                                    <y>668</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_001.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_001.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control> 
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>387</x>
+                                    <y>234</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_002.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>550</x>
+                                    <y>360</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_002.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>314</x>
+                                    <y>800</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_002.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>205</x>
+                                    <y>640</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_002.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>545</x>
+                                    <y>740</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_002.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>470</x>
+                                    <y>828</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_002.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>513</x>
+                                    <y>232</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_003.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_003.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>420</x>
+                                    <y>739</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_003.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_003.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>427</x>
+                                    <y>360</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_004.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_004.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>503</x>
+                                    <y>490</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_004.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_004.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>231</x>
+                                    <y>899</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_004.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_004.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>265</x>
+                                    <y>306</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_005.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_005.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>356</x>
+                                    <y>570</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_005.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_005.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>219</x>
+                                    <y>450</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_006.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_006.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>544</x>
+                                    <y>901</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_006.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_006.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>160</x>
+                                    <y>504</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/22/flower_002.png</image>
+                                <highlighted-image>($APP_BUNDLE)/22/flower_002.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>470</x>
+                                    <y>828</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 2.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/flower 2.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>300</x>
+                                    <y>945</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/flower 1.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>363</x>
+                                    <y>444</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/20_feet_flower/flower 7.png</image>
+                                <highlighted-image>($APP_BUNDLE)/20_feet_flower/flower 7.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                            <control type="next-page">
+                                <center>
+                                    <x>718</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                            </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0022.png">
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+                 
+                 
+                 
+                    <title>
+                        <p hidden="true">S23</p>
+                    </title>
+                    <content-title>
+                        <p>S23</p>
+                    </content-title>
+                    <page>
+                        <controls>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>216</x>
+                                    <y>383</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_1.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>449</x>
+                                    <y>570</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_1.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>280</x>
+                                    <y>784</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_1.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_1.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>440</x>
+                                    <y>430</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_2.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_2.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>332</x>
+                                    <y>601</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_2.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_2.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>306</x>
+                                    <y>470</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_3.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_3.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>237</x>
+                                    <y>697</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_3.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_3.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>344</x>
+                                    <y>853</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_3.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_3.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>200</x>
+                                    <y>477</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_4.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_4.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>220</x>
+                                    <y>863</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_4.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_4.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>361</x>
+                                    <y>730</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/spiral_4.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/spiral_4.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>323</x>
+                                    <y>360</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/lotos.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/lotos.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>206</x>
+                                    <y>578</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/lotos.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/lotos.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="toggle-animations" checkmark="true"> 
+                                <center>
+                                    <x>620</x>
+                                    <y>885</y>
+                                </center>
+                                <image>($APP_BUNDLE)/empty.png</image>
+                                <highlighted-image>($APP_BUNDLE)/empty.png</highlighted-image>
+                                <disabled-image>($APP_BUNDLE)/empty.png</disabled-image>
+                                <arg> <animation>sun</animation> </arg>
+                            </control>
+                            <control type="page-link" dragable="true"> 
+                                <center>
+                                    <x>466</x>
+                                    <y>746</y>  
+                                </center>
+                                <image>($APP_BUNDLE)/23/lotos_2.png</image>
+                                <highlighted-image>($APP_BUNDLE)/23/lotos_2.png</highlighted-image>
+                                <arg>-1</arg>
+                            </control>
+                            <control type="prev-page">
+                                <center>
+                                    <x>50</x>
+                                    <y>980</y>
+                                </center>
+                                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+                            </control>
+                                <control type="next-page">
+                                    <center>
+                                        <x>718</x>
+                                        <y>980</y>
+                                    </center>
+                                    <image>($APP_BUNDLE)/arrow.png</image>
+                                    <highlighted-image>($APP_BUNDLE)/arrow_highlight.png</highlighted-image>
+                                    <disabled-image>($APP_BUNDLE)/next.png</disabled-image>
+                                </control>
+                        </controls>
+                        <background image="($APP_BUNDLE)/Nitay_0023.png"> 
+                        <animation name="sun" autostart="false" center="{620, 885}">
+                            <target type="image">($APP_BUNDLE)/23/sun.png</target>
+                            <actions>
+                                <action type="rotation" duration="4" autoreverse = "true"
+                                repeats-count="0" start-angle="0" end-angle="360"/>
+                            </actions>
+                        </animation>
+                        </background>
+                        <show-number>0</show-number>
+                    </page>
+			</section>
+                        
+        
+        <section>
+            <title>
+                <p hidden="true">About</p>
+            </title>
+            <page>
+            <controls>
+            <control type="prev-page">
+                <center>
+                    <x>50</x>
+                    <y>980</y>
+                </center>
+                <image>($APP_BUNDLE)/arrow_pr.png</image>
+                <highlighted-image>($APP_BUNDLE)/arrow_highlight_pr.png</highlighted-image>
+            </control>
+                </controls>
+                    <background image="($APP_BUNDLE)/Nitay_0024.png">
+					<animation center="{384, 802}">
+						<target type="keyframe" repeat-count="1" images-per-second="10">($APP_BUNDLE)/cow_hat</target>
+					</animation>
+				</background>
+				<show-number>0</show-number>
+            </page>
+        </section>
+
+        
+	</body>
+</book>
+
+ 

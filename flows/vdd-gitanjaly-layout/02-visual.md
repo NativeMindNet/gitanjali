@@ -1,7 +1,7 @@
 # Visual Mockups: Gitanjali Adaptive Layout
 
-> Version: 1.1
-> Status: DRAFT
+> Version: 1.2
+> Status: REVIEW
 > Last Updated: 2026-05-01
 
 ## Overview
@@ -66,18 +66,17 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 
 Как на скриншотах iPad: постоянная нижняя tab bar, а аудио — отдельной мини‑панелью поверх/над tab bar.
 
-**Табы (примерный состав):**
-- Back (стрелка назад)
-- Add (+)
-- Book (книга / библиотека / оглавление)
-- List (список / разделы / плейлисты)
-- Home (домой)
-- Reading (очки / режим чтения / настройки текста)
-- Audio (нота / аудио‑раздел)
+**Табы (4 таба):**
+- **Home** - обложка / последняя страница / продолжить чтение
+- **Library** - TOC / категории / поиск / закладки
+- **Audio** - плейлист / now playing / аудио-библиотека
+- **Settings** - язык, размер текста, тема, о приложении
 
 ```
-|<Back|  +   | Book | List | Home | Read | Audio |
+| Home | Library | Audio | Settings |
 ```
+
+**Примечание:** Back-навигация через системный жест (swipe from edge) и кнопку в header, не через tab bar.
 
 ---
 
@@ -102,7 +101,7 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 |   (optional) [Tap to continue] / auto-advance after load      |
 |                                                              |
 |--------------------------------------------------------------|
-|<Back|  +   | Book | List | Home | Read | Audio               | <- Tab bar (iPad)
+|  Home  |  Library  |  Audio  |  Settings  | <- Tab bar (iPad)
 +--------------------------------------------------------------+
 ```
 
@@ -143,7 +142,7 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 |             ~~~~~~~~~~~~~ (scroll) ~~~~~~~~~~~~~              |
 |                                                              |
 |--------------------------------------------------------------|
-|<Back|  +   | Book | List | Home | Read | Audio               |
+|  Home  |  Library  |  Audio  |  Settings  |
 +--------------------------------------------------------------+
 ```
 
@@ -174,7 +173,7 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 |                                                              |
 |                                                              |
 |--------------------------------------------------------------|
-|<Back|  +   | Book | List | Home | Read | Audio               |
+|  Home  |  Library  |  Audio  |  Settings  |
 +--------------------------------------------------------------+
 ```
 
@@ -350,11 +349,11 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 |                                                              |
 |--------------------------------------------------------------|
 |  [Mini Player / Audio Bar]                                   |
-|  [Play]  Track Title                        1:30   -2:36     |
+|  [Play]  Track Title                        1:30   -2:36     |  <- tap to toggle: 1:30 / 4:06
 |  [======o-------------------------------]   (seek)           |
 |                             [v] (expand/collapse)            |
 |--------------------------------------------------------------|
-|<Back|  +   | Book | List | Home | Read | Audio               |
+|  Home  |  Library  |  Audio  |  Settings  |
 +--------------------------------------------------------------+
 ```
 
@@ -434,17 +433,17 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 |                                                              |
 |                   ~~~~~~~~~ (scroll) ~~~~~~~~~                |
 |--------------------------------------------------------------|
-|<Back|  +   | Book | List | Home | Read | Audio               |
+|  Home  |  Library  |  Audio  |  Settings  |
 +--------------------------------------------------------------+
 ```
 
 ---
 
-## Screen: Settings (Language Switcher)
+## Screen: Settings
 
-Доступ через иконку [S] в header.
+Доступ через иконку [S] в header (phones) или tab Settings (iPad).
 
-### Modal Bottom Sheet (все размеры)
+### Modal Bottom Sheet (phones) / Full Screen (iPad)
 
 ```
 +------------------------------------------+
@@ -469,7 +468,30 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 |                                          |
 |  ----------------------------------------|
 |                                          |
+|  Размер текста / Text Size:              |
+|                                          |
+|  [S]  [M]  [L]  [XL]                     |  <- Segmented control
+|         ^                                |
+|       (selected)                         |
+|                                          |
+|  ----------------------------------------|
+|                                          |
+|  Тема / Theme:                           |
+|                                          |
+|  +------------------------------------+  |
+|  | (O) Светлая / Light                |  |
+|  +------------------------------------+  |
+|  +------------------------------------+  |
+|  | ( ) Тёмная / Dark                  |  |
+|  +------------------------------------+  |
+|  +------------------------------------+  |
+|  | ( ) Системная / System             |  |
+|  +------------------------------------+  |
+|                                          |
+|  ----------------------------------------|
+|                                          |
 |  Версия: 1.0.0                           |
+|  Sri Chaitanya Saraswat Math             |
 |                                          |
 +------------------------------------------+
 ```
@@ -690,12 +712,11 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
    |               v                     v                 |
    |           [Section List] -------> [Reader Page] <------+
    |
-   +--(Tab: Home)------------------------------> [TOC Categories]
-   +--(Tab: Book)------------------------------> [Library/Book root]
-   +--(Tab: List)------------------------------> [Section List / Playlists]
-   +--(Tab: Read)------------------------------> [Reader Preferences]
+   +--(Tab: Home)------------------------------> [Cover / Continue Reading]
+   +--(Tab: Library)----------------------------> [TOC Categories / Search / Bookmarks]
    +--(Tab: Audio)-----------------------------> [Audio Library / Now Playing]
-   +--(Back)-----------------------------------> previous screen
+   +--(Tab: Settings)--------------------------> [Settings Full Screen]
+   +--(Swipe from edge / Header back)----------> previous screen
    +--(Mini Player tap / chevron)--------------> [Expanded Player Sheet]
 ```
 
@@ -753,10 +774,11 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 
 | Element | MD iPad override |
 |--------|-------------------|
-| Global nav | Tab bar вместо bottom toolbar |
-| Audio | Mini player bar над tab bar + expand chevron |
+| Global nav | Tab bar (Home/Library/Audio/Settings) вместо bottom toolbar |
+| Audio | Mini player bar над tab bar + expand chevron + tap для toggle timings |
 | Reader typography | Нумерация стихов слева + перевод серым |
 | Cover/TOC | Полноэкранный фон + центрированный список |
+| Settings | Full screen вместо bottom sheet, включает размер текста и тему |
 
 ---
 

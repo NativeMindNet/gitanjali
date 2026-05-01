@@ -1,7 +1,7 @@
 # Requirements: Gitanjali Flutter Layout Migration
 
-> Version: 1.1
-> Status: UPDATED (REVIEW REQUIRED)
+> Version: 1.2
+> Status: REVIEW
 > Last Updated: 2026-05-01
 
 ## Problem Statement
@@ -177,9 +177,9 @@
 - [x] Нужна ли поддержка анимированных фонов? - Да, уже реализовано (AnimatedBackground)
 - [x] Нужен ли ручной переключатель языка? - Да, автоопределение + ручной переключатель в настройках
 - [x] Какой минимальный размер экрана? - Адаптивная верстка для ЛЮБЫХ устройств, включая старые и маленькие
-- [ ] Какой точный состав табов на tab bar для iPad? - Зафиксировать в VISUAL/SPEC (минимум: Home/Library/Reader/Audio)
-- [ ] Mini player: показываем remaining или total? - Зафиксировать в SPEC; допускается elapsed + remaining как в legacy
-- [ ] Режим “очки/Read”: это настройки текста или отдельный экран? - Уточнить в SPEC
+- [x] Какой точный состав табов на tab bar для iPad? - **4 таба: Home, Library, Audio, Settings**
+- [x] Mini player: показываем remaining или total? - **elapsed + remaining по умолчанию, tap для переключения на elapsed + total**
+- [x] Режим "очки/Read": это настройки текста или отдельный экран? - **Объединить с Settings (язык + размер текста + тема)**
 
 ## References
 
