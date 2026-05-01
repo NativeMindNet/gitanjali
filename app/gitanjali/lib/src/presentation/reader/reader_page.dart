@@ -6,6 +6,7 @@ import '../../data/audio_controller.dart';
 import '../../data/book_repository.dart';
 import '../../data/reader_store.dart';
 import '../../domain/models.dart';
+import '../settings/settings_controller.dart';
 import 'reader_controller.dart';
 import 'widgets/background_layer.dart';
 import 'widgets/reader_toolbar.dart';
@@ -16,31 +17,53 @@ import 'widgets/reader_page_header.dart';
 import 'widgets/page_paragraphs.dart';
 import 'widgets/reader_swipe_navigator.dart';
 
+/// Reader page that can work standalone or receive external controllers
 class ReaderPage extends StatefulWidget {
-  const ReaderPage({super.key});
+  const ReaderPage({
+    super.key,
+    this.controller,
+    this.settingsController,
+  });
+
+  /// External reader controller (if null, creates its own)
+  final ReaderController? controller;
+
+  /// External settings controller for text scale factor
+  final SettingsController? settingsController;
 
   @override
   State<ReaderPage> createState() => _ReaderPageState();
 }
 
 class _ReaderPageState extends State<ReaderPage> {
-  late final ReaderController _controller;
+  ReaderController? _ownController;
+  AudioController? _ownAudioController;
   BookLanguage _bookLanguage = BookLanguage.eng;
   bool _initialized = false;
+
+  ReaderController get _controller => widget.controller ?? _ownController!;
+  double get _textScaleFactor => widget.settingsController?.textScaleFactor ?? 1.0;
 
   @override
   void initState() {
     super.initState();
-    _controller = ReaderController(
-      repository: BookRepository(),
-      store: ReaderStore(),
-      audioService: AudioController(),
-    );
+    // Only create own controllers if not provided externally
+    if (widget.controller == null) {
+      _ownAudioController = AudioController();
+      _ownController = ReaderController(
+        repository: BookRepository(),
+        store: ReaderStore(),
+        audioService: _ownAudioController!,
+      );
+    }
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+
+    // Only handle language detection if using own controller
+    if (widget.controller != null) return;
 
     final languageCode = Localizations.localeOf(context).languageCode.toLowerCase();
     final nextLanguage = languageCode.startsWith('ru') ? BookLanguage.ru : BookLanguage.eng;
@@ -60,14 +83,20 @@ class _ReaderPageState extends State<ReaderPage> {
 
   @override
   void dispose() {
-    _controller.dispose();
+    _ownController?.dispose();
+    _ownAudioController?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
+    final listenables = <Listenable>[_controller];
+    if (widget.settingsController != null) {
+      listenables.add(widget.settingsController!);
+    }
+
+    return ListenableBuilder(
+      listenable: Listenable.merge(listenables),
       builder: (context, _) {
         return Scaffold(
           appBar: AppBar(
@@ -162,7 +191,10 @@ class _ReaderPageState extends State<ReaderPage> {
                     pageIndex: page.index,
                   ),
                   const SizedBox(height: 16),
-                  PageParagraphs(paragraphs: page.paragraphs),
+                  PageParagraphs(
+                    paragraphs: page.paragraphs,
+                    textScaleFactor: _textScaleFactor,
+                  ),
                   PageCommentsCard(comments: page.comments),
                   NavigateLinksPanel(
                     controls: page.linkControls,

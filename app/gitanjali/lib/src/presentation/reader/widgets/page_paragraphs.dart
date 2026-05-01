@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import '../../../domain/models.dart';
 
 class PageParagraphs extends StatelessWidget {
-  const PageParagraphs({super.key, required this.paragraphs});
+  const PageParagraphs({
+    super.key,
+    required this.paragraphs,
+    this.textScaleFactor = 1.0,
+  });
 
   final List<ParagraphSpec> paragraphs;
+  final double textScaleFactor;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +30,7 @@ class PageParagraphs extends StatelessWidget {
               textAlign: paragraph.style.textAlign,
               style: TextStyle(
                 fontFamily: paragraph.style.fontFamily,
-                fontSize: paragraph.style.fontSize,
+                fontSize: paragraph.style.fontSize * textScaleFactor,
                 color: paragraph.style.textColor,
                 height: 1.4,
               ),

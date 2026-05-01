@@ -231,7 +231,7 @@ class ReaderController extends ChangeNotifier {
   @override
   void dispose() {
     _audioSubscription?.cancel();
-    audioService.dispose();
+    // Note: audioService is not disposed here - it's owned by the shell
     super.dispose();
   }
 }

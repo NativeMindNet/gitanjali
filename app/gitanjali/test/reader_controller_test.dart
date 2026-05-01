@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gitangali/src/data/audio_service.dart';
+import 'package:gitangali/src/data/audio_controller.dart';
 import 'package:gitangali/src/data/book_repository.dart';
 import 'package:gitangali/src/data/reader_store.dart';
 import 'package:gitangali/src/domain/models.dart';
@@ -15,13 +15,13 @@ void main() {
   group('ReaderController', () {
     late _FakeBookRepository repository;
     late _FakeReaderStore store;
-    late _FakeAudioService audioService;
+    late _FakeAudioController audioService;
     late ReaderController controller;
 
     setUp(() {
       repository = _FakeBookRepository();
       store = _FakeReaderStore();
-      audioService = _FakeAudioService();
+      audioService = _FakeAudioController();
       controller = ReaderController(
         repository: repository,
         store: store,
@@ -152,10 +152,11 @@ class _FakeReaderStore extends ReaderStore {
   }
 }
 
-class _FakeAudioService extends AudioService {
+class _FakeAudioController extends AudioController {
   final StreamController<PlayerState> _stateController = StreamController<PlayerState>.broadcast();
   bool _isPlaying = false;
   bool _disposed = false;
+  String? _currentAsset;
   int playCalls = 0;
   int stopCalls = 0;
 
@@ -166,9 +167,12 @@ class _FakeAudioService extends AudioService {
   bool get isPlaying => _isPlaying;
 
   @override
+  String? get currentAsset => _currentAsset;
+
+  @override
   Future<void> play(PageAudio audio) async {
     playCalls += 1;
-    currentAsset = audio.assetPath;
+    _currentAsset = audio.assetPath;
     _isPlaying = true;
   }
 
@@ -179,12 +183,13 @@ class _FakeAudioService extends AudioService {
   }
 
   @override
-  Future<void> dispose() async {
+  void dispose() {
     if (_disposed) {
       return;
     }
     _disposed = true;
-    await _stateController.close();
+    _stateController.close();
+    super.dispose();
   }
 }
 

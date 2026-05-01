@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gitangali/src/data/audio_service.dart';
+import 'package:gitangali/src/data/audio_controller.dart';
 import 'package:gitangali/src/data/book_repository.dart';
 import 'package:gitangali/src/data/reader_store.dart';
 import 'package:gitangali/src/domain/models.dart';
@@ -15,7 +15,7 @@ void main() {
     final controller = ReaderController(
       repository: _FakeBookRepository(),
       store: _FakeReaderStore(),
-      audioService: _FakeAudioService(),
+      audioService: _FakeAudioController(),
     );
     addTearDown(controller.dispose);
     await controller.initialize(bookLanguage: BookLanguage.eng);
@@ -57,15 +57,19 @@ class _FakeReaderStore extends ReaderStore {
   Future<Set<int>> loadBookmarks(String bookId) async => <int>{};
 }
 
-class _FakeAudioService extends AudioService {
+class _FakeAudioController extends AudioController {
   final StreamController<PlayerState> _stateController = StreamController<PlayerState>.broadcast();
+  bool _disposed = false;
 
   @override
   Stream<PlayerState> get playerStateStream => _stateController.stream;
 
   @override
-  Future<void> dispose() async {
-    await _stateController.close();
+  void dispose() {
+    if (_disposed) return;
+    _disposed = true;
+    _stateController.close();
+    super.dispose();
   }
 }
 
