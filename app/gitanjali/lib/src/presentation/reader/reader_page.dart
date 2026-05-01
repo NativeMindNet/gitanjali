@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../../data/audio_service.dart';
+import '../../data/audio_controller.dart';
 import '../../data/book_repository.dart';
 import '../../data/reader_store.dart';
 import '../../domain/models.dart';
@@ -34,7 +34,7 @@ class _ReaderPageState extends State<ReaderPage> {
     _controller = ReaderController(
       repository: BookRepository(),
       store: ReaderStore(),
-      audioService: AudioService(),
+      audioService: AudioController(),
     );
   }
 

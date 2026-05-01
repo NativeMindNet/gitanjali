@@ -22,7 +22,8 @@ IN PROGRESS (Phase 1: Foundation)
 - [x] Visual v1.2 approved
 - [x] Specifications approved
 - [x] Plan approved
-- [ ] Implementation Phase 1: Foundation  <- current
+- [x] Implementation Phase 1: Foundation
+- [ ] Implementation Phase 2: Controllers  <- current
 - [ ] Implementation Phase 2: Controllers
 - [ ] Implementation Phase 3: Shell
 - [ ] Implementation Phase 4: Screens

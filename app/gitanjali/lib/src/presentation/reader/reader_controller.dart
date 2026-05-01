@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
 
-import '../../data/audio_service.dart';
+import '../../data/audio_controller.dart';
 import '../../data/book_repository.dart';
 import '../../data/reader_store.dart';
 import '../../domain/models.dart';
@@ -21,7 +21,7 @@ class ReaderController extends ChangeNotifier {
 
   final BookRepository repository;
   final ReaderStore store;
-  final AudioService audioService;
+  final AudioController audioService;
 
   StreamSubscription<PlayerState>? _audioSubscription;
 

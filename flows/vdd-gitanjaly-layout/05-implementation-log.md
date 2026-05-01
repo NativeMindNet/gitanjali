@@ -3,28 +3,48 @@
 > Started: 2026-05-01
 > Plan: [04-plan.md](./04-plan.md)
 
-## Phase 1: Foundation
+## Phase 1: Foundation - COMPLETE
 
 ### Task 1.1: Add Data Models
-- **Status**: In Progress
-- **Started**: 2026-05-01
+- **Status**: Complete
+- **File**: `lib/src/domain/models.dart`
 
-Added enums to `models.dart`:
-- `LanguageOption` (auto, russian, english)
-- `TextSizeOption` (small, medium, large, extraLarge)
+Added enums:
+- `LanguageOption` (auto, russian, english) with `toBookLanguage()` method
+- `TextSizeOption` (small, medium, large, extraLarge) with `scaleFactor`
 - `ThemeOption` (light, dark, system)
 - `LayoutMode` (phone, tablet)
 
 ### Task 1.2: Create Breakpoints Utility
-- **Status**: Pending
+- **Status**: Complete
+- **File**: `lib/src/presentation/common/breakpoints.dart`
+
+Created:
+- `Breakpoints` class with constants (xs, sm, md, lg, phoneTabletThreshold)
+- `layoutModeOf(context)` function
+- `adaptivePadding(context)` function
+- `contentMaxWidth(context)` function
+- `LayoutModeX` extension on BuildContext
 
 ### Task 1.3: Create Theme Tokens
-- **Status**: Pending
+- **Status**: Complete
+- **File**: `lib/src/presentation/common/theme_tokens.dart`
+
+Created:
+- `AppColors` - reader backgrounds, text colors, accents
+- `AppTypography` - text styles (coverTitle, pageTitle, byline, originalVerse, translation, verseNumber, quote, tocItem)
+- `AppSpacing` - spacing constants
+- `AppLayout` - layout constants (maxContentWidth, miniPlayerHeight, etc.)
+- `AppTheme` - light/dark ThemeData factories
+
+**Verification**: `flutter analyze` - No issues found
 
 ---
 
-## Phase 2: Controllers
-(Not started)
+## Phase 2: Controllers - IN PROGRESS
+
+### Task 2.1: Extend ReaderStore with Settings
+- **Status**: In Progress
 
 ## Phase 3: Shell & Navigation
 (Not started)
