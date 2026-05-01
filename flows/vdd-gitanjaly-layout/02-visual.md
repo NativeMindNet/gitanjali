@@ -1,6 +1,6 @@
 # Visual Mockups: Gitanjali Adaptive Layout
 
-> Version: 1.0
+> Version: 1.1
 > Status: DRAFT
 > Last Updated: 2026-05-01
 
@@ -18,6 +18,169 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 | SM | 360-599px | Стандартные телефоны |
 | MD | 600-899px | Планшеты, большие телефоны в landscape |
 | LG | >= 900px | Десктоп, большие планшеты |
+
+---
+
+## Design System Notes (типографика/цвет/отступы)
+
+Цель: сохранить “книжную” эстетику (каллиография/воздух/кремово-белая бумага), но не жертвовать читабельностью и навигацией.
+
+### Color & Surfaces
+
+- **Reader background**: светлая “бумага” (off‑white).  
+- **Cover / TOC background**: полноэкранное изображение (например перо павлина) с лёгким затемнением/blur для контраста текста.
+- **Text**: основной — тёмный, вторичный (перевод/комментарий) — серый.
+- **Accent**: голубой/бирюзовый (как в примерах), используется для декоративных заголовков и выделений.
+
+### Typography Roles
+
+- **H0 Cover Title (script)**: декоративный/каллиографический шрифт, большой, с трекингом, цвет accent.
+- **H1 Page Title (script/serif)**: название песни/секции.
+- **Byline**: “by …” — меньший кегль, нейтральный (серый/чёрный), центр.
+- **Original verse**: основной текст (чёрный), может быть чуть крупнее перевода.
+- **Translation**: вторичный (серый), можно курсив для отдельных слов/терминов.
+- **Verse number**: слева, маленький кегль, серый.
+- **Quote block**: уменьшенный, серый, с кавычками, увеличенный межстрочный.
+
+### Layout tokens (ориентиры)
+
+- **Content max width (MD/LG)**: 720–800px, центрирование.
+- **Reader side padding**: XS 12px, SM 16px, MD 24px, LG 32px.
+- **Vertical rhythm**: между блоками 16–24px, между стихами 18–28px.
+- **Safe area**: обязательна на всех платформах (включая нижнюю панель/плеер).
+
+---
+
+## Global Navigation Models
+
+### Model A: Bottom Toolbar (phones / desktop web)
+
+Используется в исходных ASCII макетах для XS/SM и для web/desktop:
+
+```
+[<Prev] [Next>] | [Home] [Search] [Bookmarks] [Audio]
+ optional: audio mini player in toolbar area
+```
+
+### Model B: Bottom Tab Bar + Mini Player (iPad / tablets)
+
+Как на скриншотах iPad: постоянная нижняя tab bar, а аудио — отдельной мини‑панелью поверх/над tab bar.
+
+**Табы (примерный состав):**
+- Back (стрелка назад)
+- Add (+)
+- Book (книга / библиотека / оглавление)
+- List (список / разделы / плейлисты)
+- Home (домой)
+- Reading (очки / режим чтения / настройки текста)
+- Audio (нота / аудио‑раздел)
+
+```
+|<Back|  +   | Book | List | Home | Read | Audio |
+```
+
+---
+
+## Screen: Cover / Splash (полноэкранный)
+
+Покрывает экран с павлиньим пером и надписью “Sri Gaudiya Gitanjali”.
+
+### MD/ LG (tablet/desktop-like)
+
+```
++--------------------------------------------------------------+
+|                      [Full-screen Background Image]          |
+|                      (peacock feather / artwork)             |
+|                                                              |
+|                                                              |
+|                         Sri Gaudiya Gitanjali                 | <- H0 script
+|                     Sri Chaitanya Saraswat Math               | <- subtitle
+|                                                              |
+|                                                              |
+|                                                              |
+|                                                              |
+|   (optional) [Tap to continue] / auto-advance after load      |
+|                                                              |
+|--------------------------------------------------------------|
+|<Back|  +   | Book | List | Home | Read | Audio               | <- Tab bar (iPad)
++--------------------------------------------------------------+
+```
+
+### Loading overlay (если контент/база грузится)
+
+```
+  [Loading…]   [=====>      ]
+  Подготовка библиотеки / индекса / аудио…
+```
+
+---
+
+## Screen: TOC / Library Categories (полноэкранный список)
+
+Покрывает экран со списком категорий поверх фонового изображения (“Morning Songs”, “Midday Songs”, …).
+
+### MD (iPad portrait)
+
+```
++--------------------------------------------------------------+
+|                      [Full-screen Background Image]          |
+|                  (darken/blur behind text)                   |
+|                                                              |
+|                     Morning Songs                             |
+|                     Midday Songs                              |
+|                     Evening Songs                             |
+|                     Songs to Lord Nityananda                  |
+|                     Songs to Lord Chaitanya                   |
+|                     Songs to the Vaisnavas                    |
+|                     Various Songs of the Vaisnava Acharyas    |
+|                     Sri Siksastakam …                         |
+|                     Songs to Srimati Radharani                |
+|                     Songs to Sri Krishna                      |
+|                     Special Songs for the Festival Days       |
+|                     Compositions by Srila …                   |
+|                     Compositions by Srila …                   |
+|                                                              |
+|             ~~~~~~~~~~~~~ (scroll) ~~~~~~~~~~~~~              |
+|                                                              |
+|--------------------------------------------------------------|
+|<Back|  +   | Book | List | Home | Read | Audio               |
++--------------------------------------------------------------+
+```
+
+### Item states
+
+- **Default**: акцентный script‑инициал (как “M” у Morning) + основной текст.
+- **Pressed/selected**: подсветка фоном (полупрозрачная “плашка”) + subtle scale/opacity.
+- **Long title wrap**: перенос на 2 строки, выравнивание по центру.
+
+---
+
+## Screen: Section Cover (обложка раздела)
+
+Покрывает экран “Evening Songs” с белым фоном, большой иллюстрацией и крупным заголовком.
+
+### MD (iPad portrait)
+
+```
++--------------------------------------------------------------+
+|                         (paper/off-white)                    |
+|                                                              |
+|                +------------------------------+              |
+|                |        [Illustration]        |              |
+|                |  (watercolor / line art)     |              |
+|                +------------------------------+              |
+|                                                              |
+|                         Evening Songs                         | <- H1 script/serif
+|                                                              |
+|                                                              |
+|--------------------------------------------------------------|
+|<Back|  +   | Book | List | Home | Read | Audio               |
++--------------------------------------------------------------+
+```
+
+### Navigation
+
+- Tap section cover → open first page of section / section list (depending on UX choice).
 
 ---
 
@@ -147,6 +310,60 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 +------------------------------------------------------------+
 ```
 
+### MD Layout (600-899px) - Планшет (iPad style: Tab Bar + Mini Player)
+
+Покрывает reader‑экран как на скриншотах: белая страница, центрированные заголовки, нумерация стихов слева, перевод серым, снизу мини‑плеер.
+
+```
++--------------------------------------------------------------+
+|                      (paper/off-white)                       |
+|                                                              |
+|                 Gupta Govardhan Arati                         | <- Title (script)
+|            by Srila Bhakti Sundar Govinda ...                 | <- Byline
+|                                                              |
+|            jaya jaya girirajer arati visala                    | <- Original (center)
+|            sri gaura-mandala-majhe ...                         |
+|                                                              |
+|  1   All glories, all glories, to the grand arati ...         | <- Translation (gray)
+|                                                              |
+|            koladvipe sobhe gupta-govardhana ...                |
+|            vyakta hoila sri govinda ...                        |
+|                                                              |
+|  2   The hidden Govardhan graces Koladwip ...                  |
+|                                                              |
+|            malati-madhavi-kunja ...                            |
+|            nigudha-nikunja-lila ...                            |
+|                                                              |
+|  3   There are groves of malati and madhavi ...                |
+|                                                              |
+|            apurvva kundera sobha ...                           |
+|            surendra-surabhi-seva ...                           |
+|                                                              |
+|  4   The incomparable beauty of the kunda ...                  |
+|                                                              |
+|            sri bhakti-raksaka ...                              |
+|            prakasila tava seva ...                             |
+|                                                              |
+|  5   ...                                                      |
+|                                                              |
+|                   ~~~~~~~~~ (scroll) ~~~~~~~~~                |
+|                                                              |
+|--------------------------------------------------------------|
+|  [Mini Player / Audio Bar]                                   |
+|  [Play]  Track Title                        1:30   -2:36     |
+|  [======o-------------------------------]   (seek)           |
+|                             [v] (expand/collapse)            |
+|--------------------------------------------------------------|
+|<Back|  +   | Book | List | Home | Read | Audio               |
++--------------------------------------------------------------+
+```
+
+**Reader content rules (iPad):**
+- Заголовок/Byline — центр, с большим top padding.
+- Original verse — центр, жирность/контраст выше перевода.
+- Translation — left aligned (или центр с большим line length), **серым**.
+- Verse number — отдельная колонка слева (фикс ширина), вертикальное выравнивание по первой строке перевода.
+
 ### LG Layout (>= 900px) - Десктоп
 
 ```
@@ -188,6 +405,37 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 +--------------------------------------------------------------------------------+
 |              [>] Playing: Jaya Jaya Girirajer Arati   [========>    ]          |
 +--------------------------------------------------------------------------------+
+```
+
+---
+
+## Screen: Dedication / Biography Page (портрет + текст)
+
+Покрывает экран с портретом и большим цитатным/биографическим блоком.
+
+### MD (iPad)
+
+```
++--------------------------------------------------------------+
+|                      (paper/off-white)                       |
+|                                                              |
+|                 +---------------------------+                 |
+|                 |        [Portrait]         |                 |
+|                 |   (framed / rounded)      |                 |
+|                 +---------------------------+                 |
+|                                                              |
+|     Srila Bhakti Sundar Govinda Dev-Goswami Maharaj           | <- H1/H2 (accent initial optional)
+|                                                              |
+|   gurvabhista-supurakam guru-ganair                           |
+|   asisa-sambhusitam ...                                       | <- Verse/Prayer block (center)
+|                                                              |
+|  "His Guru's most cherished wishes, he's truly fulfilling ... |
+|   ... bestower of the seed of Divine Love."                   | <- Quote block (gray)
+|                                                              |
+|                   ~~~~~~~~~ (scroll) ~~~~~~~~~                |
+|--------------------------------------------------------------|
+|<Back|  +   | Book | List | Home | Read | Audio               |
++--------------------------------------------------------------+
 ```
 
 ---
@@ -433,6 +681,24 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
       +--(tap Page Link)---> [Reader Page @ linked page]
 ```
 
+### Flow: iPad Tab Bar Navigation (Model B)
+
+```
+[Cover] ---> [TOC Categories] ---> [Section Cover] ---> [Reader Page]
+   ^               |                     |                 |
+   |               | (tap category)      | (tap)           |
+   |               v                     v                 |
+   |           [Section List] -------> [Reader Page] <------+
+   |
+   +--(Tab: Home)------------------------------> [TOC Categories]
+   +--(Tab: Book)------------------------------> [Library/Book root]
+   +--(Tab: List)------------------------------> [Section List / Playlists]
+   +--(Tab: Read)------------------------------> [Reader Preferences]
+   +--(Tab: Audio)-----------------------------> [Audio Library / Now Playing]
+   +--(Back)-----------------------------------> previous screen
+   +--(Mini Player tap / chevron)--------------> [Expanded Player Sheet]
+```
+
 ---
 
 ## States Summary
@@ -483,6 +749,15 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 | Font scale | 0.9x | 1.0x | 1.0x | 1.1x |
 | Page links | Horizontal scroll | Horizontal scroll | Grid | Grid |
 
+### iPad-specific Overrides (MD)
+
+| Element | MD iPad override |
+|--------|-------------------|
+| Global nav | Tab bar вместо bottom toolbar |
+| Audio | Mini player bar над tab bar + expand chevron |
+| Reader typography | Нумерация стихов слева + перевод серым |
+| Cover/TOC | Полноэкранный фон + центрированный список |
+
 ---
 
 ## Notes
@@ -492,6 +767,8 @@ ASCII макеты адаптивной верстки для Sri Gaudiya Gitanj
 - На XS экранах приоритет читаемости текста над декоративными элементами
 - Swipe-навигация работает на всех размерах экрана
 - Safe area respected на всех платформах (notch, navigation bar)
+- Для iPad допускается альтернативная навигация: tab bar + mini player (см. Model B)
+- Reader page должен поддерживать “книжные” страницы: обложки секций, страницы-посвящения, страницы со стихами (original+translation)
 
 ---
 
