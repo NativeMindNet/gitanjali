@@ -225,3 +225,57 @@ class ControlInfo {
   final String? highlightedImageAsset;
 }
 
+// =============================================================================
+// Settings & Layout Models (VDD: vdd-gitanjaly-layout)
+// =============================================================================
+
+/// User language preference for content
+enum LanguageOption {
+  auto('Автоматически / Auto'),
+  russian('Русский'),
+  english('English');
+
+  const LanguageOption(this.label);
+  final String label;
+
+  /// Convert to BookLanguage based on system locale
+  BookLanguage toBookLanguage(String systemLocale) {
+    switch (this) {
+      case LanguageOption.auto:
+        return systemLocale.startsWith('ru') ? BookLanguage.ru : BookLanguage.eng;
+      case LanguageOption.russian:
+        return BookLanguage.ru;
+      case LanguageOption.english:
+        return BookLanguage.eng;
+    }
+  }
+}
+
+/// Text size preference
+enum TextSizeOption {
+  small('S', 0.85),
+  medium('M', 1.0),
+  large('L', 1.15),
+  extraLarge('XL', 1.3);
+
+  const TextSizeOption(this.label, this.scaleFactor);
+  final String label;
+  final double scaleFactor;
+}
+
+/// Theme preference
+enum ThemeOption {
+  light('Светлая / Light'),
+  dark('Тёмная / Dark'),
+  system('Системная / System');
+
+  const ThemeOption(this.label);
+  final String label;
+}
+
+/// Layout mode based on screen width
+enum LayoutMode {
+  phone,  // < 600px width (Model A: bottom toolbar)
+  tablet, // >= 600px width (Model B: tab bar + mini player)
+}
+

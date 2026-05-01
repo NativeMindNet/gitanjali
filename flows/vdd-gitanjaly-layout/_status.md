@@ -2,11 +2,11 @@
 
 ## Current Phase
 
-VISUAL
+IMPLEMENTATION
 
 ## Phase Status
 
-REVIEW (v1.2 - all questions resolved)
+IN PROGRESS (Phase 1: Foundation)
 
 ## Last Updated
 
@@ -18,19 +18,16 @@ REVIEW (v1.2 - all questions resolved)
 
 ## Progress
 
-- [x] Requirements v1.0 drafted
-- [x] Requirements v1.0 approved
-- [x] Visual v1.0 drafted
-- [x] Requirements v1.1 expanded (user)  <- iPad, new screens, mini player
-- [x] Visual v1.1 expanded (user)  <- Design system, navigation models, new screens
-- [ ] Requirements v1.1 approved
-- [ ] Visual v1.1 approved  <- current
-- [ ] Specifications drafted
-- [ ] Specifications drafted
-- [ ] Specifications approved
-- [ ] Plan drafted
-- [ ] Plan approved
-- [ ] Implementation started
+- [x] Requirements v1.2 approved
+- [x] Visual v1.2 approved
+- [x] Specifications approved
+- [x] Plan approved
+- [ ] Implementation Phase 1: Foundation  <- current
+- [ ] Implementation Phase 2: Controllers
+- [ ] Implementation Phase 3: Shell
+- [ ] Implementation Phase 4: Screens
+- [ ] Implementation Phase 5: Widgets
+- [ ] Implementation Phase 6: Testing
 - [ ] Implementation complete
 - [ ] Documentation drafted
 - [ ] Documentation approved
@@ -86,5 +83,6 @@ Key decisions and context for resuming:
 
 ## Next Actions
 
-1. Review and approve requirements document
-2. Proceed to VISUAL phase for adaptive layout mockups
+1. Implement Phase 1: Foundation (models, breakpoints, tokens)
+2. Implement Phase 2: Controllers (settings, audio)
+3. Continue through remaining phases

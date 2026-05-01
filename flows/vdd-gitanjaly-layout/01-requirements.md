@@ -1,7 +1,7 @@
 # Requirements: Gitanjali Flutter Layout Migration
 
 > Version: 1.2
-> Status: REVIEW
+> Status: APPROVED
 > Last Updated: 2026-05-01
 
 ## Problem Statement
@@ -206,5 +206,5 @@
 
 - [x] Reviewed by: User
 - [x] Approved on: 2026-05-01
-- [ ] Re-reviewed after v1.1 update
-- [x] Notes: v1.0 requirements approved; v1.1 расширяет требования под iPad/новые экраны из legacy, требуется повторный review
+- [x] Re-reviewed after v1.2 update: 2026-05-01
+- [x] Notes: v1.2 approved with all open questions resolved (4 tabs, timings toggle, Settings includes text size + theme)
