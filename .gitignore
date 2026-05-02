@@ -1,3 +1,6 @@
+# Book export tool copies binaries here (dart run app/gitanjali/tool/extract_book_content.dart --copy-media)
+docs/extracted-gitanjali/*/media/
+
 logs
 log
 screenshots
