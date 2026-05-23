@@ -131,6 +131,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_versegrid:
+    dependency: "direct main"
+    description:
+      path: "../../../../flutter_versegrid"
+      relative: true
+    source: path
+    version: "0.1.0"
   flutter_web_plugins:
     dependency: transitive
     description: flutter

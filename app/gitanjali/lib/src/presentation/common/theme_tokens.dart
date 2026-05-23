@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_versegrid/flutter_versegrid.dart';
 
 /// Design tokens for Gitanjali app
 /// Based on VDD visual specifications v1.2
@@ -182,6 +183,18 @@ class AppTheme {
           selectedItemColor: AppColors.primary,
           unselectedItemColor: Colors.grey,
         ),
+        extensions: <ThemeExtension<dynamic>>[
+          VerseGridTheme(
+            verseNumberColumnWidth: AppLayout.verseNumberWidth,
+            rowVerticalPadding: AppSpacing.verseGap / 2,
+            columnVerticalPadding: AppSpacing.paragraphGap / 2,
+            gapOriginalToTranslation: AppSpacing.md,
+            gapOriginalToTranslationCompact: AppSpacing.sm,
+            defaultOriginalFontSize: 16,
+            defaultTranslationFontSize: 15,
+            defaultVerseNumberFontSize: 12,
+          ),
+        ],
       );
 
   static ThemeData dark() => ThemeData(
@@ -202,5 +215,17 @@ class AppTheme {
           selectedItemColor: AppColors.accent,
           unselectedItemColor: Colors.grey.shade600,
         ),
+        extensions: <ThemeExtension<dynamic>>[
+          VerseGridTheme(
+            verseNumberColumnWidth: AppLayout.verseNumberWidth,
+            rowVerticalPadding: AppSpacing.verseGap / 2,
+            columnVerticalPadding: AppSpacing.paragraphGap / 2,
+            gapOriginalToTranslation: AppSpacing.md,
+            gapOriginalToTranslationCompact: AppSpacing.sm,
+            defaultOriginalFontSize: 16,
+            defaultTranslationFontSize: 15,
+            defaultVerseNumberFontSize: 12,
+          ),
+        ],
       );
 }
