@@ -171,6 +171,9 @@ We will use **Custom XML Format** because:
 ## Related Decisions
 
 - ADR-002: Shared Architecture Pattern (enables consistent parsing approach)
+- ADR-003: Songbook Markdown Format (alternative content format for web songbooks - simpler, translator-friendly)
+
+> **Note**: ADR-001 (XML) is for book readers with rich content (animations, controls, audio). ADR-003 (Markdown) is for web songbooks with simple verse structure. Different tools for different needs.
 
 ## Related Specs
 

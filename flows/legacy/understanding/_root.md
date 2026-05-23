@@ -1,297 +1,163 @@
-# Understanding: Bhagavad Gita Application Data Model
+# Understanding: Legacy Ecosystem Root
 
-> Entry point for data structure analysis of /legacy/csv
+> Entry point for analysis of all legacy projects in /legacy/
 
 ## Project Overview
 
-This is a **Bhagavad Gita study application** with multilingual support. The data model supports:
-- Multiple book editions/translations (Russian, English, German, Spanish)
-- Original Sanskrit verses with transliterations and translations
-- Word-by-word vocabulary breakdowns
-- Chapter structure across 18 chapters of Bhagavad Gita
-- Inspirational quotes from various authors
-- Device analytics for mobile app users
+The legacy folder contains a **comprehensive multi-platform ecosystem** for publishing and distributing Vaishnava sacred music and devotional content. The system spans:
 
-## Entity Relationship Model
+- **Native iOS apps** (Objective-C book readers - already documented in ADR-001, ADR-002)
+- **Web applications** (Gulp and Next.js static site generators)
+- **NPM packages** (content repositories and tooling)
+- **AI-powered translation pipelines**
+- **Shared infrastructure** (parsers, validators, audio resources)
+
+## Ecosystem Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                           CONTENT DOMAIN                                 │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
-│   ┌──────────────┐         ┌──────────────┐         ┌──────────────┐    │
-│   │  Languages   │◄────────│    Books     │────────►│   Chapters   │    │
-│   │──────────────│ 1    N  │──────────────│ 1    N  │──────────────│    │
-│   │ Id (PK)      │         │ Id (PK)      │         │ Id (PK)      │    │
-│   │ Name         │         │ LanguageId   │         │ BookId (FK)  │    │
-│   │ Code (en/ru) │         │ Name         │         │ Name         │    │
-│   └──────────────┘         │ Initials     │         │ Order        │    │
-│         ▲                  └──────────────┘         └──────────────┘    │
-│         │                                                   │            │
-│         │                                                   │ 1          │
-│         │                                                   ▼ N          │
-│         │                                           ┌──────────────┐    │
-│         │                                           │    Slokas    │    │
-│         │                                           │──────────────│    │
-│         │                                           │ Id (PK)      │    │
-│         │                                           │ ChapterId    │    │
-│         │                                           │ Name (verse#)│    │
-│         │                                           │ Text (Skt)   │    │
-│         │                                           │ Transcription│    │
-│         │                                           │ Translation  │    │
-│         │                                           │ Comment      │    │
-│         │                                           │ Order        │    │
-│         │                                           │ Audio        │    │
-│         │                                           │ AudioSanskrit│    │
-│         │                                           └──────────────┘    │
-│         │                                                   │            │
-│         │                                                   │ 1          │
-│         │                                                   ▼ N          │
-│         │                                           ┌──────────────┐    │
-│         │                                           │ Vocabularies │    │
-│         │                                           │──────────────│    │
-│         │                                           │ Id (PK)      │    │
-│         │                                           │ SlokaId (FK) │    │
-│         │                                           │ Text (word)  │    │
-│         │                                           │ Translation  │    │
-│         │                                           └──────────────┘    │
-│         │                                                                │
-│   ┌─────┴────────┐                                                       │
-│   │    Quotes    │                                                       │
-│   │──────────────│                                                       │
-│   │ Id (PK)      │                                                       │
-│   │ LanguageId   │                                                       │
-│   │ Author       │                                                       │
-│   │ Text         │                                                       │
-│   │ IsDay        │                                                       │
-│   └──────────────┘                                                       │
-└─────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                    CONTENT ECOSYSTEM                             │
+│                                                                  │
+│  ┌──────────────────┐    ┌──────────────────┐                   │
+│  │ Songbook Sources │    │ Audio Resources  │                   │
+│  │  (Markdown/YAML) │    │   (resources/)   │                   │
+│  └────────┬─────────┘    └────────┬─────────┘                   │
+│           │                       │                              │
+│           ▼                       ▼                              │
+│  ┌─────────────────────────────────────────┐                    │
+│  │       songbook-md-json-parser           │                    │
+│  │    (validation + JSON generation)       │                    │
+│  └────────────────────┬────────────────────┘                    │
+│                       │                                          │
+│           ┌───────────┼───────────┐                              │
+│           ▼           ▼           ▼                              │
+│  ┌────────────┐ ┌────────────┐ ┌────────────┐                   │
+│  │kirtan-mate │ │kirtan-next │ │ Flutter App│                   │
+│  │  (Gulp)    │ │ (Next.js)  │ │(app/gitanj)│                   │
+│  └────────────┘ └────────────┘ └────────────┘                   │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────────────┐
-│                          ANALYTICS DOMAIN                                │
-├─────────────────────────────────────────────────────────────────────────┤
-│   ┌──────────────────┐                                                   │
-│   │     Devices      │  (Standalone - no FK relationships)              │
-│   │──────────────────│                                                   │
-│   │ Id (PK, UUID)    │                                                   │
-│   │ Platform         │  (1=Android, 2=iOS?)                              │
-│   │ OsVersion        │                                                   │
-│   │ DeviceId         │                                                   │
-│   │ Model            │                                                   │
-│   │ AppVersion       │                                                   │
-│   │ TimezoneOffset   │                                                   │
-│   │ Culture          │  (0/1 - locale flag?)                             │
-│   │ PushToken        │                                                   │
-│   │ LastModified     │                                                   │
-│   └──────────────────┘                                                   │
-└─────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                    LEGACY iOS APPS                               │
+│                                                                  │
+│  ┌──────────────────┐                                            │
+│  │   Book XML       │   ─── ADR-001: Custom XML format           │
+│  └────────┬─────────┘                                            │
+│           ▼                                                      │
+│  ┌──────────────────┐                                            │
+│  │ Shared Classes   │   ─── ADR-002: Shared architecture         │
+│  │ (BBook, BUI*)    │                                            │
+│  └────────┬─────────┘                                            │
+│           ▼                                                      │
+│  ┌──────────────────┐   ┌──────────────────┐                    │
+│  │  English Reader  │   │  Russian Reader  │                    │
+│  └──────────────────┘   └──────────────────┘                    │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    AI TRANSLATION                                │
+│                                                                  │
+│  English songs ──► Gemini API ──► Ukrainian songs               │
+│                    (10-stage pipeline)                           │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-## Identified Domains
+## Legacy Projects Discovered (2026-05-23)
 
-| Domain | Hypothesis | Priority | Status |
-|--------|------------|----------|--------|
-| content | Core spiritual content - verses, translations, vocabulary | HIGH | EXPLORING |
-| localization | Multi-language support (4 languages) | MEDIUM | EXPLORING |
-| analytics | User device tracking for mobile app | LOW | EXPLORING |
+| Project | Type | Domain | Status |
+|---------|------|--------|--------|
+| ddd-architecture-specification | Documentation | Architecture | NEW |
+| gaudiya-gitanjali-lv | Songbook (npm) | Latvian content | NEW |
+| gaudiya-gitanjali-ru | Songbook (npm) | Russian content | NEW |
+| gaudiya-gitanjali-ua | Songbook (npm) | Ukrainian content | NEW |
+| gaudiya-gitanjali-ua-preview | Songbook (npm) | Ukrainian transliteration | NEW |
+| kirtan-guide-es | Songbook (npm) | Spanish content | NEW |
+| kirtan-guide-pt | Songbook (npm) | Portuguese content | NEW |
+| kirtan-guide-pocket-edition | Songbook (npm) | Pocket reference | NEW |
+| kirtan-mate | Web App (Gulp) | Multi-songbook aggregator | NEW |
+| kirtan-next | Web App (Next.js) | Modern songbook portal | NEW |
+| md2html | Tool (Gulp) | Markdown to HTML/JSON | NEW |
+| songbook-md-json-parser | Library (npm) | Parsing/validation core | NEW |
+| songbook-resources | Data (npm) | Shared audio metadata | NEW |
+| songbook-translate-en-ua-ai | Pipeline (Node) | AI translation | NEW |
+| standalone-browser-audio-player | Widget (HTML/JS) | Audio player component | NEW |
+| legacy-gitanjali-en-swift | iOS App (ObjC) | English reader | DOCUMENTED (ADR-001, ADR-002) |
+| legacy-gitabjali-ru-swift | iOS App (ObjC) | Russian reader | DOCUMENTED (ADR-001, ADR-002) |
 
-## Entity Schemas (Detailed)
+## Key Patterns Identified
 
-### 1. Languages (db_languages.csv)
-```
-Columns: Id, Name, Code
-Delimiter: ,
-Records: 4
-```
-| Id | Name | Code |
-|----|------|------|
-| 1 | English | en |
-| 2 | Русский | ru |
-| 3 | Deutsch | de |
-| 5 | Español | spa |
+1. **Content-as-Code**: All songbook content stored in Markdown with YAML frontmatter
+2. **Multi-target Publishing**: Same content published to web (Gulp, Next.js) and mobile (Flutter)
+3. **Centralized Parsing**: `songbook-md-json-parser` is single source of truth for content validation
+4. **Localization Strategy**: Separate repositories per language (not i18n within single repo)
+5. **Audio Resource Management**: Centralized `songbook-resources` with performer database
+6. **AI-Assisted Translation**: Automated pipeline with human oversight for Ukrainian content
 
-**Note**: Id=4 is missing - suggests possible deleted language.
+## Domain Boundaries
 
----
-
-### 2. Books (db_books.csv)
-```
-Columns: Id, LanguageId, Name, Initials
-Delimiter: ,
-Records: 6
-```
-| Id | LanguageId | Name | Initials |
-|----|------------|------|----------|
-| 1 | 2 (ru) | Бхагавад Гита Жемчужина мудрости Востока | ШМ |
-| 2 | 1 (en) | Bhagavad-gītā. The Hidden Treasure of the Sweet Absolute | SM |
-| 5 | 1 (en) | Visvanath Cakravarti Thakur commentary | VC |
-| 8 | 1 (en) | Srimad Bhagavad-Gītā As It Is (Prabhupada) | SP |
-| 11 | 3 (de) | Die BHAGAVAD-GITA in Deutsch | SM |
-| 14 | 5 (spa) | Śrīmad Bhagavad-Gītā | SM |
-
-**Initials Legend**:
-- **SM** = Sridhar Maharaj
-- **VC** = Visvanath Cakravarti
-- **SP** = Swami Prabhupada
-
----
-
-### 3. Chapters (db_chapters.csv)
-```
-Columns: Id, BookId, Name, Order
-Delimiter: ,
-Records: 143 (18 chapters × ~8 book editions, some with multiline names)
-```
-
-Each book has 18 chapters. Chapter names vary by translation:
-- Russian: "Осмотр Армий", "Душа в мире материи"...
-- English: "Observing the Armies", "The Constitution of the Soul"...
-- German: Multiline format with Sanskrit names
-
-**Note**: German chapters (BookId=11) have embedded newlines in Name field.
-
----
-
-### 4. Slokas (Gita_Slokas.csv) - **CORE CONTENT**
-```
-Columns: Id, ChapterId, Name, Text, Transcription, Translation, Comment, Order, Audio, AudioSanskrit
-Delimiter: ;
-Records: 700+ (all verses of Bhagavad Gita)
-```
-
-| Column | Description |
-|--------|-------------|
-| Id | Primary key |
-| ChapterId | FK to Chapters |
-| Name | Verse number (e.g., "1.1", "1.2", "1.4-6") |
-| Text | Original Sanskrit in Devanagari script |
-| Transcription | IAST transliteration with diacritics (Russian-style) |
-| Translation | Full verse translation |
-| Comment | Commentary (NULL for most) |
-| Order | Display order within chapter |
-| Audio | Path to audio file (/Files/*.mp3) |
-| AudioSanskrit | Path to Sanskrit recitation audio |
-
-**Example Sloka**:
-- Verse 1.1: धृतराष्ट्र उवाच... (Dhritarashtra spoke...)
-- Includes both reading and Sanskrit pronunciation audio
-
----
-
-### 5. Vocabularies (Gita_Vocabularies.csv)
-```
-Columns: Id, SlokaId, Text, Translation
-Delimiter: ;
-Records: 5000+ (word-by-word breakdown)
-```
-
-Word-by-word vocabulary for each sloka:
-- **SlokaId**: Links to specific verse
-- **Text**: Sanskrit/transliterated word
-- **Translation**: Word meaning
-
-Example for Sloka 1:
-| Text | Translation |
-|------|-------------|
-| дхр̣тара̄ш̣т̣рах̣ ува̄ча | Дхр̣тара̄ш̣т̣ра сказал |
-| дхарма-кш̣етре куру-кш̣етре | на священной земле Курукш̣етры |
-
----
-
-### 6. Quotes (db_quoutes.csv)
-```
-Columns: Id, LanguageId, Author, Text, IsDay
-Delimiter: ,
-Records: 150+
-```
-
-Inspirational quotes about Bhagavad Gita from notable figures:
-- **Authors**: Gandhi, Tolstoy, Einstein, Huxley, Thoreau, Schopenhauer, etc.
-- **Languages**: English (1), Russian (2), German (3)
-- **IsDay**: Boolean flag (0/1) - likely "quote of the day" feature
-
----
-
-### 7. Devices (Gita_Devices.csv)
-```
-Columns: Id, Platform, OsVersion, DeviceId, Model, AppVersion, TimezoneOffset, Culture, PushToken, LastModified
-Delimiter: ;
-Records: 50,000+
-```
-
-Mobile app analytics data:
-- **Platform**: 1 = Android (all observed records)
-- **OsVersion**: Android versions (5.0 - 11)
-- **Model**: Samsung, Xiaomi, OnePlus, Huawei, etc. (predominantly Indian market devices)
-- **PushToken**: Firebase Cloud Messaging tokens
-- **LastModified**: 2018-2022 range
-
----
-
-## Source Mapping
-
-| Source Path | -> Domain |
-|-------------|----------|
-| Books/db_languages.csv | localization |
-| Books/db_books.csv | content → books |
-| Books/db_chapters.csv | content → chapters |
-| Books/Gita_Slokas.csv | content → slokas |
-| Books/Gita_Vocabularies.csv | content → vocabularies |
-| Books/db_quoutes.csv | content → quotes |
-| devices/Gita_Devices.csv | analytics → devices |
-
-## Cross-Cutting Concerns
-
-> Things that span multiple domains (may become ADRs)
-
-1. **File Naming Inconsistency**: Mix of `db_*.csv` and `Gita_*.csv` naming conventions
-2. **Delimiter Inconsistency**: Some files use `;` (semicolon), others use `,` (comma)
-3. **ID Gaps**: Missing IDs in sequences (e.g., Language Id=4, Book Ids 3,4,6,7,9,10,12,13)
-4. **Multiline Values**: German chapter names contain embedded newlines
-5. **Audio File References**: Paths reference `/Files/*.mp3` - external storage
-6. **Encoding**: Files use UTF-8 with BOM (﻿ marker)
+| Domain | Projects | Pattern |
+|--------|----------|---------|
+| Content | gaudiya-gitanjali-*, kirtan-guide-* | npm packages with songs/ + json/ |
+| Infrastructure | songbook-md-json-parser, songbook-resources | npm libraries |
+| Web Publishing | kirtan-mate, kirtan-next | Static site generators |
+| Mobile | legacy-*-swift, app/gitanjali | Native iOS, Flutter |
+| Translation | songbook-translate-en-ua-ai | AI pipeline |
+| Tools | md2html | Hari-katha conversion |
+| Components | standalone-browser-audio-player | Embeddable widgets |
+| Documentation | ddd-architecture-specification | Architecture guidance |
 
 ## Children Spawned
 
 ```
 understanding/
-└── data-model/
-    ├── content-domain/
-    │   ├── _node.md (books, chapters, slokas, vocabularies, quotes)
-    │   └── relationships.md
-    └── analytics-domain/
-        └── _node.md (devices)
+├── content-ecosystem/        # Songbooks + audio resources
+│   └── _node.md
+├── build-infrastructure/     # Parser + tools
+│   └── _node.md
+├── web-publishing/           # kirtan-mate, kirtan-next
+│   └── _node.md
+├── ai-translation/           # Translation pipeline
+│   └── _node.md
+└── web-components/           # Audio player widget
+    └── _node.md
 ```
 
-## Data Statistics Summary
+## Flow Recommendations
 
-| Entity | Records | Primary Language |
-|--------|---------|------------------|
-| Languages | 4 | - |
-| Books | 6 | Multi (en, ru, de, spa) |
-| Chapters | 143 | Multi |
-| Slokas | ~700 | Russian translations |
-| Vocabularies | ~5000 | Russian |
-| Quotes | ~150 | English + Russian |
-| Devices | ~50,000 | Analytics |
+### New ADRs Needed
+
+| Topic | Type | Confidence | Rationale |
+|-------|------|------------|-----------|
+| Songbook Markdown Format | ADR | HIGH | Defines content-as-code pattern |
+| Multi-Edition Localization | ADR | HIGH | Per-language repository strategy |
+| AI Translation Pipeline | ADR | MEDIUM | Novel automation approach |
+
+### Existing Flows to Update
+
+| Flow | Topics to Add |
+|------|---------------|
+| ADR-001 (XML Format) | Note: XML for iOS/Flutter, Markdown for web |
+| ADR-002 (Shared Architecture) | Pattern applies to npm package reuse too |
+
+### New SDDs Needed
+
+| Topic | Type | Priority |
+|-------|------|----------|
+| songbook-md-json-parser API | SDD | HIGH - core library |
+| kirtan-next architecture | SDD | MEDIUM - modern stack |
 
 ## Synthesis
 
-This is a **mobile application database** for studying Bhagavad Gita with:
-
-1. **Content Hierarchy**: Language → Book → Chapter → Sloka → Vocabulary
-2. **Audio Support**: Each sloka has 2 audio files (reading + Sanskrit)
-3. **Multi-edition**: Same verses available in different translations
-4. **Vocabulary Learning**: Word-by-word breakdown for study
-5. **Inspirational Quotes**: Daily quote feature with famous author quotes
-6. **Mobile Analytics**: Android app with push notification support
-
-**Technology Indicators**:
-- Mobile-first (Android app with push tokens)
-- Firebase integration (FCM tokens visible)
-- Audio streaming capability
-- Predominantly Indian market users
+The legacy ecosystem spans 17 projects across 5 distinct domains:
+- **Two content formats**: XML (iOS/Flutter readers) and Markdown (web songbooks)
+- **Core infrastructure**: `songbook-md-json-parser` npm package
+- **Multi-language support**: Separate content repositories per language
+- **AI translation**: Automates EN→UA conversion with 10-stage pipeline
+- **Web publishing**: Both legacy (Gulp) and modern (Next.js 16) approaches
 
 ---
 
-*Created by /legacy EXPLORING phase - 2026-03-26*
+*Updated by /legacy - 2026-05-23*

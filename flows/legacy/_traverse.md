@@ -4,11 +4,11 @@
 
 ## Mode
 
-- **BFS** - Breadth-first analysis of /legacy/csv data structure
+- **BFS** - Breadth-first analysis of all legacy projects
 
 ## Source Path
 
-/legacy/csv
+/legacy/
 
 ## Focus (DFS only)
 
@@ -18,61 +18,109 @@
 
 | Flow Path | Type | Topics | Key Decisions |
 |-----------|------|--------|---------------|
-| - | No existing flows | - | - |
+| flows/adr-001-book-xml-format/ | ADR | XML format, content structure, parser | Custom XML chosen over EPUB/JSON |
+| flows/adr-002-shared-architecture-pattern/ | ADR | legacy patterns, code reuse, MVC | Shared architecture with content-only variation |
+| flows/sdd-gitanjali-flutter-refactoring/ | SDD | Flutter migration, reader, audio, bookmarks | Direct XML parsing in Flutter |
+| flows/sdd-gitanjali-flutter-refactoring-v2/ | SDD | keyframe animation, visual parity | Added background animation support |
+| flows/sdd-control-system/ | SDD | controls, navigation, buttons, XML | Flexible XML-defined control system |
+| flows/sdd-animation-system/ | SDD | keyframe, fade, scale, rotation | Animation defined in XML |
+| flows/vdd-gitanjaly-layout/ | VDD | layout, responsive, reader, audio player | Adaptive layout for all devices |
 
-## Files Discovered
+## Legacy Projects Discovered
 
-| File | Delimiter | Records Est. | Domain |
-|------|-----------|--------------|--------|
-| Books/Gita_Slokas.csv | ; | 700+ | Content - Sanskrit verses |
-| Books/Gita_Vocabularies.csv | ; | 5000+ | Content - Word definitions |
-| Books/db_books.csv | , | 6 | Content - Book editions |
-| Books/db_chapters.csv | , | 143 | Content - Chapter metadata |
-| Books/db_languages.csv | , | 4 | Localization |
-| Books/db_quoutes.csv | , | 150+ | Content - Quotes |
-| devices/Gita_Devices.csv | ; | 50000+ | Analytics - User devices |
+| Project | Type | Domain | Status |
+|---------|------|--------|--------|
+| ddd-architecture-specification | Documentation | Architecture | NEW |
+| gaudiya-gitanjali-lv | Songbook (npm) | Latvian content | NEW |
+| gaudiya-gitanjali-ru | Songbook (npm) | Russian content | NEW |
+| gaudiya-gitanjali-ua | Songbook (npm) | Ukrainian content | NEW |
+| gaudiya-gitanjali-ua-preview | Songbook (npm) | Ukrainian transliteration | NEW |
+| kirtan-guide-es | Songbook (npm) | Spanish content | NEW |
+| kirtan-guide-pt | Songbook (npm) | Portuguese content | NEW |
+| kirtan-guide-pocket-edition | Songbook (npm) | Pocket reference | NEW |
+| kirtan-mate | Web App (Gulp) | Multi-songbook aggregator | NEW |
+| kirtan-next | Web App (Next.js) | Modern songbook portal | NEW |
+| md2html | Tool (Gulp) | Markdown to HTML/JSON | NEW |
+| songbook-md-json-parser | Library (npm) | Parsing/validation core | NEW |
+| songbook-resources | Data (npm) | Shared audio metadata | NEW |
+| songbook-translate-en-ua-ai | Pipeline (Node) | AI translation | NEW |
+| standalone-browser-audio-player | Widget (HTML/JS) | Audio player component | NEW |
+| legacy-gitanjali-en-swift | iOS App (ObjC) | English reader | DOCUMENTED (ADR-001, ADR-002) |
+| legacy-gitabjali-ru-swift | iOS App (ObjC) | Russian reader | DOCUMENTED (ADR-001, ADR-002) |
 
 ## Current Stack
 
 ```
-/ (root)                           EXPLORING <- current
-└── data-model                     PENDING
-    ├── content-domain             PENDING
-    └── analytics-domain           PENDING
+/ (root)                                SYNTHESIZING
+├── content-ecosystem                   DONE → ADR-003, ADR-004
+│   ├── songbook-data-format            DONE (songs/, json/, markdown)
+│   ├── multilingual-editions           DONE (lv, ru, ua, es, pt)
+│   └── audio-resources                 DONE (recordings, performers)
+├── build-infrastructure                DONE → ADR-005, ADR-006 candidates
+│   ├── parser-library                  DONE (songbook-md-json-parser)
+│   ├── web-generators                  DONE (kirtan-mate, kirtan-next)
+│   └── conversion-tools                DONE (md2html)
+├── ai-translation-pipeline             DONE → ADR-008, ADR-009 candidates
+│   └── gemini-translation              DONE (en→ua, 10 stages)
+├── web-components                      DONE (no ADR needed)
+│   └── audio-player                    DONE (standalone-browser-audio-player)
+├── architecture-docs                   DONE (reference only)
+│   └── ddd-spec                        DONE
+└── legacy-ios-apps                     DONE (ADR-001, ADR-002)
 ```
 
 ## Stack Operations Log
 
 | # | Operation | Node | Phase | Result |
 |---|-----------|------|-------|--------|
-| 1 | PUSH | / (root) | ENTERING | Started analysis |
-| 2 | UPDATE | / (root) | EXPLORING | Identified 7 CSV files |
+| 1 | INIT | / (root) | ENTERING | Started BFS analysis |
+| 2 | UPDATE | / (root) | EXPLORING | Scanned 17 legacy projects |
+| 3 | UPDATE | / (root) | SPAWNING | Created logical tree with 6 domains |
+| 4 | ENTER | content-ecosystem | EXPLORING | Analyzed 8 songbook packages |
+| 5 | ENTER | build-infrastructure | EXPLORING | Analyzed parser + md2html |
+| 6 | ENTER | web-publishing | EXPLORING | Analyzed kirtan-mate, kirtan-next |
+| 7 | ENTER | ai-translation | EXPLORING | Analyzed 10-stage pipeline |
+| 8 | ENTER | web-components | EXPLORING | Analyzed audio player widget |
+| 9 | CREATE | ADR-003 | EXITING | Songbook Markdown Format |
+| 10 | CREATE | ADR-004 | EXITING | Per-Language Repository Pattern |
+| 11 | UPDATE | ADR-001, ADR-002 | EXITING | Added cross-references |
 
 ## Current Position
 
 - **Node**: / (root)
-- **Phase**: EXPLORING
+- **Phase**: SPAWNING
 - **Depth**: 0
-- **Path**: /legacy/csv
+- **Path**: /legacy/
 
 ## Pending Children
 
 ```
-data-model (content + analytics domains)
+1. content-ecosystem (songbook content and audio resources)
+2. build-infrastructure (parsers, generators, converters)
+3. ai-translation-pipeline (automated translation)
+4. web-components (embeddable widgets)
+5. architecture-docs (DDD specification)
 ```
 
 ## Visited Nodes
 
 | Node Path | Summary | Flow Created |
 |-----------|---------|--------------|
-| - | - | - |
+| legacy-ios-apps | Swift/ObjC book readers | ADR-001, ADR-002 |
+| content-ecosystem | 8 songbook npm packages | ADR-003, ADR-004 |
+| build-infrastructure | Parser + tools | (ADR-005, ADR-006 candidates) |
+| web-publishing | Gulp + Next.js generators | (ADR-007 candidate) |
+| ai-translation | 10-stage Gemini pipeline | (ADR-008, ADR-009 candidates) |
+| web-components | Audio player widget | (none needed) |
 
 ## Next Action
 
 ```
-1. Complete root exploration - document all entity schemas
-2. SPAWN children for content-domain and analytics-domain
-3. Deep dive into each entity
+1. OPTIONAL: Create remaining ADR candidates (005-009)
+2. OPTIONAL: Create SDD for songbook-md-json-parser
+3. OPTIONAL: Create SDD for kirtan-next
+4. SYNTHESIS: Combine all domain insights into _root.md
+5. EXIT: Mark traversal complete
 ```
 
 ---
@@ -107,4 +155,4 @@ data-model (content + analytics domains)
 
 ---
 
-*Updated by /legacy recursive traversal*
+*Updated by /legacy - 2026-05-23*

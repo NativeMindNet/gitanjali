@@ -2,6 +2,74 @@
 
 ## Session History
 
+### 2026-05-23 - Extended Analysis (17 Projects)
+
+**Mode**: BFS
+**Target**: /legacy/ (all projects)
+
+**New Projects Analyzed**:
+
+| Project | Type | Domain |
+|---------|------|--------|
+| ddd-architecture-specification | Documentation | Architecture guidance |
+| gaudiya-gitanjali-lv | npm | Latvian songbook |
+| gaudiya-gitanjali-ru | npm | Russian songbook |
+| gaudiya-gitanjali-ua | npm | Ukrainian songbook |
+| gaudiya-gitanjali-ua-preview | npm | Ukrainian transliteration |
+| kirtan-guide-es | npm | Spanish Kirtan Guide |
+| kirtan-guide-pt | npm | Portuguese Kirtan Guide |
+| kirtan-guide-pocket-edition | npm | Pocket reference |
+| kirtan-mate | Gulp | Legacy web generator |
+| kirtan-next | Next.js 16 | Modern web generator |
+| md2html | Gulp | Hari-katha converter |
+| songbook-md-json-parser | npm | Core parsing library |
+| songbook-resources | npm | Audio metadata |
+| songbook-translate-en-ua-ai | Node.js | AI translation pipeline |
+| standalone-browser-audio-player | HTML/JS | Audio widget |
+
+**Key Findings**:
+1. **Two content formats**: XML (iOS/Flutter) and Markdown (web songbooks)
+2. **Core library**: `songbook-md-json-parser` defines content schema
+3. **Multi-language**: 8 songbook editions in 6 languages
+4. **Two-generation web**: Gulp (kirtan-mate) → Next.js (kirtan-next)
+5. **AI translation**: 10-stage Gemini pipeline for EN→UA
+6. **3500+ performers** in audio resources database
+
+**Understanding Tree Created**:
+```
+understanding/
+├── _root.md (updated)
+├── content-ecosystem/_node.md
+├── build-infrastructure/_node.md
+├── web-publishing/_node.md
+├── ai-translation/_node.md
+└── web-components/_node.md
+```
+
+**ADR Candidates Identified**:
+- ADR-003: Songbook Markdown Format
+- ADR-004: Per-Language Repository Pattern
+- ADR-005: Centralized Parser Library
+- ADR-006: JSON Schema for Content Validation
+- ADR-007: Next.js Migration
+- ADR-008: AI Translation Pipeline
+- ADR-009: Translation Caching Strategy
+
+**SDD Candidates**:
+- sdd-songbook-parser: Core parsing library API
+- sdd-kirtan-next: Modern web generator architecture
+
+**Flows Updated**:
+- `_traverse.md`: Full index of existing flows + legacy projects
+
+**Next Actions**:
+1. Create ADR-003: Songbook Markdown Format
+2. Create ADR-004: Per-Language Repository Pattern
+3. Create SDD for songbook-md-json-parser
+4. Update existing ADRs with cross-references
+
+---
+
 ### 2026-03-26 - Depth 0 (Root)
 
 **Mode**: BFS

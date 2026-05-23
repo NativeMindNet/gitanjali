@@ -179,6 +179,9 @@ Only Resources differ:
 ## Related Decisions
 
 - ADR-001: Book XML Format (defines content structure)
+- ADR-004: Per-Language Repository Pattern (similar reuse pattern for songbook npm packages)
+
+> **Note**: ADR-002 documents code reuse across iOS apps. ADR-004 documents a similar pattern for songbook npm packages - separate content repos, shared infrastructure.
 
 ## Related Specs
 
